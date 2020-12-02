@@ -16,27 +16,27 @@
 <meta property="og:url" content="http://acgkaka.github.io/2020/11/11/8Java%E5%85%A5%E9%97%A8%EF%BC%88%E5%85%AB%EF%BC%89JDBC/index.html">
 <meta property="og:site_name" content="ACGkaka">
 <meta property="og:description" content="JDBC概述、封装JDBCUtils工具类、Statement、PreparedStatement、批处理、事务、返回自增主键、JDBC操作分页。">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps202.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps204.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps203.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps205.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps206.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps207.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps208.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps209.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps210.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps211.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps212.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps213.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps214.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps215.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps216.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201202141943202.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201202142004886.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020120214201737.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201202142026982.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201202142035476.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201202142046994.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201202142056637.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201202142106805.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201202142118443.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201202142133231.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201202142140886.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201202142149605.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201202142159286.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020120214220760.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201202142215940.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
 <meta property="article:published_time" content="2020-11-10T20:00:00.000Z">
-<meta property="article:modified_time" content="2020-12-02T08:38:59.473Z">
+<meta property="article:modified_time" content="2020-12-02T10:48:12.298Z">
 <meta property="article:author" content="ACG kaka">
 <meta property="article:tag" content="Java入门">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps202.jpg">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20201202141943202.jpg">
   
     <link rel="alternative" href="/atom.xml" title="ACGkaka" type="application/atom+xml">
   
@@ -276,7 +276,7 @@
 <a id="more"></a>
 
 <h2 id="一、JDBC概述、怎样使用JDBC、初步封装"><a href="#一、JDBC概述、怎样使用JDBC、初步封装" class="headerlink" title="一、JDBC概述、怎样使用JDBC、初步封装"></a>一、JDBC概述、怎样使用JDBC、初步封装</h2><p><font size="5"><strong>JDBC概述</strong></font></p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps202.jpg" alt="img"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201202141943202.jpg" alt="在这里插入图片描述"></p>
 <p><strong>JDBC是什么</strong></p>
 <ol>
 <li><p>JDBC是一套sun公司定义的接口,是一套标准,规定了统一的数据库访问方法 </p>
@@ -289,7 +289,7 @@
 <li>jdbc的好处：我们只学习一套接口的使用和操作，就可以访问任何数据库了。</li>
 </ul>
 <p><strong>怎么使用JDBC</strong></p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps204.jpg" alt="img"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201202142004886.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <ol>
 <li><p>下载驱动，mysql驱动，去Maven库搜索MySQL connector下载即可；</p>
 </li>
@@ -324,11 +324,10 @@
 
 
 
-
 </li>
 </ol>
 <p><strong>ResultSet 游标</strong></p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps203.jpg" alt="img"></p>
+<p><img src="https://img-blog.csdnimg.cn/2020120214201737.jpg" alt="在这里插入图片描述"></p>
 <ul>
 <li>ResultSet对象，使用游标控制数据 ；</li>
 <li>当执行查询语句的时候，resultSet对象用于封装查询结果方法；</li>
@@ -400,17 +399,17 @@
 <p>使用一个数据库的管理员，管理员对数据库连接做管理，导入包，并直接使用。</p>
 </li>
 </ol>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps205.jpg" alt="img"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201202142026982.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p><strong>课堂练习</strong></p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps206.jpg" alt="img"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201202142035476.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 声明四个必要参数</span></span><br><span class="line">    String driver;</span><br><span class="line">    String url;</span><br><span class="line">    String username;</span><br><span class="line">    String password;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 声明两个策略参数</span></span><br><span class="line">    <span class="keyword">int</span> initialSize;</span><br><span class="line">    <span class="keyword">int</span> maxActive;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 声明BasicDataSource对象，赋值为null</span></span><br><span class="line">    BasicDataSource ds=<span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 静态块中完成读取六个参数的操作</span></span><br><span class="line">    <span class="comment">// 创建BasicDataSource对象的操作</span></span><br><span class="line">    <span class="comment">// 给BasicDataSource对象设置6个参数的操作</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        Properties conf=<span class="keyword">new</span> Properties();</span><br><span class="line">        InputStream in = DBUtils1<span class="class">.<span class="keyword">class</span>.<span class="title">getClassLoader</span>()</span></span><br><span class="line">                .getResourceAsStream("db.properties");</span><br><span class="line">        conf.load(in);</span><br><span class="line">        driver=conf.getProperty(<span class="string">"jdbc.driver"</span>);</span><br><span class="line">        url=conf.getProperty(<span class="string">"jdbc.url"</span>);</span><br><span class="line">        username=conf.getProperty(<span class="string">"jdbc.username"</span>);</span><br><span class="line">        password=conf.getProperty(<span class="string">"jdbc.password"</span>);</span><br><span class="line">        initialSize=Integer.parseInt(conf.getProperty(<span class="string">"initialSize"</span>));</span><br><span class="line">        maxActive=Integer.parseInt(conf.getProperty(<span class="string">"maxActive"</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">//创建BasicDataSource对象</span></span><br><span class="line">        ds=<span class="keyword">new</span> BasicDataSource();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//给BasicDataSource对象设置6个参数</span></span><br><span class="line">        ds.setDriverClassName(driver);</span><br><span class="line">        ds.setUrl(url);</span><br><span class="line">        ds.setUsername(username);</span><br><span class="line">        ds.setPassword(password);</span><br><span class="line">        ds.setInitialSize(initialSize);</span><br><span class="line">        ds.setMaxActive(maxActive);</span><br><span class="line">        Connection conn=ds.getConnection();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
 <p>封装连接池，完成查询表内容</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps207.jpg" alt="img"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201202142046994.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p>多线程演示连接池的等待效果</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps208.jpg" alt="img"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201202142056637.jpg" alt="在这里插入图片描述"></p>
 <p><strong>数据库执行计划</strong></p>
 <ul>
 <li><p>目的：优化Statement对象，重用执行计划。</p>
@@ -444,13 +443,13 @@
 <blockquote>
 <p><strong>问题</strong>：Connection是一次连接，一次jdbc和数据库的响应叫一次通讯。当执行多条SQL的时候，就需要进行多次连接通讯，效率低。</p>
 </blockquote>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps209.jpg" alt="img"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201202142106805.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p><strong>Statement  解决方案：</strong></p>
 <ul>
 <li>在jdbc中设置一个缓存区用于积攒sql语句，积攒一定数量之后执行；</li>
 <li>因为sql语句是DDL语句，所以执行语句不能省，只是节省通讯次数。</li>
 </ul>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps210.jpg" alt="img"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201202142118443.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p><strong>PreparedStatement解决方案：</strong></p>
 <ul>
 <li>使用批量处理</li>
@@ -475,13 +474,13 @@
 
 </li>
 </ol>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps211.jpg" alt="img"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201202142133231.jpg" alt="在这里插入图片描述"></p>
 <p><strong>结果集元数据</strong></p>
 <ul>
 <li>就是结果集的相关信息。</li>
 <li>目的：为了获取结果集中其它的描述信息。</li>
 </ul>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps212.jpg" alt="img"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201202142140886.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <ul>
 <li><p>举个栗子：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Connection conn = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        conn=DBUtils1.getConnection();</span><br><span class="line">        String sql=<span class="string">"select * from emp"</span>;</span><br><span class="line">        Statement sta=conn.createStatement();</span><br><span class="line">        ResultSet rs=sta.executeQuery(sql);</span><br><span class="line">        <span class="comment">// 获取元数据</span></span><br><span class="line">        ResultSetMetaData meta = rs.getMetaData();</span><br><span class="line">        <span class="comment">// 获取列的数量</span></span><br><span class="line">        <span class="keyword">int</span> n = meta.getColumnCount();</span><br><span class="line">        System.out.println(n);</span><br><span class="line">        <span class="comment">// 获取列的名称</span></span><br><span class="line">        String name1=meta.getColumnName(<span class="number">1</span>);</span><br><span class="line">        String name2=meta.getColumnName(<span class="number">2</span>);</span><br><span class="line">        System.out.println(name1+<span class="string">"~"</span>+name2);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= meta.getColumnCount(); i ++)&#123;</span><br><span class="line">            System.out.println(meta.getColumnName(i));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;<span class="keyword">finally</span> &#123;</span><br><span class="line">        DBUtils1.closeConnection(conn);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -504,7 +503,7 @@
 <p><strong>事务</strong></p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sql&gt; set autocommit=0; </span><br><span class="line">sql&gt; start transaction;</span><br><span class="line">sql&gt; .... </span><br><span class="line">sql&gt; commit/rollback;</span><br></pre></td></tr></table></figure>
 
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps213.jpg" alt="img"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201202142149605.jpg" alt="在这里插入图片描述"></p>
 <p><strong>课堂练习</strong></p>
 <ul>
 <li><p>借钱的业务</p>
@@ -529,8 +528,8 @@
 <p><strong>问题</strong>：在我们的日常开发过程中，数据的主键我们一般是使用数据库自动生成的序列。</p>
 <p>那么如何在新增数据库之后获取到该条数据自动生成的主键序列呢？</p>
 </blockquote>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps214.jpg" alt="img"></p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps215.jpg" alt="img"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201202142159286.jpg" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/2020120214220760.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p><strong>解决方案：</strong></p>
 <ul>
 <li>1.在建表的时候指定主键序列为自增长，<strong>auto_increment</strong>；</li>
@@ -555,7 +554,7 @@
 
 
 
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml14552%5Cwps216.jpg" alt="img"> </p>
+<p><img src="https://img-blog.csdnimg.cn/20201202142215940.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p><strong>为什么MySQL查询大表必须要分页？</strong></p>
 <ul>
 <li>官方要求查询结果存在数据库的缓存中，直到rs.getXXX,数据才会传到服务器内存；</li>
