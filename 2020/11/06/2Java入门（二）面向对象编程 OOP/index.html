@@ -6,16 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://acgkaka.github.io">
-  <title>Tag: Java入门 | ACGkaka</title>
+  <title>Java入门（二）面向对象编程OOP | ACGkaka</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="ACGkaka">
-<meta property="og:url" content="http://acgkaka.github.io/tags/Java%E5%85%A5%E9%97%A8/index.html">
+  <meta name="description" content="对象和类、方法和this、数组、继承、访问控制权限、static、final、抽象类、接口、内部类、对象内存管理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java入门（二）面向对象编程OOP">
+<meta property="og:url" content="http://acgkaka.github.io/2020/11/06/2Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%20OOP/index.html">
 <meta property="og:site_name" content="ACGkaka">
+<meta property="og:description" content="对象和类、方法和this、数组、继承、访问控制权限、static、final、抽象类、接口、内部类、对象内存管理">
+<meta property="og:image" content="http://acgkaka.github.io/2020/11/06/2Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%20OOP/........%5Cimages%5Cwps1.jpg">
+<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml4316%5Cwps2.jpg">
+<meta property="og:image" content="http://acgkaka.github.io/2020/11/06/2Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%20OOP/........%5Cimages%5Cwps3.jpg">
+<meta property="og:image" content="http://acgkaka.github.io/2020/11/06/2Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%20OOP/........%5Cimages%5Cwps4.jpg">
+<meta property="og:image" content="http://acgkaka.github.io/2020/11/06/2Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%20OOP/........%5Cimages%5Cwps26.jpg">
+<meta property="og:image" content="http://acgkaka.github.io/2020/11/06/2Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%20OOP/........%5Cimages%5Cwps36.jpg">
+<meta property="article:published_time" content="2020-11-05T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-11-06T02:12:20.287Z">
 <meta property="article:author" content="ACG kaka">
+<meta property="article:tag" content="Java入门">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://acgkaka.github.io/2020/11/06/2Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%20OOP/........%5Cimages%5Cwps1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="ACGkaka" type="application/atom+xml">
   
@@ -216,342 +228,402 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-2Java入门（二）面向对象编程 OOP" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/11/12/9Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%B9%9D%EF%BC%89Servlet%20JSP%20MVC/" class="archive-article-date">
-        <time datetime="2020-11-11T20:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020年11月12日</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/11/12/9Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%B9%9D%EF%BC%89Servlet%20JSP%20MVC/" target="_blank">Java入门（九）Servlet JSP MVC</a>
   
+    <h1 class="article-title" itemprop="name">
+      Java入门（二）面向对象编程OOP
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java入门</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/11/11/8Java%E5%85%A5%E9%97%A8%EF%BC%88%E5%85%AB%EF%BC%89JDBC/" class="archive-article-date">
-        <time datetime="2020-11-10T20:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020年11月11日</time>
-</a>
-
-        </div>
-    	 
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/11/11/8Java%E5%85%A5%E9%97%A8%EF%BC%88%E5%85%AB%EF%BC%89JDBC/" target="_blank">Java入门（八）JDBC</a>
-  
-    </h1>
-  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
 
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java入门</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/11/10/7Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%83%EF%BC%89Oracle%20%E6%95%B0%E6%8D%AE%E5%BA%93/" class="archive-article-date">
-        <time datetime="2020-11-09T20:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020年11月10日</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/11/10/7Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%83%EF%BC%89Oracle%20%E6%95%B0%E6%8D%AE%E5%BA%93/" target="_blank">Java入门（七）Oracle 数据库</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java入门</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/11/09/6Java%E5%85%A5%E9%97%A8%EF%BC%88%E5%85%AD%EF%BC%89MySql%20%E6%95%B0%E6%8D%AE%E5%BA%93/" class="archive-article-date">
-        <time datetime="2020-11-08T20:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020年11月09日</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/11/09/6Java%E5%85%A5%E9%97%A8%EF%BC%88%E5%85%AD%EF%BC%89MySql%20%E6%95%B0%E6%8D%AE%E5%BA%93/" target="_blank">Java入门（六）MySql 数据库</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java入门</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/11/08/5Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%94%EF%BC%89HTMLl%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/" class="archive-article-date">
-        <time datetime="2020-11-07T20:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020年11月08日</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/11/08/5Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%94%EF%BC%89HTMLl%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/" target="_blank">Java入门（五）HTML网络基础</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java入门</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/11/07/4Java%E5%85%A5%E9%97%A8%EF%BC%88%E5%9B%9B%EF%BC%89Java%20SE%2002/" class="archive-article-date">
-        <time datetime="2020-11-06T20:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020年11月07日</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/11/07/4Java%E5%85%A5%E9%97%A8%EF%BC%88%E5%9B%9B%EF%BC%89Java%20SE%2002/" target="_blank">Java入门（四）JAVA SE 02</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java入门</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/11/06/3Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%89%EF%BC%89Java%20SE%2001/" class="archive-article-date">
-        <time datetime="2020-11-05T20:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020年11月06日</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/11/06/3Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%89%EF%BC%89Java%20SE%2001/" target="_blank">Java入门（三）JAVA SE 01</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java入门</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
 <a href="/2020/11/06/2Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%20OOP/" class="archive-article-date">
         <time datetime="2020-11-05T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020年11月06日</time>
 </a>
 
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <!--:loudspeaker:：哈喽~:sunny:欢迎加入程序:monkey:大家庭，快点开始:black_nib:自己的黑客帝国吧 ~:ocean::ocean:-->
+
+<h2 id="一、对象和类"><a href="#一、对象和类" class="headerlink" title="一、对象和类"></a>一、对象和类</h2><blockquote>
+<p>高质量的代码：</p>
+<p>复用性好，扩展性好，维护性好，可移植性好，健壮性好，效率高。</p>
+</blockquote>
+<a id="more"></a>
+
+<p><strong>1. 什么是类？什么是对象？</strong></p>
+<p>​    1） 现实世界是由很多很多对象组成的</p>
+<p>​            基于对象抽象出了类</p>
+<p>​    2） 对象：真实存在的单个的个体</p>
+<p>​            类：类型/类别，代表一类个体</p>
+<p>​    3） 类中可以包括：</p>
+<p>​            3.1）<strong>变量</strong>：所有对象所共有的属性/特征</p>
+<p>​            3.2）<strong>方法</strong>：所有对象所共有的行为</p>
+<p>​    4）一个类可以创建多个对象</p>
+<p>​            同一类型的多个对象，结构相同，数据不同</p>
+<p>​    5）类是对象的模板，对象是类的具体的实例</p>
+<h2 id="二、方法和this"><a href="#二、方法和this" class="headerlink" title="二、方法和this"></a>二、方法和this</h2><p><strong>1. 方法的签名：方法名 + 参数列表</strong></p>
+<p><strong>2. 方法的重载（Overload）</strong></p>
+<p>​    1） 发生在一个类中，方法名称相同，参数列表不同</p>
+<p>​    2） 编译器在编译时会根据方法签名自动绑定调用的方法</p>
+<p><strong>3.构造方法</strong></p>
+<p>​    1）给成员变量赋初值</p>
+<p>​    2）与类同名，<strong>没有返回值类型，有返回值的不是构造方法</strong></p>
+<p>​    3）在创建对象是被自动调用</p>
+<p>​    4）若自己不写构造方法，则编译器默认提供一个无参构造方法</p>
+<p>​    <strong>注意：若自己写了构造方法，则不再默认提供，一般在重载有参构造前先写一个空的无参构造。</strong></p>
+<p>​    5）构造方法可以重载 </p>
+<p><strong>4. this</strong></p>
+<p>​    指代当前对象，哪个对象调方法指的就是哪个对象</p>
+<p>​    只能用在方法中，方法中访问成员变量之前默认有个“this.”</p>
+<p>​    this的用法：</p>
+<p>​    1） this.成员变量名————–访问成员变量</p>
+<p>​    2） this.方法名()—————–调用方法（一般不用）</p>
+<p>​    3） this()————————调用构造方法</p>
+<h2 id="三、数组，继承（上）"><a href="#三、数组，继承（上）" class="headerlink" title="三、数组，继承（上）"></a>三、数组，继承（上）</h2><p><strong>1. 引用类型数组</strong></p>
+<p>1）Student[] stus = new Student[3];</p>
+<p>stus[0] = new Student();</p>
+<p>stus[1] = new Student();</p>
+<p>stus[2] = new Student();</p>
+<p>2）Student[] stus = new Student[]{</p>
+<p>new Student(),</p>
+<p>new Student(),</p>
+<p>new Student()</p>
+<p>};</p>
+<p>3）int [ ] [ ] arr = new int[3][ ];</p>
+<p>arr[0] = new int[2];</p>
+<p>arr[1] = new int[3];</p>
+<p>arr[2] = new int [2];</p>
+<p>arr[1][0]=100;    //将arr中第2个元素中的第1个元素赋值为10</p>
+<p>4）int [ ] [ ] arr = new int[3][4];</p>
+<p>for(int i=0;i&lt;arr.length;i++){</p>
+<p>​    for(int j=0;j&lt;arr[i].length;j++){</p>
+<p>​        arr[i][j]=100;</p>
+<p>}</p>
+<p>​      }</p>
+<p><img src="........%5Cimages%5Cwps1.jpg" alt="img"> </p>
+<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml4316%5Cwps2.jpg" alt="img"> </p>
+<p>(对象放在栈里面，基本类型的值是在栈里面的，</p>
+<p>引用变量的值是在堆中，函数放在方法区.)</p>
+<p><strong>2. null：空，没有指向任何对象</strong></p>
+<ul>
+<li><p>若引用的值为null，则该引用不能再进行任何操作了</p>
+</li>
+<li><p>若操作，则发生NullPointerException空指针异常</p>
+</li>
+</ul>
+<p><strong>3. 继承</strong></p>
+<p>​    1）作用：减少代码重复、提高代码的复用性</p>
+<p>​    2）通过extends来实现继承</p>
+<p>​    3）父类：所有子类所共有的属性和行为</p>
+<p>​        子类：子类所特有的属性和行为</p>
+<p>​    4）子类继承父类后，<strong>子类具有：子类+父类所有的属性和方法</strong></p>
+<p>​    5）一个父类可以创建多个子类</p>
+<p>​        一个子类只能有一个父类——单一继承</p>
+<p>​    6）继承具有传递性</p>
+<p>​    7）java规定：构造子类之前必须先构造父类</p>
+<p>​        在子类构造方法中若没有调用父类构造方法，则默认super()来调用父类的无参构造</p>
+<p>​        若子类构造方法中自己调用了父类的构造方法，则不再默认提供</p>
+<p><strong>4. super：指代当前对象的父类对象</strong></p>
+<p>super的用法：</p>
+<p>​    1） super.成员变量名——-访问父类的成员变量</p>
+<p>​    2） super.方法名()———-调用父类的方法</p>
+<p>​    3） super()—————–调用父类的构造方法</p>
+<h2 id="四、继承（下）"><a href="#四、继承（下）" class="headerlink" title="四、继承（下）"></a>四、继承（下）</h2><p><strong>1. 方法的重写：重新写、覆盖</strong></p>
+<p>​    1） 发生在父子类中，方法名称相同，参数列表相同，方法体不同</p>
+<p>​    2） 重写方法被调用时，看对象的类型</p>
+<p><strong>2. 重写遵循”两同两小一大“原则</strong></p>
+<p>​    1）两同：</p>
+<p>​        1.1）方法名称相同</p>
+<p>​        1.2） 参数列表相同</p>
+<p>​    2）两小：</p>
+<p>​        2.1）子类方法的返回值类型小于或等于父类的</p>
+<p>​            a）void时，必须相等</p>
+<p>​            b）基本数据类型时，必须相等</p>
+<p>​            c）引用数据类型时，小于或等于</p>
+<p>​        2.2)子类抛出的异常要小于或等于父类的——-异常之后</p>
+<p>​    3）一大：</p>
+<p>​        3.1）子类方法的访问权限大于或等于父类的——访问控制修饰符之后 </p>
+<p><strong>3. 重写与重载的区别</strong>——–常见面试题</p>
+<p>​    1）重写（Override）：</p>
+<p>​        1.1）发生在父子类中，方法名称相同，参数列表相同，方法体不同</p>
+<p>​        1.2）遵循“运行期绑定“，看对象的类型来调用方法</p>
+<p>​    2）重载（Overload）:</p>
+<p>​        2.1）发生在一个类中，方法名称相同，参数列表不同，方法体不同</p>
+<p>​        2.2）遵循“编译期绑定“，看引用的类型来绑定方法</p>
+<p><strong>4. 向上造型</strong></p>
+<p>​    1）父类型的引用指向子类的对象</p>
+<p>​    2）能点出来什么，看引用的类型</p>
+<h2 id="五、访问控制、static和final"><a href="#五、访问控制、static和final" class="headerlink" title="五、访问控制、static和final"></a>五、访问控制、static和final</h2><p><strong>1. package和import</strong></p>
+<p>包命名的建议：</p>
+<p>​        域名反写        . 项目名称        . 模板名称     . 类名</p>
+<p>​        cn.tedu            . aproject        .</p>
+<p>​        com.taobao    . bproject        .</p>
+<p>​        com.baidu        .</p>
+<p><strong>package</strong>：</p>
+<p>​    1） 作用：避免类名的冲突</p>
+<p>​    2） 同包中的类不能同名的</p>
+<p>​    3） 类的全称：包名.类名</p>
+<p>​    4） 建议：所有字母都小写</p>
+<p><strong>import</strong>：</p>
+<p>​    1) 同包中的类可以直接访问，不同包中的类不能直接访问</p>
+<p>​        不同包中的类访问有两种方法：</p>
+<p>​        1.1） 先import声明类再使用类——–建议</p>
+<p>​        1.2） 类的全称———————–太繁琐</p>
+<p><strong>2. 访问控制修饰符</strong>（抽象方法的访问权限默认都是public）</p>
+<p>​    1） <font color="red">public</font>：公共的，任何类</p>
+<p>​    2） <font color="red">protected</font>：受保护的，本类、子类、同包类</p>
+<p>​    3） <font color="red">默认的</font>：什么也不写，本类、同包类</p>
+<p>​    4） <font color="red">private</font>：私有的，本类，内部类</p>
+<p>说明：</p>
+<p>​    1） 类的访问修饰为public和默认的</p>
+<p>​    2） 类中成员的访问修饰如上4种都可以</p>
+<p><strong>3. static：静态的</strong></p>
+<p>​    1) 静态变量：</p>
+<p>​        1.1） 由static修饰的</p>
+<p>​        1.2） 属于类的，存储在方法区中，只有一份</p>
+<p>​        1.3） 常常通过类名来访问</p>
+<p>​        1.4） 何时用：所有对象所共享的数据（图片、音频、视频）</p>
+<p>​    2） 静态方法：</p>
+<p>​        2.1）由static修饰的</p>
+<p>​        2.2）属于类的，存储在方法区中，只有一份</p>
+<p>​        2.3）常常通过类名点来访问</p>
+<p>​        2.4）静态方法没有隐式的this传递，</p>
+<p>​        <strong>静态方法中不能直接访问实例成员（本类中的非静态成员变量+非静态成员方法）</strong></p>
+<p>​        2.5）何时用：方法的操作仅与参数相关而与对象无关</p>
+<p>​    3） 静态块：</p>
+<p>​        3.1）在类被加载期间自动执行，</p>
+<p>​        因为类只被加载一次，所以静态块也只执行一次</p>
+<p>​        3.2）何时用：加载/初始化静态资源（图片、音频、视频等）</p>
+<p><strong>4. final：最终的</strong>—————-单独应用的几率很小</p>
+<p>​    1） 修饰变量：变量不能被改变</p>
+<p>​    2） 修饰方法：方法不能被重写</p>
+<p>​    3） 修饰类：类不能被继承</p>
+<p><strong>5. static final 常量</strong>—————-应用率高</p>
+<p>​    1） 必须声明同时初始化</p>
+<p>​    2） 通过类名来访问，不能被改变</p>
+<p>​    3） 建议：常量名所有字母都大写，多个单词用下划线分隔</p>
+<p>​    4） 编译器在编译时将常量直接替换为具体的值，效率高</p>
+<p>​    5） 某个数据永远不会改变，并且还经常使用</p>
+<p>补充：</p>
+<p>​    1.数据（变量）私有化，行为（方法）公开化</p>
+<p>​    2.成员变量：</p>
+<p>​        1）实例变量：没有static修饰的，属于对象的，存储在堆中的，</p>
+<p>​            有几个对象就有几份</p>
+<p>​            通过对象名点来访问</p>
+<p>​        2）静态变量：由static修饰的，属于类的，存储在方法区中</p>
+<p>​            只有一份</p>
+<p>​            通过类名来访问</p>
+<p> <img src="........%5Cimages%5Cwps3.jpg" alt="wps3"></p>
+<h2 id="六、抽象类、接口和内部类（上）"><a href="#六、抽象类、接口和内部类（上）" class="headerlink" title="六、抽象类、接口和内部类（上）"></a>六、抽象类、接口和内部类（上）</h2><p><strong>1. 抽象方法</strong></p>
+<p>​    1） 由abstract修饰</p>
+<p>​    2） 只有方法的定义，没有具体的实现（连{ }都没有）</p>
+<p>​    3）抽象方法的访问权限默认都是public</p>
+<p><strong>2. 抽象类</strong></p>
+<p>​    1） 由abstract修饰</p>
+<p>​    2） 包含抽象方法的类必须是抽象类</p>
+<p>​        不包含抽象方法的类也可以声明为抽象类—-我乐意</p>
+<p>​    3） 抽象类不能被实例化</p>
+<p>​    4） 抽象类是需要被继承的，子类：</p>
+<p>​        4.1）<strong>必须重写所有的抽象方法</strong>———变不完整为完整</p>
+<p>​        4.2）也声明为抽象类————-一般不这样做</p>
+<p>​            设计规则：</p>
+<p>​                1） 将所有子类共有的属性和行为，抽象到父类中</p>
+<p>​                2） 所有子类行为都一样———–设计为普通方法</p>
+<p>​                        所有子类行为不一样———–设计为抽象方法</p>
+<p>​    5） 抽象类的意义：</p>
+<p>​        5.1）封装子类共有的属性和行为——-代码复用</p>
+<p>​        5.2）为所有子类提供了统一的类型—–向上造型</p>
+<p>​        5.3）可以包含抽象方法，为所有子类提供统一的入口</p>
+<p>​            子类的具体实现不同，但方法的定义是一致的</p>
+<p>  <img src="........%5Cimages%5Cwps4.jpg" alt="img"> </p>
+<h2 id="七、抽象类、接口和内部类（下）"><a href="#七、抽象类、接口和内部类（下）" class="headerlink" title="七、抽象类、接口和内部类（下）"></a>七、抽象类、接口和内部类（下）</h2><p> <strong>1. 接口</strong></p>
+<p>​    1）是一种数据类型（引用类型）</p>
+<p>​    2）由<font color="red">interface</font>定义的</p>
+<p>​    3）接口中只能包含常量和抽象方法</p>
+<p>​    4）接口不能被实例化</p>
+<p>​    5）接口时需要被实现（继承）的，实现类（子类）：</p>
+<p>​        必须重写接口中的所有抽象方法</p>
+<p>​    6）一个类可以实现多个接口，用逗号分隔</p>
+<p>​        若又继承又实现时，应先继承后实现</p>
+<p>​    7）接口可以继承接口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Inter1</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> NUM = <span class="number">5</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="keyword">double</span> PI = <span class="number">3.14</span>; <span class="comment">// 默认 public static final</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>; <span class="comment">// public abstract</span></span><br><span class="line">    <span class="keyword">int</span> count; <span class="comment">// 编译错误，常量必须声明同时初始化</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">sayHI</span><span class="params">()</span> </span>&#123;&#125;; <span class="comment">// 编译错误，抽象方法不能有方法体，除非default修饰</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p> <strong>2. 多态</strong></p>
+<pre><code>1）多态的意义：</code></pre><p>​        1.1）同一类型的引用，在指向不同的对象时，有不同的实现；</p>
+<p>​                —————-行为的多态：cut()、run()</p>
+<p>​        1.2）同一个对象，被造型为不同的类型时，有不同的功能；</p>
+<p>​                —————-对象的多态；我、水</p>
+<p><img src="........%5Cimages%5Cwps26.jpg" alt="img"> </p>
+<p><strong>3. 多态的表现形式</strong></p>
+<p>​    1）重写（Override）：</p>
+<p>​        1.1）发生在父子类中，方法名称相同，参数列表相同，方法体不同</p>
+<p>​        1.2）遵循“运行期绑定“，看对象的类型来调用方法</p>
+<p>​    2）重载（Overload）:</p>
+<p>​        2.1）发生在一个类中，方法名称相同，参数列表不同，方法体不同</p>
+<p>​        2.2）遵循“编译期绑定“，看引用的类型来绑定方法</p>
+<p><strong>4. 向上造型</strong></p>
+<p>​    1）父类型的引用指向子类的对象；</p>
+<p>​    2）能造型成为的类型有：父类 + 所实现的接口；</p>
+<p>​    3）能点出来什么，看引用的类型。</p>
+<p><strong>5. 强制类型转换</strong>（成功的条件有两种）</p>
+<p>​    1）引用所指向的对象，就是该类型（条件一）</p>
+<p>​    2）引用所指向的对象，实现了该接口（条件二）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Aoo o1 = <span class="keyword">new</span> Boo(); <span class="comment">// 向上造型（自动类型转换）</span></span><br><span class="line">Boo o2 = (Boo)o1; <span class="comment">// 符合条件一</span></span><br><span class="line">Inter o3 = (Inter1)o1; <span class="comment">// 符合条件二</span></span><br><span class="line">Coo o4 = (Coo)o1; <span class="comment">// ClassCastException 类型转换异常</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Inter1</span></span>&#123;&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Aoo</span></span>&#123;&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Boo</span> <span class="keyword">extends</span> <span class="title">Aoo</span> <span class="keyword">implements</span> <span class="title">Inter1</span></span>&#123;&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Coo</span> <span class="keyword">extends</span> <span class="title">Aoo</span></span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​    注意：强转时若不符合如上两个条件，则发生ClassCastException类型转换异常。</p>
+<p>​                建议在强转之前先通过 instanceof 来判断，引用所指向的对象是否是该类型。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Aoo o1 = <span class="keyword">new</span> Boo(); <span class="comment">// 向上造型（自动类型转换）</span></span><br><span class="line">Boo o2 = (Boo)o1; <span class="comment">// 符合条件一</span></span><br><span class="line">Inter o3 = (Inter1)o1; <span class="comment">// 符合条件二</span></span><br><span class="line">Coo o4 = (Coo)o1; <span class="comment">// ClassCastException 类型转换异常</span></span><br><span class="line"><span class="keyword">if</span> (o1 <span class="keyword">instanceof</span> Boo) &#123; <span class="comment">// false</span></span><br><span class="line">    Boo o5 = (Boo)o1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">System.out.println(o1 <span class="keyword">instanceof</span> Boo); 		<span class="comment">// true</span></span><br><span class="line">System.out.println(o1 <span class="keyword">instanceof</span> Inter1); 	<span class="comment">// true</span></span><br><span class="line">System.out.println(o1 <span class="keyword">instanceof</span> Coo); 		<span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="八、对象内存管理"><a href="#八、对象内存管理" class="headerlink" title="八、对象内存管理"></a>八、对象内存管理</h2><p><strong>1. 引用类型画等号</strong></p>
+<p>​    1）指向同一个对象；</p>
+<p>​    2）对一个引用的修改会影响另一个引用。</p>
+<p><strong>2. 基本类型画等号</strong></p>
+<p>​    1）赋值；</p>
+<p>​    2）对一个变量的修改不会影响另一个变量。</p>
+<p><img src="........%5Cimages%5Cwps36.jpg" alt="img"> </p>
+<p><strong>2. 内存管理：由JVM来管理</strong></p>
+<p>​    1）<strong>堆</strong>：</p>
+<p>​        1.1）存储所有new出来的对象（包括实例变量）</p>
+<p>​        1.2）垃圾：没有任何引用所指向的对象；</p>
+<p>​                垃圾回收器（GC）不定时到内存中去清扫垃圾；</p>
+<p>​                垃圾回收器的回收过程是透明的（看不到的）；</p>
+<p>​                并不是一发现垃圾九立即回收；</p>
+<p>​                调用 System.gc() 是建议虚拟机尽快调用 GC 来回收垃圾。</p>
+<p>​        1.3）内存泄漏：不再使用的内存还没有被及时的回收</p>
+<p>​                建议：不再使用的内存及时将引用设置为 null。</p>
+<p>​        1.4）实例变量的生命周期：</p>
+<p>​                创建对象时存在堆中，对象被回收时一并被回收。</p>
+<p>​    2）<strong>栈</strong>：</p>
+<p>​        2.1）存储正在调用的方法中的所有局部变量（包括参数）</p>
+<p>​        2.2）调用方法时会在栈中为该方法分配一块对应的栈帧，</p>
+<p>​                栈帧中存储方法中的局部变量（包含参数），</p>
+<p>​                方法调用完成时，栈帧被清除，局部变量一并失效</p>
+<p>​        2.3）局部变量的生命周期：</p>
+<p>​                调用方法时存在栈中，方法结束时与栈帧一并被清除。</p>
+<p>​            <strong>实例变量：</strong></p>
+<p>​                1）类中，方法中</p>
+<p>​                2）创建对象时存储在堆中，对象被回收时一并被回收</p>
+<p>​                3）有默认值</p>
+<p>​            <strong>局部变量：</strong></p>
+<p>​                1）方法中</p>
+<p>​                2）调用方法时存储在栈中，方法结束时与栈帧一并被清除</p>
+<p>​                3）没有默认值</p>
+<blockquote>
+<ul>
+<li>一个运行的Java程序从开始到结束会有多次方法的调用，JVM会为每一个方法的调用在栈中分配一个对应的空间，这个空间成为该方法的<strong>栈帧</strong>。</li>
+<li>一个栈帧对应一个正在调用中的方法，栈帧中存储了该方法的参数，局部变量等数据。当某一个方法调用完成后，其对应的栈帧将被请出，局部变量失效。</li>
+</ul>
+</blockquote>
+<p>​    3）<strong>方法区</strong>：</p>
+<p>​        3.1）存储.class字节码文件（包括方法、静态变量）；</p>
+<p>​        3.2）方法只有一份；</p>
+<blockquote>
+<p><strong>实例化class的时候的执行顺序：</strong></p>
+<p><strong>1）方法区</strong>    <strong>2）堆</strong>    <strong>3）栈</strong>        </p>
+</blockquote>
+<p><strong>面向对象的三大特性：</strong></p>
+<p><strong>1.封装：</strong></p>
+<p>​    1）类：封装的对象的属性和行为；</p>
+<p>​    2）方法：封装了具体的业务逻辑功能行为</p>
+<p>​    3）访问控制符：封装的具体的访问权限</p>
+<p><strong>2.继承：</strong></p>
+<p>​    1）作用：实现代码的复用，减少代码的重复；</p>
+<p>​    2）通过 extends 来继承，通过 implements 来实现；</p>
+<p>​    3）单一继承，多接口实现；</p>
+<p>​    4）传递性</p>
+<p><strong>3.多态：</strong></p>
+<p>​    1）行为的多态、对象的多态；</p>
+<p>​    2）向上造型、强制类型转换、instanceof判断</p>
+<p>​    3）多态的表现形式：</p>
+<p>​        3.1）重写（Override）：</p>
+<p>​            3.1.1）发生在父子类中，方法名称相同，参数列表相同，方法体不同</p>
+<p>​            3.1.2）遵循“运行期绑定“，看对象的类型来调用方法</p>
+<p>​        3.2）重载（Overload）:</p>
+<p>​            3.2.1）发生在一个类中，方法名称相同，参数列表不同，方法体不同</p>
+<p>​            3.2.2）遵循“编译期绑定“，看引用的类型来绑定方法</p>
+<p>​    <strong>（ 注意：四大特性：抽象、封装、继承、多态 ）</strong></p>
+<p><strong>面试技巧：</strong></p>
+<p>每个人差不多十分钟事件，所以尽量答详细，不管问什么都尽量往老师总结的面向对象上靠，补充一些，要把东西表达清楚，多背点东西，不管什么知识点都要能说出来</p>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.png">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/11/06/2Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%20OOP/" target="_blank">Java入门（二）面向对象编程OOP</a>
-  
-    </h1>
-  
+      </a>
+    </div>
+    
 
-
-        <div class="article-info info-on-right">
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          ACG kaka
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://acgkaka.github.io/2020/11/06/2Java入门（二）面向对象编程 OOP/" title="Java入门（二）面向对象编程OOP" target="_blank">http://acgkaka.github.io/2020/11/06/2Java入门（二）面向对象编程 OOP/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          文章均为个人整理，如有侵权，请联系删除。
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -563,62 +635,152 @@
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://acgkaka.github.io/2020/11/06/2Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%20OOP/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/11/05/1Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" class="archive-article-date">
-        <time datetime="2020-11-04T20:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020年11月05日</time>
-</a>
 
+
+<nav id="article-nav">
+  
+    <a href="/2020/11/06/3Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%89%EF%BC%89Java%20SE%2001/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Java入门（三）JAVA SE 01
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/11/05/1Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java入门（一）基础语法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/11/05/1Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" target="_blank">Java入门（一）基础语法</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java入门</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、对象和类"><span class="toc-number">1.</span> <span class="toc-text">一、对象和类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、方法和this"><span class="toc-number">2.</span> <span class="toc-text">二、方法和this</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、数组，继承（上）"><span class="toc-number">3.</span> <span class="toc-text">三、数组，继承（上）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、继承（下）"><span class="toc-number">4.</span> <span class="toc-text">四、继承（下）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、访问控制、static和final"><span class="toc-number">5.</span> <span class="toc-text">五、访问控制、static和final</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、抽象类、接口和内部类（上）"><span class="toc-number">6.</span> <span class="toc-text">六、抽象类、接口和内部类（上）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#七、抽象类、接口和内部类（下）"><span class="toc-number">7.</span> <span class="toc-text">七、抽象类、接口和内部类（下）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#八、对象内存管理"><span class="toc-number">8.</span> <span class="toc-text">八、对象内存管理</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
   
+  <div id="gitment-ctn"></div>
   
-    </div></section>
+    <!-- 中文 -->
+    <link rel="stylesheet" href="/lib/gitment.css">
+    <script src="/lib/gitment.js"></script>
+  
+  <script>
+    <!-- id: "Java入门（二）面向对象编程OOP" -->
+    var gitment = new Gitment({
+      id: "20201106000000",
+      owner: 'ACGkaka',
+      repo: 'ACGkaka.github.io',
+      oauth: {
+        client_id: '1062039060f4021e8ae2',
+        client_secret: '6ffbfcbd49ef5b123d524664657145a662179f34',
+      },
+    })
+    gitment.render('gitment-ctn')
+  </script>
+
+
   
 
-    
 
 
           </div>
@@ -659,9 +821,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
