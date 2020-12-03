@@ -6,21 +6,34 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://acgkaka.github.io">
-  <title>Java入门（一）基础语法 | ACGkaka</title>
+  <title>如何使用hexo和github搭建个人博客 | ACGkaka</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="Java开发环境、数据类型、运算符、分支结构、循环结构、数组">
+  <meta name="description" content="如何使用hexo和github搭建个人博客">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java入门（一）基础语法">
-<meta property="og:url" content="http://acgkaka.github.io/2020/11/05/1Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/index.html">
+<meta property="og:title" content="如何使用hexo和github搭建个人博客">
+<meta property="og:url" content="http://acgkaka.github.io/2020/11/04/0%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hexo%E5%92%8Cgithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20-%20%E5%89%AF%E6%9C%AC/index.html">
 <meta property="og:site_name" content="ACGkaka">
-<meta property="og:description" content="Java开发环境、数据类型、运算符、分支结构、循环结构、数组">
-<meta property="article:published_time" content="2020-11-04T20:00:00.000Z">
-<meta property="article:modified_time" content="2020-11-05T07:15:02.838Z">
+<meta property="og:description" content="如何使用hexo和github搭建个人博客">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200617100144295.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/202006171002105.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200617100225673.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020061710023937.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200617100252607.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200617100312512.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200617100329111.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201104093115811.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200617100357341.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020061710041118.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200617100427797.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200617134043266.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-11-03T20:00:00.000Z">
+<meta property="article:modified_time" content="2020-11-04T03:26:03.557Z">
 <meta property="article:author" content="ACG kaka">
-<meta property="article:tag" content="Java入门">
+<meta property="article:tag" content="工具">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200617100144295.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
   
     <link rel="alternative" href="/atom.xml" title="ACGkaka" type="application/atom+xml">
   
@@ -221,14 +234,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-1Java入门（一）基础语法" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-0如何使用hexo和github搭建个人博客 - 副本" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      Java入门（一）基础语法
+      如何使用hexo和github搭建个人博客
     </h1>
   
 
@@ -240,8 +253,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/11/05/1Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" class="archive-article-date">
-        <time datetime="2020-11-04T20:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020年11月05日</time>
+<a href="/2020/11/04/0%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hexo%E5%92%8Cgithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20-%20%E5%89%AF%E6%9C%AC/" class="archive-article-date">
+        <time datetime="2020-11-03T20:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020年11月04日</time>
 </a>
 
   
@@ -250,358 +263,75 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <!--:loudspeaker:：哈喽~:sunny:欢迎加入程序:monkey:大家庭，快点开始:black_nib:自己的黑客帝国吧 ~:ocean::ocean:-->
-
-<h2 id="一、Java开发环境"><a href="#一、Java开发环境" class="headerlink" title="一、Java开发环境"></a>一、Java开发环境</h2><blockquote>
-<p>Java特点：<strong>跨平台、一次编程到处使用</strong></p>
+    <h2 id="1-在gihub上创建个人首页"><a href="#1-在gihub上创建个人首页" class="headerlink" title="1. 在gihub上创建个人首页"></a>1. 在gihub上创建个人首页</h2><blockquote>
+<p><strong>成果展示：</strong><a href="https://acgkaka.github.io/">https://acgkaka.github.io/</a></p>
 </blockquote>
+<p>登录GitHub，如果没有的话需要注册一个账号。</p>
 <a id="more"></a>
 
-<p><strong>1. Java开发环境</strong>：</p>
-<p>​    1）Java编译运行过程：——常见面试题</p>
-<p>​        1.1）<strong>编译期</strong>：.Java源文件，经过编译，生成.class字节码文件</p>
-<p>​        1.2）<strong>运行期</strong>：JVM加载.class并运行.class</p>
-<p>​     2）名词解释：————–常见面试题</p>
-<p>​        2.1）<strong>JVM</strong>：Java虚拟机<em>（加载.class并运行.class）</em></p>
-<p>​        2.2）<strong>JRE</strong>：Java运行环境</p>
-<p>​            除了包含JVM以外还包含了运行Java程序所必须的环境</p>
-<p>​            <font color="red">JRE = JVM + Java系统类库</font></p>
-<p>​        2.3）<strong>JDK</strong>：Java开发工具包</p>
-<p>​            除了包含JRE以外还包含了开发Java程序所必须的命令工具</p>
-<p>​            <font color="red">JDK = JRE + 编译、运行等等命令工具</font></p>
-<p>​        说明：</p>
-<p>​            * 运行Java程序的最小环境为JRE</p>
-<p>​            * 开发Java程序的最小环境为JDK</p>
-<p>​    3）配置环境变量：———————了解</p>
-<p>​        3.1）JAVA_HOME：指向jdk的安装路径</p>
-<p>​        3.2）CLASSPATH：表示类的搜索路径，一般简写为.</p>
-<p>​        3.3）PATH：指向 JDK 下的bin目录</p>
-<p><strong>2. Java开发工具-eclipse：</strong></p>
-<p>​    1）IBM、开源的、免费、不需要安装仅需要解压即可</p>
-<p>​    2）步骤：</p>
-<p>​        2.1）新建Java项目/工程—————–小区</p>
-<p>​        2.2）新建Java包————————楼+单元</p>
-<p>​        2.3）新建Java类————————房子</p>
-<p>​    3）注释：解释性文字</p>
-<p>​        3.1）单行注释：//</p>
-<p>​        3.2）多行注释：/** **/</p>
-<p>​        3.3）文档注释：/** **/—————-API之后</p>
-<p><strong>练习：</strong></p>
-<p>​    1）创建Java项目MyProject</p>
-<p>​    2）在MyProejct项目中创建Java包mypackage</p>
-<p>​    3）在mypackage包中创建Java类MyClass，main(）中：</p>
-<p>​        输出HelloWorld，并换行</p>
-<p>​    4）在mypackage包中创建Java类Test，main(）中：</p>
-<p>​        输出Hello，不换行</p>
-<p>​        输出World，换行</p>
-<p>​        输出当日事当日毕，换行</p>
-<p>​        输出……</p>
-<p><strong>3. Java系统类库</strong>（Maven、Gradle）：</p>
-<ul>
-<li>Java做好的一堆小零件</li>
-<li>把一些特别常用的功能，都给我们封装好了</li>
-<li>直接拿过来就用</li>
-</ul>
-<p> <strong>补充：</strong></p>
-<ol>
-<li><p>Eclipse</p>
-<ul>
-<li><p>eclipse这个软件是通过Java语言写的</p>
-</li>
-<li><p>IBM公司使用Java语言开发了eclipse</p>
-</li>
-<li><p>让人们用eclipse去写Java程序</p>
-</li>
-<li><p>A：先装JDK再运行eclipse————-正确的</p>
-</li>
-</ul>
-</li>
-</ol>
-<ol start="2">
-<li><p>Linux</p>
-<ul>
-<li>主要是通过命令来操作的</li>
-<li>主要是服务器操作系统</li>
-<li><em>（Java主要是做服务器端开发）</em></li>
-</ul>
-</li>
-<li><p>对比</p>
-<ul>
-<li>Windows：安全级别低</li>
-<li>Linux：安全级别高</li>
-<li>Windows：————–C盘(系统盘）</li>
-<li>Linux：—————-可以对每一个文件设计权限</li>
-</ul>
-</li>
-</ol>
-<h3 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello World"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>登录之后，点击Your repositories，进入仓库：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200617100144295.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>点击new创建一个名称为用户名.github.io的仓库：</p>
+<p><img src="https://img-blog.csdnimg.cn/202006171002105.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>创建完之后，将仓库克隆到到本地：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200617100225673.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/2020061710023937.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200617100252607.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>然后提交一个index.html文件：</p>
+<p><strong>index.html</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Welcome to ACGkaka<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">center</span>&gt;</span><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Have a nice day.<span class="tag">&lt;/<span class="name">h1</span>&gt;</span><span class="tag">&lt;/<span class="name">center</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
+<p>提交完之后访问用户名.github.io，就可以看到你的主页了：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200617100312512.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="2-使用hexo"><a href="#2-使用hexo" class="headerlink" title="2. 使用hexo"></a>2. 使用hexo</h2><p>官网地址：<a href="http://hexo.io" target="_blank" rel="noopener">http://hexo.io</a></p>
+<h3 id="2-1-安装"><a href="#2-1-安装" class="headerlink" title="2.1 安装"></a>2.1 安装</h3><p>下载nodeJs之后，输入官网上的命令，进行安装：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200617100329111.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install hexo-cli -g</span></span><br></pre></td></tr></table></figure>
 
+<h3 id="2-2-初始化"><a href="#2-2-初始化" class="headerlink" title="2.2 初始化"></a>2.2 初始化</h3><p>新建<font color="red"><strong>hexo</strong></font>文件夹，比如我的是D:\hexo，这个文件夹就是你存放hexo代码的地方，最好不要随便放。</p>
+<p>输入命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> D:\hexo</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo init</span></span><br></pre></td></tr></table></figure>
 
+<p>hexo就会自动下载一些文件到这个目录</p>
+<p><img src="https://img-blog.csdnimg.cn/20201104093115811.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h3 id="2-3-启动"><a href="#2-3-启动" class="headerlink" title="2.3 启动"></a>2.3 启动</h3><p>输入命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo g <span class="comment"># 生成页面</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo s <span class="comment"># 启动服务</span></span></span><br></pre></td></tr></table></figure>
 
+<p><font color="red"><strong>hexo s</strong></font> 是开启本地预览服务，打开浏览器访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 就可以看到页面了：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200617100357341.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="2-4-部署"><a href="#2-4-部署" class="headerlink" title="2.4 部署"></a>2.4 部署</h3><p>修改 _config.yml 配置文件中的地址为git上的地址：</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy</span>:<span class="string"></span></span><br><span class="line">  <span class="attr">type</span>: <span class="string">git</span></span><br><span class="line">  <span class="attr">repository</span>: <span class="string">git@github.com:ACGkaka/ACGkaka.github.io.git</span></span><br><span class="line">  <span class="attr">branch</span>: <span class="string">master</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="二、变量，基本数据类型"><a href="#二、变量，基本数据类型" class="headerlink" title="二、变量，基本数据类型"></a>二、变量，基本数据类型</h2><p><strong>1. 变量</strong></p>
-<p>​    存数的，代词，指代的就是它所存的那个数</p>
-<p>​    1）声明：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a;   <span class="comment">//声明一个整型的变量，名为a</span></span><br><span class="line"><span class="keyword">int</span> b,c,d; <span class="comment">//声明三个整型的变量，名为b,c,d</span></span><br></pre></td></tr></table></figure>
+<p>在hexo目录使用 git bash 打开当前目录：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo d</span></span><br></pre></td></tr></table></figure>
 
-<p>​    2）初始化：第一次赋值</p>
-<p>​        2.1）声明的同时初始化</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">250</span>; <span class="comment">//声明整型变量a并赋值为250</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/2020061710041118.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>如果出现如下错误提示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Deployer not found: github</span><br></pre></td></tr></table></figure>
 
-<p>​        2.2）先声明后初始化</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a;  <span class="comment">//声明整型变量a</span></span><br><span class="line">a = <span class="number">250</span>; <span class="comment">//给变量a赋值为250</span></span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Deployer not found: git</span><br></pre></td></tr></table></figure>
 
-<p>​     3）使用：</p>
-<p>​        3.1）对变量的使用就是对它所存的那个数的使用</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span> b = a+<span class="number">10</span>; <span class="comment">//取出a的值5，加10后，再赋值给整型变量b</span></span><br><span class="line">System.out.println(b);  <span class="comment">//输出变量b的值15</span></span><br><span class="line">System.out.println(<span class="string">"b"</span>); <span class="comment">//输出b，双引号中的原样输出</span></span><br><span class="line"></span><br><span class="line">a = a+<span class="number">10</span>; <span class="comment">//取出a的值5，加10后，再赋值给a</span></span><br><span class="line">System.out.println(a); <span class="comment">//输出变量a的值15</span></span><br></pre></td></tr></table></figure>
+<p>是因为还需要安装一个插件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
-<p>​        3.2）变量的使用必须与数据类型匹配</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">3.14</span>; <span class="comment">//编译错误，数据类型不匹配</span></span><br></pre></td></tr></table></figure>
+<p>hexo d执行成功之后，再访问我们github上的个人首页就可以看到效果了，部署成功。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200617100427797.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="2-5-常用hexo命令"><a href="#2-5-常用hexo命令" class="headerlink" title="2.5 常用hexo命令"></a>2.5 常用hexo命令</h3><p>常见命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo new <span class="string">"postName"</span> <span class="comment">#新建文章</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo new page <span class="string">"pageName"</span> <span class="comment">#新建页面</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo generate <span class="comment">#生成静态页面至public目录</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo server <span class="comment">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo deploy <span class="comment">#部署到GitHub</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo version  <span class="comment">#查看Hexo的版本</span></span></span><br></pre></td></tr></table></figure>
 
-<p>​        3.3）变量在用之前必须声明并初始化</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(m); <span class="comment">//编译错误，变量未声明</span></span><br><span class="line"><span class="keyword">int</span> m;</span><br><span class="line">System.out.println(m); <span class="comment">//编译错误，变量未初始化</span></span><br></pre></td></tr></table></figure>
+<p>缩写：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo n == hexo new</span><br><span class="line">hexo g == hexo generate</span><br><span class="line">hexo s == hexo server</span><br><span class="line">hexo d == hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p>​     4）命名规则：</p>
-<p>​        4.1）只能包含字母、数字、_和$符，并且不能以数字开头</p>
-<p>​        4.2）严格区分大小写</p>
-<p>​        4.3）不能使用关键字</p>
-<p>​        4.4）可以中文命名，但不建议</p>
-<p>​          建议：”英文的见名知意”、”驼峰命名法”</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> score,myScore,myJavaScore; <span class="comment">//驼峰命名法</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> Score,MyScore,MyJavaScore; <span class="comment">//帕斯卡命名法</span></span><br></pre></td></tr></table></figure>
+<p>组合命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo s -g <span class="comment">#生成并本地预览</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo d -g <span class="comment">#生成并上传</span></span></span><br></pre></td></tr></table></figure>
 
+<h3 id="2-6-config-yml文件"><a href="#2-6-config-yml文件" class="headerlink" title="2.6 _config.yml文件"></a>2.6 _config.yml文件</h3><p>下面是hexo根目录的配置文件（<font color="red"><strong>_config.yml</strong></font>）解释：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Hexo Configuration</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/configuration.html</span></span><br><span class="line"><span class="comment">## Source: https://github.com/hexojs/hexo/</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Hexo</span> <span class="comment">#网站标题</span></span><br><span class="line"><span class="attr">subtitle:</span>   <span class="comment">#网站副标题</span></span><br><span class="line"><span class="attr">description:</span>  <span class="comment">#网站描述</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">John</span> <span class="string">Doe</span>  <span class="comment">#作者</span></span><br><span class="line"><span class="attr">language:</span>    <span class="comment">#语言</span></span><br><span class="line"><span class="attr">timezone:</span>    <span class="comment">#网站时区。Hexo 默认使用您电脑的时区。时区列表。比如说：America/New_York, Japan, 和 UTC 。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">http://yoursite.com</span>   <span class="comment">#你的站点Url</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/</span>                       <span class="comment">#站点的根目录</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span>   <span class="comment">#文章的 永久链接 格式   </span></span><br><span class="line"><span class="attr">permalink_defaults:</span>    <span class="comment">#永久链接中各部分的默认值</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Directory   </span></span><br><span class="line"><span class="attr">source_dir:</span> <span class="string">source</span>   <span class="comment">#资源文件夹，这个文件夹用来存放内容</span></span><br><span class="line"><span class="attr">public_dir:</span> <span class="string">public</span>     <span class="comment">#公共文件夹，这个文件夹用于存放生成的站点文件。</span></span><br><span class="line"><span class="attr">tag_dir:</span> <span class="string">tags</span>         <span class="comment"># 标签文件夹     </span></span><br><span class="line"><span class="attr">archive_dir:</span> <span class="string">archives</span>    <span class="comment">#归档文件夹</span></span><br><span class="line"><span class="attr">category_dir:</span> <span class="string">categories</span>      <span class="comment">#分类文件夹</span></span><br><span class="line"><span class="attr">code_dir:</span> <span class="string">downloads/code</span>     <span class="comment">#Include code 文件夹</span></span><br><span class="line"><span class="attr">i18n_dir:</span> <span class="string">:lang</span>                <span class="comment">#国际化（i18n）文件夹</span></span><br><span class="line"><span class="attr">skip_render:</span>                <span class="comment">#跳过指定文件的渲染，您可使用 glob 表达式来匹配路径。    </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Writing</span></span><br><span class="line"><span class="attr">new_post_name:</span> <span class="string">:title.md</span> <span class="comment"># 新文章的文件名称</span></span><br><span class="line"><span class="attr">default_layout:</span> <span class="string">post</span>     <span class="comment">#预设布局</span></span><br><span class="line"><span class="attr">titlecase:</span> <span class="literal">false</span> <span class="comment"># 把标题转换为 title case</span></span><br><span class="line"><span class="attr">external_link:</span> <span class="literal">true</span> <span class="comment"># 在新标签中打开链接</span></span><br><span class="line"><span class="attr">filename_case:</span> <span class="number">0</span>     <span class="comment">#把文件名称转换为 (1) 小写或 (2) 大写</span></span><br><span class="line"><span class="attr">render_drafts:</span> <span class="literal">false</span>  <span class="comment">#是否显示草稿</span></span><br><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">false</span>  <span class="comment">#是否启动 Asset 文件夹</span></span><br><span class="line"><span class="attr">relative_link:</span> <span class="literal">false</span>      <span class="comment">#把链接改为与根目录的相对位址    </span></span><br><span class="line"><span class="attr">future:</span> <span class="literal">true</span>                <span class="comment">#显示未来的文章</span></span><br><span class="line"><span class="attr">highlight:</span>                    <span class="comment">#内容中代码块的设置    </span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">line_number:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">auto_detect:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">tab_replace:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Category &amp; Tag</span></span><br><span class="line"><span class="attr">default_category:</span> <span class="string">uncategorized</span></span><br><span class="line"><span class="attr">category_map:</span>          <span class="comment">#分类别名</span></span><br><span class="line"><span class="attr">tag_map:</span>            <span class="comment">#标签别名</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Date / Time format</span></span><br><span class="line"><span class="comment">## Hexo uses Moment.js to parse and display date</span></span><br><span class="line"><span class="comment">## You can customize the date format as defined in</span></span><br><span class="line"><span class="comment">## http://momentjs.com/docs/#/displaying/format/</span></span><br><span class="line"><span class="attr">date_format:</span> <span class="string">YYYY-MM-DD</span>         <span class="comment">#日期格式</span></span><br><span class="line"><span class="attr">time_format:</span> <span class="string">HH:mm:ss</span>        <span class="comment">#时间格式    </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Pagination</span></span><br><span class="line"><span class="comment">## Set per_page to 0 to disable pagination</span></span><br><span class="line"><span class="attr">per_page:</span> <span class="number">10</span>    <span class="comment">#分页数量</span></span><br><span class="line"><span class="attr">pagination_dir:</span> <span class="string">page</span>  </span><br><span class="line"></span><br><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">landscape</span>   <span class="comment">#主题名称</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="comment">#  部署部分的设置</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repository:</span> <span class="string">git@github.com:ACGkaka/ACGkaka.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
 
-
-<p><strong>2.八种基本数据类型：</strong></p>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>字节数</th>
-<th>取值范围</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>byte</td>
-<td>1</td>
-<td>-128~127</td>
-</tr>
-<tr>
-<td>short</td>
-<td>2</td>
-<td>-32768~32767</td>
-</tr>
-<tr>
-<td>int</td>
-<td>4</td>
-<td>-2147483648~2147483647（21亿，2.1E+9）</td>
-</tr>
-<tr>
-<td>long</td>
-<td>8</td>
-<td>-9223372036854775808~9223372036854775807(9E+18）</td>
-</tr>
-<tr>
-<td>float</td>
-<td>4</td>
-<td>-3.40E+38~3.40E+38</td>
-</tr>
-<tr>
-<td>double</td>
-<td>8</td>
-<td>-1.79E+308~1.79E+308</td>
-</tr>
-<tr>
-<td>boolean</td>
-<td>1</td>
-<td>true，false</td>
-</tr>
-<tr>
-<td>char</td>
-<td>2</td>
-<td>0~65535</td>
-</tr>
-</tbody></table>
-<p>常用的基础数据类型：</p>
-<p>​    1）<strong>int</strong>：整型，4个字节，-21个多亿到21个多亿</p>
-<p>​        1.1）整数直接量默认为int型，但不能超范围，超范围则编译错误</p>
-<p>​        1.2）两个整数相除，结果还是整数，小数位无条件舍弃</p>
-<p>​        1.3）整数运算时超范围则发生溢出，溢出是需要避免的</p>
-<p>​    2）<strong>long</strong>：长整型，8个字节，很大很大很大</p>
-<p>​        2.1）长整型直接量需在数字后加L或l</p>
-<p>​        2.2）运算时若有可能溢出，建议在第1个数字后加L或l</p>
-<p>​        2.3）System.currentTimeMillis(）用于获取自1970.1.1零时到此时此刻的毫秒数</p>
-<p>​    3）<strong>double</strong>：浮点型，8个字节，很大很大很大</p>
-<p>​        3.1）浮点数直接量默认为double型，表示float需在数字后加F或f</p>
-<p>​        3.2）浮点型数据参与运算时，有可能会出现舍入误差，精确运算场合不能使用</p>
-<p>​    4）<strong>boolean</strong>：布尔型，1个字节</p>
-<p>​        4.1）只能存储true和false</p>
-<p>​    5）<strong>char</strong>：字符型，2个字节</p>
-<p>​        5.1）采用Unicode字符集编码，一个字符(char）对应一个码(int）</p>
-<p>​            表现的形式是字符char，本质上是码int(0到65535之间）</p>
-<p>​            ASCII码(‘a’–97  ‘A’–65  ‘0’–48）</p>
-<p>​        5.2）字符直接量必须放在单引号中，只能有一个</p>
-<p>​        5.3）特殊符号需要通过*来转义</p>
-<p><strong>3. 基本数据类型间的转换</strong></p>
-<blockquote>
-<p>基本类型从小到大依次为：<strong>byte &lt; short &lt; int &lt; long &lt; float &lt; double &lt; char</strong></p>
-</blockquote>
-<p>​    1）两种方式：</p>
-<p>​        1.1）自动类型转换：从小类型到大类型</p>
-<p>​    1.2）强制类型转换：从大类型到小类型</p>
-<p>​        - (要转换成为的数据类型）变量</p>
-<p>​        - 强转有可能会溢出或丢失精度</p>
-<p>​    2）两点规则：</p>
-<p>​        2.1）整数直接量可以直接赋值给byte,short,char，<font color="red">但不能超范围</font></p>
-<p>​        2.2）byte,short,char型数据参与运算时，</p>
-<p>​      先一律转换为int再运算</p>
-<p><strong>4. Scanner的用法</strong></p>
-<blockquote>
-<p>用于接收用户输入的值</p>
-</blockquote>
-<p>​    1）在package下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Java.util.Scanner;</span><br></pre></td></tr></table></figure>
-
-<p>​    2）在main中：</p>
-   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    Scanner scan = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"></span><br><span class="line">	System.out.println(<span class="string">"请输入年龄："</span>);</span><br><span class="line">	<span class="keyword">int</span> age = scan.nextInt();</span><br><span class="line"></span><br><span class="line">	System.out.println(<span class="string">"请输入价格："</span>);</span><br><span class="line">	<span class="keyword">double</span> price = scan.nextDouble();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>补充：</strong></p>
-<p>​    1. char：字符型</p>
-<p>​    2. Unicode字符集编码———统一码、通用码、万国码</p>
-<p>​        世界级通用的定长字符集</p>
-<p>​        Java中的Unicode———–通用字符集版本 0到65535</p>
-<p>​        一个字符(char）对应一个码(int）</p>
-<p>​    3. 表现的形式是char字符，实质上是int码</p>
-<p>​    4. char就是个int(0到65535）</p>
-<p>​    5. 精确运算场合不能使用double和float，要使用BigDecimal</p>
-<ol start="6">
-<li><p>直接量超范围为编译错误</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">10000000000</span>;  <span class="comment">//编译错误</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>运算时超范围为溢出（溢出是需要避免的）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> b = <span class="number">1000000000</span>**<span class="number">10</span>; <span class="comment">//溢出</span></span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ol>
-<h2 id="三、六种运算符"><a href="#三、六种运算符" class="headerlink" title="三、六种运算符"></a>三、六种运算符</h2><p><strong>1. 算术运算符</strong>（+ - * / % ++ – ）</p>
-<p>​    1）%：取模/取余，余数为0即为整除</p>
-<p>​    2）++/–：自增1/自减1，可在变量前可在变量后</p>
-<p>​        2.1）单独使用时，在前在后无差别</p>
-<p>​        2.2）被使用时，在前在后有差别</p>
-<p>​            a++的值为a</p>
-<p>​            ++a的值为a+1</p>
-<p><strong>2.关系运算符</strong>：</p>
-<p>​    1）&gt;(大于）,&lt;(小于）</p>
-<p>​        &gt;=(大于或等于）,&lt;=(小于或等于）</p>
-<p>​        ==(等于）,!=(不等于）</p>
-<p>​    2）关系运算的结果为boolean型，</p>
-<p>​        关系成立则为true，关系不成立则为false</p>
-<p> <strong>3. 逻辑运算符</strong></p>
-<p>​    1）&amp;&amp;：短路与(并且），两边都为真则为真，见false则false</p>
-<p>​        第1个数为false时，发生短路(后面的不执行了）</p>
-<p>​        ||：短路或(或者），有一边为真则为真，见true则true</p>
-<p>​        第1个数为true时，发生短路(后面的不执行了）</p>
-<p>​        !：逻辑非(取反），非真则假，非假则真</p>
-<p>​    2）逻辑运算是建立在关系运算的基础之上的，</p>
-<p>​        逻辑运算的结果也是boolean型</p>
-<p><strong>4. 赋值运算符</strong></p>
-<p>​    1）简单赋值运算符：=</p>
-<p>​    2）扩展赋值运算符：+=,-=,**=,/=,%=</p>
-<p><strong>5. 字符串连接运算符</strong></p>
-<p>​    1）+：</p>
-<p>​        1.1）若两边都是数字，则做加法运算</p>
-<p>​        1.2）若两边出现了字符串，则做字符串连接</p>
-<p><strong>6. 三目/条件运算符</strong></p>
-<p>​    1）语法：</p>
-<p>​        boolean?数1：数2</p>
-<p>​    2）执行过程：</p>
-<p>​        计算boolean的值：</p>
-<p>​        若为true，则整个表达式的结果为数1</p>
-<p>​        若为false，则整个表达式的结果为数2、</p>
-<h2 id="四、分支结构，循环结构"><a href="#四、分支结构，循环结构" class="headerlink" title="四、分支结构，循环结构"></a>四、分支结构，循环结构</h2><p><strong>1. 分支结构</strong></p>
-<p>​    1）if…else if结构：多条路</p>
-<p>​    2）switch…case结构：多条路</p>
-<p>​        优点：效率高、结构清晰</p>
-<p>​        缺点：整数、相等</p>
-<p>​        break：跳出switch</p>
-<p>​        default：其他</p>
-<p><strong>2. 循环结构</strong></p>
-<p>​    1）循环：反复的执行一段相同或相似的代码</p>
-<p>​    2）循环三要素：</p>
-<p>​        2.1）循环变量的初始化</p>
-<p>​        2.2）循环的条件(以循环变量为基础）</p>
-<p>​        2.3）循环变量的改变(向着循环的结束变）</p>
-<p>​        <em>循环变量：在整个循环过程中所反复改变的那个数</em></p>
-<p>​    3）循环结构：</p>
-<p>​        3.1）while结构：先判断后执行，有可能一次都不执行</p>
-<p>​        3.2）do…while结构：先执行后判断，至少执行一次</p>
-<p>​              当第1要素与第3要素相同时首选do…while</p>
-<p>Math.random()——————————–0.0到0.99999999999999…</p>
-<p>Math.random() * 1000———————-0.0到999.999999999999…</p>
-<p>(int)(Math.random() * 1000)—————0到999</p>
-<p>(int)(Math.random() * 1000) + 1———-1到1000</p>
-<p><strong>总结：</strong></p>
-<p>1）顺序结构：从上往下逐行执行，每句必走</p>
-<p>2）分支结构：有条件的执行某语句一次，并非每句必走</p>
-<p>3）循环结构：有条件的执行某语句多次，并非每句必走</p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="keyword">boolean</span>) &#123; <span class="comment">// 多次</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 语句块/循环体---------------反复执行的语句</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">boolean</span>) &#123; <span class="comment">//一次</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 语句块</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>注意：</strong></p>
-<ol>
-<li>能用switch…case实现的，都可以用if…else if来实现</li>
-<li>能用if…else if实现的，不一定能用switch…case实现</li>
-<li>正好是对整数来判断相等————首选switch…case</li>
-</ol>
-<h2 id="五、三种循环结构，数组"><a href="#五、三种循环结构，数组" class="headerlink" title="五、三种循环结构，数组"></a>五、三种循环结构，数组</h2><p><strong>1. 循环结构</strong></p>
-<p>​    <strong>for</strong>：固定次数循环，应用率最高</p>
-<p><strong>2. break</strong>（跳出循环）</p>
-<p>​    <strong>continue</strong>：跳过循环体中剩余语句而进入下一次循环</p>
-<p><strong>3. 三种循环结构的适用情况</strong></p>
-<p>​    1）<font color="red">while</font>：”当…”循环</p>
-<p>​        要素1与要素3不同时首选while</p>
-<p>​    2）<font color="red">do…while</font>：”直到…”循环</p>
-<p>​        要素1与要素3相同时首选do…while</p>
-<p>​    3）<font color="red">for</font>：应用率最高，固定次数循环</p>
-<p><strong>4. 嵌套循环</strong></p>
-<p>​    1）循环中套循环，一般多行多列时使用，外层控制行，内层控制列</p>
-<p>​    2）执行规则：外层循环走一次，内层循环走所有次</p>
-<p>​    3）建议：嵌套层数越少越好，能用一层不用两层，能用两层不用三层，</p>
-<p>​        若需求必须通过三层以上的循环才能实现，说明设计有问题</p>
-<p>​    4）break只能跳出一层循环</p>
-<p><strong>5. 程序 = 算法 + 数据结构</strong></p>
-<p>​    1）算法：解决问题的流程/步骤(顺序、分支、循环）</p>
-<p>​    2）数据结构：将数据按照某种特定的结构来保存</p>
-<p>​        - 数怎么存</p>
-<p>​        - 设计良好的/合理的数据结构会导致好的算法</p>
-<p><strong>6. 数组</strong></p>
-<p>​    1）相同数据类型元素的集合</p>
-<p>​    2）是一种数据类型(引用类型）</p>
-<p>​    3）数组的定义：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br></pre></td></tr></table></figure>
-
-<p>​    4）数组的初始化：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">4</span>]; <span class="comment">//0,0,0,0</span></span><br><span class="line"><span class="keyword">int</span>[] arr = &#123;<span class="number">1</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">9</span>&#125;; <span class="comment">//1,4,5,9</span></span><br><span class="line"><span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">1</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">9</span>&#125;; <span class="comment">//1,4,5,9</span></span><br><span class="line"><span class="keyword">int</span>[] arr;</span><br><span class="line">arr = &#123;<span class="number">1</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">9</span>&#125;; <span class="comment">//编译错误</span></span><br><span class="line">arr = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">1</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">9</span>&#125;; <span class="comment">//正确</span></span><br></pre></td></tr></table></figure>
-
-<p>​    5）数组的访问：</p>
-<p>​        5.1）通过(数组名.length）可以获取数组的长度</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">4</span>];</span><br><span class="line">System.out.println(arr.length); <span class="comment">//4</span></span><br></pre></td></tr></table></figure>
-
-<p>​    5.2）通过下标/索引来访问数组中的元素</p>
-<p>​        下标从0开始，最大到(数组的长度-1）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];</span><br><span class="line"></span><br><span class="line">arr[<span class="number">0</span>] = <span class="number">100</span>; <span class="comment">//给arr中的第1个元素赋值为100</span></span><br><span class="line">arr[<span class="number">1</span>] = <span class="number">200</span>; <span class="comment">//给arr中的第2个元素赋值为200</span></span><br><span class="line">arr[<span class="number">2</span>] = <span class="number">300</span>; <span class="comment">//给arr中的第3个元素赋值为300</span></span><br><span class="line">arr[<span class="number">3</span>] = <span class="number">400</span>; <span class="comment">//数组下标越界异常</span></span><br><span class="line"></span><br><span class="line">System.out.println(arr[arr.length-<span class="number">1</span>]); <span class="comment">//输出arr中最后一个元素的值</span></span><br></pre></td></tr></table></figure>
-
-<p>​    6）数组的遍历：</p>
-   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;arr.length;i++）&#123;</span><br><span class="line">	arr[i] = <span class="number">100</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;arr.length;i++）&#123;</span><br><span class="line">	System.out.println(arr[i]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=arr.length-<span class="number">1</span>;i&gt;=<span class="number">0</span>;i--）&#123;</span><br><span class="line">	System.out.println(arr[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>补充：</strong></p>
-<p>​    循环———-不固定次数用while或do…while</p>
-<p>​    找三要素</p>
+<h3 id="2-7-修改主题"><a href="#2-7-修改主题" class="headerlink" title="2.7 修改主题"></a>2.7 修改主题</h3><p>官方主题地址：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a><br>以<strong>yilia</strong>举例：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /f/Workspaces/hexo/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</span></span><br></pre></td></tr></table></figure>
+<p>效果如下：<br><img src="https://img-blog.csdnimg.cn/20200617134043266.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 
     
 
@@ -648,7 +378,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://acgkaka.github.io/2020/11/05/1Java入门（一）基础语法/" title="Java入门（一）基础语法" target="_blank">http://acgkaka.github.io/2020/11/05/1Java入门（一）基础语法/</a>
+          <a href="http://acgkaka.github.io/2020/11/04/0如何使用hexo和github搭建个人博客 - 副本/" title="如何使用hexo和github搭建个人博客" target="_blank">http://acgkaka.github.io/2020/11/04/0如何使用hexo和github搭建个人博客 - 副本/</a>
         </li>
         
         <li>
@@ -670,7 +400,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java入门</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
         		</li>
       		
 		</ul>
@@ -726,7 +456,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://acgkaka.github.io/2020/11/05/1Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://acgkaka.github.io/2020/11/04/0%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hexo%E5%92%8Cgithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20-%20%E5%89%AF%E6%9C%AC/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -741,20 +471,15 @@
 
 <nav id="article-nav">
   
-    <a href="/2020/11/06/2Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%20OOP/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/11/05/1Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Java入门（二）面向对象编程OOP
+          Java入门（一）基础语法
         
       </div>
     </a>
   
-  
-    <a href="/2020/11/04/0%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hexo%E5%92%8Cgithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%20-%20%E5%89%AF%E6%9C%AC/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">如何使用hexo和github搭建个人博客</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
@@ -771,19 +496,6 @@
             </div>
         </div>
         
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、Java开发环境"><span class="toc-number">1.</span> <span class="toc-text">一、Java开发环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hello-World"><span class="toc-number">1.1.</span> <span class="toc-text">Hello World</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、变量，基本数据类型"><span class="toc-number">2.</span> <span class="toc-text">二、变量，基本数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、六种运算符"><span class="toc-number">3.</span> <span class="toc-text">三、六种运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、分支结构，循环结构"><span class="toc-number">4.</span> <span class="toc-text">四、分支结构，循环结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、三种循环结构，数组"><span class="toc-number">5.</span> <span class="toc-text">五、三种循环结构，数组</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
         
     </div>
 </aside>
@@ -806,9 +518,9 @@
     <script src="/lib/gitment.js"></script>
   
   <script>
-    <!-- id: "Java入门（一）基础语法" -->
+    <!-- id: "如何使用hexo和github搭建个人博客" -->
     var gitment = new Gitment({
-      id: "20201105040000",
+      id: "20201104040000",
       owner: 'ACGkaka',
       repo: 'ACGkaka.github.io',
       oauth: {
