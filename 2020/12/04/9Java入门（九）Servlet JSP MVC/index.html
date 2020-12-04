@@ -10,67 +10,61 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="JDBC概述、封装JDBCUtils工具类、Statement、PreparedStatement、批处理、事务、返回自增主键、JDBC操作分页。">
+  <meta name="description" content="Http协议、Servlet工作原理、DAO、Servlet生命周期、JSP基础、cookie、Session、过滤器、监听器、线程安全、JSTL、自定义标签、MVC。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java入门（九）Servlet JSP MVC">
-<meta property="og:url" content="http://acgkaka.github.io/2020/11/12/9Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%B9%9D%EF%BC%89Servlet%20JSP%20MVC/index.html">
+<meta property="og:url" content="http://acgkaka.github.io/2020/12/04/9Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%B9%9D%EF%BC%89Servlet%20JSP%20MVC/index.html">
 <meta property="og:site_name" content="ACGkaka">
-<meta property="og:description" content="JDBC概述、封装JDBCUtils工具类、Statement、PreparedStatement、批处理、事务、返回自增主键、JDBC操作分页。">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps1.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps2.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps3.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps4.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps5.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps6.png">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps7.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps8.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps9.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps10.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps11.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps12.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps13.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps14.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps15.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps16.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps17.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps18.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps19.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps20.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps21.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps22.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps23.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps24.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps25.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps26.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps27.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps28.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps29.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps30.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps31.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps32.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps33.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps34.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps35.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps36.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps37.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps38.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps39.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps40.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps41.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps42.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps43.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps44.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps45.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps46.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps47.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps48.jpg">
-<meta property="og:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps49.jpg">
-<meta property="article:published_time" content="2020-11-11T20:00:00.000Z">
-<meta property="article:modified_time" content="2020-12-03T03:12:32.938Z">
+<meta property="og:description" content="Http协议、Servlet工作原理、DAO、Servlet生命周期、JSP基础、cookie、Session、过滤器、监听器、线程安全、JSTL、自定义标签、MVC。">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142502171.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142526541.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142534691.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142541100.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142548219.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142559259.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142607858.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142617301.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142624950.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142631746.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142638659.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142648924.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142656508.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142705109.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142713243.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142733409.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142758642.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142815524.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142822199.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142833626.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142841594.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142852979.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142902474.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020120414291353.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020120414292345.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142931255.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142938878.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020120414294864.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204142959341.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204143010138.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204143023544.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204143037337.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204143043137.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204143054987.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204143103376.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204143111124.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204143118591.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204143125843.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204143132407.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204143139454.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204143147410.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204143157794.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201204143204763.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-12-03T20:00:00.000Z">
+<meta property="article:modified_time" content="2020-12-04T06:32:37.050Z">
 <meta property="article:author" content="ACG kaka">
 <meta property="article:tag" content="Java入门">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps1.jpg">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20201204142502171.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70">
   
     <link rel="alternative" href="/atom.xml" title="ACGkaka" type="application/atom+xml">
   
@@ -290,8 +284,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/11/12/9Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%B9%9D%EF%BC%89Servlet%20JSP%20MVC/" class="archive-article-date">
-        <time datetime="2020-11-11T20:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020年11月12日</time>
+<a href="/2020/12/04/9Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%B9%9D%EF%BC%89Servlet%20JSP%20MVC/" class="archive-article-date">
+        <time datetime="2020-12-03T20:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020年12月04日</time>
 </a>
 
   
@@ -305,7 +299,7 @@
 
 
 <blockquote>
-<p><strong>内容简述</strong>：JDBC概述、封装JDBCUtils工具类、Statement、PreparedStatement、批处理、事务、返回自增主键、JDBC操作分页。</p>
+<p><strong>内容简述</strong>：Http协议、Servlet工作原理、DAO、Servlet生命周期、JSP基础、cookie、Session、过滤器、监听器、线程安全、JSTL、自定义标签、MVC。</p>
 </blockquote>
 <a id="more"></a>
 
@@ -317,9 +311,9 @@
 </ul>
 <p><strong>扩展web服务器功能</strong></p>
 <ul>
-<li><p>a. web服务器通常只能处理<code>静态资源</code><em>（即需要事先将html文件写好并存放在服务器上）</em>的请求，</p>
+<li><p>a. web服务器通常只能处理<code>静态资源</code> （即需要事先将html文件写好并存放在服务器上）的请求，</p>
 </li>
-<li><p>不能够处理<code>动态资源</code><em>（即需要计算，动态生成相应的页面）</em>的请求。</p>
+<li><p>不能够处理<code>动态资源</code>（即需要计算，动态生成相应的页面）的请求。</p>
 </li>
 <li><p>b. 早期，开发者会使用CGI程序来扩展web服务器功能。</p>
 <blockquote>
@@ -347,7 +341,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps1.jpg" alt="img"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201204142502171.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p><font size="5"><strong>2.如何开发一个Servlet?</strong></font></p>
 <ul>
 <li><p><strong><em>step1</em></strong>. 写一个java类，实现Servlet接口或者继承HttpServlet类。</p>
@@ -385,454 +379,519 @@
 <p><a href="http://localhost:8080/" target="_blank" rel="noopener">http://localhost:8080</a></p>
 <p><strong>创建servlet测试项目：</strong></p>
 <p> 1）创建一个maven项目；</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps2.jpg" alt="img"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201204142526541.jpg" alt="在这里插入图片描述"></p>
 <p> 2）设置响应的名称并且把打包方式改为war；</p>
 <p> 3）问题：创建后的day01项目上有一个小红叉；</p>
-<p>​    <strong>解决办法</strong>：在javaEE模式下，右键Deployment选择Generate Deployment.，然后小红叉消失了。</p>
-<p>​    <strong>原因</strong>：之所以有小红叉是因为没有生成部署描述文件(web.xml)，操作之后，在src文件夹下main文件夹下的webapp中会出现一个WEB-INF文件夹，里面有web.xml文件。</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps3.jpg" alt="img"></p>
+<pre><code>**解决办法**：在javaEE模式下，右键Deployment选择Generate Deployment.，然后小红叉消失了。
+
+**原因**：之所以有小红叉是因为没有生成部署描述文件(web.xml)，操作之后，在src文件夹下main文件夹下的webapp中会出现一个WEB-INF文件夹，里面有web.xml文件。</code></pre><p><img src="https://img-blog.csdnimg.cn/20201204142534691.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p> 4）右键day01项目，选择最后一项Properties，然后选择Targeted Runtimes,在右侧选中tomcat7.0<br>原因：这一步是为了将想要运行的tomcat 的相关jar包导入我们的项目当中；</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps4.jpg" alt="img"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201204142541100.jpg" alt="在这里插入图片描述"></p>
 <p>  5）在Java Resources中的src/main/java中创建Serlvet类：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TimeServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span></span></span><br><span class="line"><span class="function">        							<span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        <span class="comment">// 1.使用request接收请求数据</span></span><br><span class="line">		<span class="comment">// 1)请求行(3组数据)</span></span><br><span class="line">        System.out.println(<span class="string">"协议类型："</span> + req.getProtocol());</span><br><span class="line">        System.out.println(<span class="string">"访问路径："</span> + req.getServletPath());</span><br><span class="line">        System.out.println(<span class="string">"请求方式："</span> + req.getMethod());</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2)消息头(N组数据)</span></span><br><span class="line">        <span class="comment">// 该数据是按照键值对的方式存储</span></span><br><span class="line">        <span class="comment">// Enumeration是一个古老的迭代器</span></span><br><span class="line">        <span class="comment">// 其用法和Iterator相似.</span></span><br><span class="line">        Enumeration&lt;String&gt; headerNames = req.getHeaderNames();</span><br><span class="line">        <span class="keyword">while</span>(headerNames.hasMoreElements()) &#123;</span><br><span class="line">            String key = headerNames.nextElement();</span><br><span class="line">            String value = req.getHeader(key);</span><br><span class="line">            System.out.println(key + <span class="string">":"</span> + value);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3)实体内容</span></span><br><span class="line">        <span class="comment">// 获取服务器的时间</span></span><br><span class="line">        Date date = <span class="keyword">new</span> Date();</span><br><span class="line">        SimpleDateFormat sdf = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"HH:mm:ss"</span>);</span><br><span class="line">        String now = sdf.format(date);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 将时间拼到一个网页里给浏览器返回</span></span><br><span class="line">        <span class="comment">// 告诉浏览器向它发送的是什么类型的内容</span></span><br><span class="line">        resp.setContentType(<span class="string">"text/html"</span>);</span><br><span class="line">        <span class="comment">// 设置编码格式，不然中文不能正常显示</span></span><br><span class="line">        resp.setCharacterEncoding(<span class="string">"utf-8"</span>);</span><br><span class="line">        <span class="comment">// 获取输出流，该流指向的目标是浏览器</span></span><br><span class="line">        PrintWriter w = resp.getWriter();</span><br><span class="line">        <span class="comment">// 此处偷懒，拼一个简化版的网页</span></span><br><span class="line">        w.println(<span class="string">"&lt;lable&gt;服务器时间:&lt;/lable&gt;"</span>);</span><br><span class="line">        w.println(<span class="string">"&lt;p&gt;"</span> + now + <span class="string">"&lt;/p&gt;"</span>);</span><br><span class="line">        <span class="comment">// 注意，不用关闭输出流，servlet会自动关闭</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><code>输出结果</code></p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps5.jpg" alt="img"> </p>
+<p><img src="https://img-blog.csdnimg.cn/20201204142548219.jpg" alt="在这里插入图片描述"></p>
 <p><strong>doGet()方法和service()方法的区别：</strong></p>
-<p>doGet()方法只处理Get请求，而service()方法即处理Get请求，也处理Post请求，官方文档上建议尽量避免使用service()方法）</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps6.png" alt="img"></p>
+<ul>
+<li>doGet()方法只处理Get请求；</li>
+<li>doPost()方法只处理Post请求；</li>
+<li>service()方法即处理Get请求，也处理Post请求；</li>
+<li>官方文档上建议尽量避免使用service()方法。</li>
+</ul>
 <p>6）在web.xml中配置serlvet</p>
-<?xml version=**"1.0"** encoding=**"UTF-8"**?>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">web-app</span> <span class="attr">xmlns:xsi</span>=<span class="string">**</span>"<span class="attr">http:</span>//<span class="attr">www.w3.org</span>/<span class="attr">2001</span>/<span class="attr">XMLSchema-instance</span>"** <span class="attr">xmlns</span>=<span class="string">**</span>"<span class="attr">http:</span>//<span class="attr">java.sun.com</span>/<span class="attr">xml</span>/<span class="attr">ns</span>/<span class="attr">javaee</span>"** <span class="attr">xsi:schemaLocation</span>=<span class="string">**</span>"<span class="attr">http:</span>//<span class="attr">java.sun.com</span>/<span class="attr">xml</span>/<span class="attr">ns</span>/<span class="attr">javaee</span> <span class="attr">http:</span>//<span class="attr">java.sun.com</span>/<span class="attr">xml</span>/<span class="attr">ns</span>/<span class="attr">javaee</span>/<span class="attr">web-app_2_5.xsd</span>"** <span class="attr">version</span>=<span class="string">**</span>"<span class="attr">2.5</span>"**&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;<span class="name">servlet</span>&gt;</span></span><br><span class="line"> 	<span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>helloServlet<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line"> 	<span class="comment">&lt;!-- 要写完整的类名（要注意大小写） --&gt;</span></span><br><span class="line"> 	<span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>web.HelloServlet<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line"> 	<span class="comment">&lt;!-- 两个name要一致 --&gt;</span></span><br><span class="line"> 	<span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>helloServlet<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line"> 	<span class="comment">&lt;!-- 告诉容器，如何访问该Servlet --&gt;</span></span><br><span class="line"> 	<span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/hello<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">web-app</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>&lt;web-app xmlns:xsi=<strong>“<a href="http://www.w3.org/2001/XMLSchema-instance&quot;" target="_blank" rel="noopener">http://www.w3.org/2001/XMLSchema-instance&quot;</a></strong> xmlns=<strong>“<a href="http://java.sun.com/xml/ns/javaee&quot;" target="_blank" rel="noopener">http://java.sun.com/xml/ns/javaee&quot;</a></strong> xsi:schemaLocation=<strong>“<a href="http://java.sun.com/xml/ns/javaee" target="_blank" rel="noopener">http://java.sun.com/xml/ns/javaee</a> <a href="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot;" target="_blank" rel="noopener">http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot;</a></strong> version=<strong>“2.5”</strong>&gt;</p>
- <servlet>
-
-<pre><code>&lt;servlet-name&gt;helloServlet&lt;/servlet-name&gt;
-
-&lt;!-- 要写完整的类名（要注意大小写） --&gt;
-
-&lt;servlet-class&gt;web.HelloServlet&lt;/servlet-class&gt;</code></pre> </servlet>
-
- <servlet-mapping>
-
-<pre><code>&lt;!-- 两个name要一致 --&gt;
-
-&lt;servlet-name&gt;helloServlet&lt;/servlet-name&gt;
-
-&lt;!-- 告诉容器，如何访问该Servlet --&gt;
-
-&lt;url-pattern&gt;/hello&lt;/url-pattern&gt;</code></pre> </servlet-mapping>
-
-</web-app>
-
-
-
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps7.jpg" alt="img"></p>
-<p>7）运行：在项目处右键→Run as→Run on Server→选中Tomcat 7.0→点next→点finish→重启Server→完成<br>4.Servlet是如何运行的?</p>
-<p>比如，在浏览器地址栏输入</p>
-<p><a href="http://ip:port/day01/hello">http://ip:port/day01/hello</a></p>
-<p><em>step1</em>.浏览器依据ip和port建立与服务器之间的连接</p>
-<p>   (比如，建立与tomcat之间的连接)。</p>
-<p><em>step2</em>.浏览器将相关数据打包</p>
-<p>   (即按照http协议的要求，创建请求数据包)。</p>
-<p><em>step3</em>，浏览器将请求数据包发送给服务器。</p>
-<p><em>step4</em>.服务器解析请求数据包的内容，并且将解析到的</p>
-<p>   数据添加到request对象里面，同时创建一个response</p>
-<p>   对象。</p>
-<p><em>step5</em>.服务器将对应的Servlet(比如HelloServlet)</p>
-<p>   实例化,接下来调用Servlet实例的service方法。</p>
-<p>注：</p>
-<p>  服务器会将request和response作为参数传递</p>
-<p>　给service方法，可以通过request对象获取</p>
-<p>　请求数据（比如一些请求参数值)，然后通过response</p>
-<p>　对象写入处理结果。</p>
-<p><em>step6</em>.服务器通过response对象获取处理结果，然后</p>
-<p>创建响应数据包。</p>
-<p><em>step7</em>.服务器发送响应数据包给浏览器。</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps8.jpg" alt="img"></p>
-<p><em>step8</em>.浏览器解析响应数据包，并且生成相应的页面。</p>
-<p>5.常见的错误及解决方式</p>
-<p>(1)404</p>
-<p>注：404是一个状态码，表示服务器依据请求地址找不到</p>
-<p>  对应的资源。</p>
-<p>错误原因:</p>
-<p>  a.请求地址写错了。</p>
-<p>  b.应用没有部署成功。</p>
-<p>(2)500</p>
-<p>注: 500是一个状态码，表示服务器端的程序运行出错。</p>
-<p>错误原因:</p>
-<p>  a.没有继承HttpServlet或者实现</p>
-<p>   Servlet接口。</p>
-<p>  b.web.xml配置错误，比如</p>
-<p>  servlet-class写错。</p>
-<p>  c.程序写得不够严谨，比如</p>
-<p>  将一个非数字转换成数字。</p>
-<p>(3)405</p>
-<p>注:405是一个状态码，表示服务器找不到处理方法。</p>
-<p>错误原因：</p>
-<p>  service()方法签名不符合要求（方法名，参数类型，异常类型要符合规范–两个异常）。</p>
-<p>练习1：写一个DateServlet，输出当前的系统日期， 比如在浏览器地址栏输入 <a href="http://ip:port/day01-lab/date">http://ip:port/day01-lab/date</a> 显示　　2018-02-06</p>
-<p>建议新建工程，从零开始写。 </p>
-<p>练习２：写一个BmiServlet,计算一个人的bmi指数。<br>bmi指数　＝　体重(公斤) / 身高(米) / 身高(米)<br><a href="http://ip:port/day01-lab/bmi?weight=80&amp;height=1.5">http://ip:port/day01-lab/bmi?weight=80&amp;height=1.5</a></p>
-<h2 id="二、HTTP协议、抓包、Servlet工作原理"><a href="#二、HTTP协议、抓包、Servlet工作原理" class="headerlink" title="二、HTTP协议、抓包、Servlet工作原理"></a>二、HTTP协议、抓包、Servlet工作原理</h2><ol>
-<li>http协议(了解)</li>
-</ol>
-<p>(1)什么是http协议?</p>
-<p>一种网络应用层协议，规定了浏览器与web服务器之间</p>
-<p>如何通信以及通信过程当中所使用的数据格式。</p>
-<p>(2)如何通信</p>
-<p>step1.建立连接</p>
-<p>step2.发送请求</p>
-<p>step3.发送响应</p>
-<p>step4.关闭连接</p>
-<p>即“一次请求，一次连接”，如果要发送新的请求，</p>
-<p>需要重新建立新的连接。</p>
-<p>优点:</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps9.jpg" alt="img"></p>
-<p>  web服务器可以使用尽可能少的连接为更多的请求服务。</p>
-<p>(3)数据格式</p>
-<p>抓包：</p>
+<p><img src="https://img-blog.csdnimg.cn/20201204142559259.jpg" alt="在这里插入图片描述"></p>
+<p>7）运行：在项目处右键→Run as→Run on Server→选中Tomcat 7.0→点next→点finish→重启Server→完成</p>
+<p><font size="5"><strong>4.Servlet是如何运行的?</strong></font></p>
+<p>比如，在浏览器地址栏输入：<u><a href="http://ip:port/day01/hello">http://ip:port/day01/hello</a></u></p>
+<p><strong><em>step1</em></strong>.浏览器依据ip和port建立与服务器之间的连接   (比如，建立与tomcat之间的连接)。</p>
+<p><strong><em>step2</em></strong>.浏览器将相关数据打包   (即按照http协议的要求，创建请求数据包)。</p>
+<p><strong><em>step3</em></strong>.浏览器将请求数据包发送给服务器。</p>
+<p><strong><em>step4</em></strong>.服务器解析请求数据包的内容，并且将解析到的数据添加到request对象里面，同时创建一个response对象。</p>
+<p><strong><em>step5</em></strong>.服务器将对应的Servlet(比如HelloServlet)</p>
+<p>   实例化，接下来调用Servlet实例的service方法。</p>
+<blockquote>
+<p><strong>注意</strong>：</p>
+<ul>
+<li>服务器会将request和response作为参数传递给service方法，可以通过request对象获取请求数据（比如一些请求参数值)，然后通过response对象写入处理结果。</li>
+</ul>
+</blockquote>
+<p><strong><em>step6</em></strong>.服务器通过response对象获取处理结果，然后创建响应数据包。</p>
+<p><strong><em>step7</em></strong>.服务器发送响应数据包给浏览器。</p>
+<p><img src="https://img-blog.csdnimg.cn/20201204142607858.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong><em>step8</em></strong>.浏览器解析响应数据包，并且生成相应的页面。</p>
+<p><font size="5"><strong>5.常见的错误及解决方式</strong></font></p>
+<p><strong>(1) 404</strong></p>
+<ul>
+<li><p><strong>404 Not Found</strong>，表示服务器依据请求地址找不到对应的资源。</p>
+</li>
+<li><p>错误原因:</p>
+<p>a.请求地址写错了；</p>
+<p>b.应用没有部署成功。</p>
+</li>
+</ul>
+<p><strong>(2)500</strong></p>
+<ul>
+<li><p><strong>500 Internal Server Error</strong>，表示服务器端的程序运行出错。</p>
+</li>
+<li><p>错误原因:</p>
+<p>a.没有继承HttpServlet或者实现Servlet接口；</p>
+<p>b.web.xml配置错误，比如servlet-class写错；</p>
+<p>c.程序写得不够严谨，异常报错，比如将一个非数字转换成数字。</p>
+</li>
+</ul>
+<p><strong>(3)405</strong></p>
+<ul>
+<li><strong>405 Method Not Allowed</strong>（GET请求和POST接口对接时就会报405）</li>
+<li>错误原因：<ul>
+<li>service()方法签名不符合要求（方法名，参数类型，异常类型要符合规范–两个异常）。</li>
+</ul>
+</li>
+</ul>
+<p><strong>课堂练习</strong></p>
+<p>练习1：</p>
+<ul>
+<li>写一个DateServlet，输出当前的系统日期， 比如在浏览器地址栏输入 <u><a href="http://ip:port/day01-lab/date">http://ip:port/day01-lab/date</a></u> 显示　　2018-02-06</li>
+<li>建议新建工程，从零开始写。 </li>
+</ul>
+<p>练习２：</p>
+<ul>
+<li>写一个BmiServlet,计算一个人的bmi指数。 </li>
+<li>bmi指数　＝　体重(公斤) / 身高(米) / 身高(米) </li>
+<li><u><a href="http://ip:port/day01-lab/bmi?weight=80&amp;height=1.5">http://ip:port/day01-lab/bmi?weight=80&amp;height=1.5</a></u></li>
+</ul>
+<h2 id="二、HTTP协议、抓包、Servlet工作原理"><a href="#二、HTTP协议、抓包、Servlet工作原理" class="headerlink" title="二、HTTP协议、抓包、Servlet工作原理"></a>二、HTTP协议、抓包、Servlet工作原理</h2><p><font size="5"><strong>1.http协议</strong></font></p>
+<p><strong>什么是http协议?</strong></p>
+<ul>
+<li>一种网络应用层协议，规定了浏览器与web服务器之间如何通信以及通信过程当中所使用的数据格式。</li>
+</ul>
+<p><strong>http协议如何通信</strong></p>
+<ul>
+<li><p><strong>step1</strong>.建立连接；</p>
+</li>
+<li><p><strong>step2</strong>.发送请求；</p>
+</li>
+<li><p><strong>step3</strong>.发送响应；</p>
+</li>
+<li><p><strong>step4</strong>.关闭连接</p>
+</li>
+<li><p>即“一次请求，一次连接”，如果要发送新的请求，需要重新建立新的连接。</p>
+<p><img src="https://img-blog.csdnimg.cn/20201204142617301.jpg" alt="在这里插入图片描述"></p>
+</li>
+</ul>
+<p><strong>http协议的优点：</strong></p>
+<ul>
+<li>web服务器可以使用尽可能少的连接为更多的请求服务。</li>
+</ul>
+<p><font size="5"><strong>2.数据格式</strong></font></p>
+<p><strong>抓包：</strong></p>
 <p>1）在Eclipse中Windows→Show View→Others→Debug→TCP/IP Monitor </p>
 <p>2）在最左上角的框中右键，点击Properties</p>
 <p>3）点击Add，在Local monitoring port处填写监视器的端口号(比如8888)</p>
-<pre><code>在Host name处填写想要拦截的地址（localhost）
-在Port处填写想要拦截的端口号（8080）如图：</code></pre><p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps10.jpg" alt="img"></p>
+<ul>
+<li>在Host name处填写想要拦截的地址（localhost）;</li>
+<li>在Port处填写想要拦截的端口号（8080）如图：</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20201204142624950.jpg" alt="在这里插入图片描述"></p>
 <p>4） 在浏览器输入网页的网址，只不过网址的端口号改为监视器的端口号</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps11.jpg" alt="img"></p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps12.jpg" alt="img">)5）在Eclipse的监视器的框中便会显示抓到的信息(第二行，左边是浏览器发送给服务器的请求内容，有边是服务器发送给浏览器的响应内容)</p>
-<p>1)请求数据包</p>
-<p>请求行 (请求方式　请求资源路径　协议类型和版本)</p>
-<p>若干消息头</p>
-<p>　消息头是一些键值对（使用”:”隔开），可以用来</p>
-<p>　传递一些特定的信息，比如，浏览器可以发送</p>
-<p> user-agent消息头告诉服务器，浏览器的类型和版本。</p>
-<p>实体内容</p>
-<p>　只有请求类型为post方式时，实体内容才会有数据。</p>
-<p>2)响应数据包</p>
-<p>状态行　（协议类型和版本　状态码　状态描述）</p>
-<p>  注：状态码是一个三位数字，表示服务器处理请求</p>
-<p>  的一种状态，200(正常),500(系统出错),404(找不到对应的资源)。</p>
-<p>若干消息头</p>
-<p> 服务器也可以发送一些消息头给浏览器，比如发送</p>
-<p> content-type消息头，告诉浏览器，服务器返回的</p>
-<p>　数据类型。</p>
-<p>实体内容</p>
-<p> 程序返回的处理结果，浏览器会解析出来，并生成相应</p>
-<p>的页面。</p>
-<p>(4)请求方式</p>
-<p>1)get请求</p>
-<p>浏览器在什么情况下会发送get请求?</p>
+<p><img src="https://img-blog.csdnimg.cn/20201204142631746.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201204142638659.jpg" alt="在这里插入图片描述"></p>
+<p>5）在Eclipse的监视器的框中便会显示抓到的信息(第二行，左边是浏览器发送给服务器的请求内容，有边是服务器发送给浏览器的响应内容)</p>
+<p><strong>1)请求数据包</strong></p>
+<ul>
+<li><p>请求行 (请求方式　请求资源路径　协议类型和版本)</p>
+</li>
+<li><p>若干消息头</p>
+<ul>
+<li><p>消息头是一些键值对（使用”:”隔开），可以用来传递一些特定的信息；</p>
+<p>比如，浏览器可以发送 user-agent消息头告诉服务器，浏览器的类型和版本。</p>
+</li>
+</ul>
+</li>
+<li><p>实体内容</p>
+<ul>
+<li>只有请求类型为post方式时，实体内容才会有数据。</li>
+</ul>
+</li>
+</ul>
+<p><strong>2)响应数据包</strong></p>
+<ul>
+<li><p>状态行　（协议类型和版本　状态码　状态描述）</p>
+</li>
+<li><p>状态码是一个三位数字，表示服务器处理请求的一种状态，200(正常),500(系统出错),404(找不到对应的资源)。</p>
+</li>
+<li><p>若干消息头</p>
+<ul>
+<li><p>服务器也可以发送一些消息头给浏览器；</p>
+<p>比如：发送 content-type 消息头，告诉浏览器，服务器返回的数据类型。</p>
+</li>
+</ul>
+</li>
+<li><p>实体内容</p>
+<ul>
+<li>程序返回的处理结果，浏览器会解析出来，并生成相应的页面。</li>
+</ul>
+</li>
+</ul>
+<p><strong>(3)请求方式</strong></p>
+<ul>
+<li><p>GET 请求</p>
+<ul>
+<li><p>浏览器在什么情况下会发送get请求?</p>
 <p>a.在地址栏直接输入某个地址。</p>
 <p>b.点击链接。</p>
 <p>c.表单默认提交方式。</p>
-<p>get请求的特点</p>
-<p>a.会将请求参数显示在浏览器地址栏，不安全。</p>
-<p>注：　比如，路由器会记录请求地址。</p>
-<p>b.会将请求参数添加到请求行里面，只能提交少量的</p>
-<p>数据（整个请求行大概能存放2k左右的数据）。</p>
-<p>2)post请求</p>
-<p>浏览器在什么情况下会发送post请求?</p>
+</li>
+<li><p>GET 请求的特点：</p>
+<p>a.会将请求参数显示在浏览器地址栏，不安全。比如，路由器会记录请求地址。</p>
+<p>b.会将请求参数添加到请求行里面，只能提交少量的数据（整个请求行大概能存放2k左右的数据）。</p>
+</li>
+</ul>
+</li>
+<li><p>POST 请求</p>
+<ul>
+<li><p>浏览器在什么情况下会发送post请求?</p>
 <p>a.将表单的提交方式设置为post。</p>
-<p>post请求的特点</p>
+</li>
+<li><p>post请求的特点：</p>
 <p>a.不会将请求参数显示在浏览器地址栏，相对安全。</p>
-<p>注：并不会对请求参数进行加密处理，所以，对于</p>
-<p>敏感数据，需要加密(使用https协议)</p>
-<p>b.会将请求参数添加到实体内容里面，可以提交</p>
-<p>大量的数据。</p>
-<p>2.Servlet输出中文，要注意什么?</p>
-<p>(1)为什么会有乱码?</p>
-<p>out默认会使用iso-8859-1来编码。</p>
-<p>(2)如何解决?</p>
-<p>response.setContentType(“text/html;charset=utf-8”);</p>
-<p>3.如何获得请求参数值?</p>
-<p>(1)String request.getParameter(String paramName)</p>
-<p>注：</p>
-<p> a.paramName是请求参数名。</p>
-<p> b.如果paramName写错，则获得null值。</p>
-<p> c.表单提交时，如果没有填写任何数据，会获得</p>
-<p> 空字符串。</p>
-<p>(2)String[] request.getParameterValues(String paramName)</p>
-<p>注:</p>
-<p> a.当有多个请求参数名相同时，使用该方法。  </p>
-<p> b.对于多选框，如果没有选择任何选项，</p>
-<p>则获得null值。</p>
-<p>4.表单提交时，如何读取中文参数值?</p>
-<p>(1)为什么会有乱码?</p>
-<p>表单提交时，浏览器会对中文参数值进行编码（</p>
-<p>注：会使用打开表单所在的页面时的字符集来编码）。</p>
-<p>而服务器端默认会使用iso-8859-1来解码。</p>
-<p>(2)如何解决?</p>
-<p>1)post请求</p>
+<ul>
+<li>并不会对请求参数进行加密处理，所以，对于敏感数据，需要加密(使用https协议)</li>
+</ul>
+<p>b.会将请求参数添加到实体内容里面，可以提交大量的数据。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Servlet输出中文，要注意什么?</strong></p>
+<ul>
+<li>(1)为什么会有乱码?<ul>
+<li>out默认会使用iso-8859-1来编码。</li>
+</ul>
+</li>
+<li>(2)如何解决?<ul>
+<li>response.setContentType(“text/html;charset=utf-8”);</li>
+</ul>
+</li>
+</ul>
+<p><strong>如何获得请求参数值?</strong></p>
+<ul>
+<li><p>(1) String request.getParameter(String paramName)</p>
+<ul>
+<li>a.paramName是请求参数名。</li>
+<li>b.如果paramName写错，则获得null值。</li>
+<li>c.表单提交时，如果没有填写任何数据，会获得空字符串。</li>
+</ul>
+</li>
+<li><p>(2) String[] request.getParameterValues(String paramName)</p>
+<ul>
+<li>a.当有多个请求参数名相同时，使用该方法。  </li>
+<li>b.对于多选框，如果没有选择任何选项，则获得null值。</li>
+</ul>
+</li>
+</ul>
+<p><strong>表单提交时，如何读取中文参数值?</strong></p>
+<ul>
+<li><p>(1) 为什么会有乱码?</p>
+</li>
+<li><p>表单提交时，浏览器会对中文参数值进行编码（会使用打开表单所在的页面时的字符集来编码）。而服务器端默认会使用iso-8859-1来解码。</p>
+</li>
+<li><p>(2) 如何解决?</p>
+<ul>
+<li><p>1) POST 请求</p>
 <p>request.setCharacterEncoding(String charset)</p>
-<p>注：</p>
-<p>  这行代码要添加到所有的getParameter方法的</p>
-<p>前面。</p>
-<p>  只针对post请求有效。</p>
-<p>2)get请求</p>
+<ul>
+<li>这行代码要添加到所有的getParameter方法的前面。只针对post请求有效。</li>
+</ul>
+</li>
+<li><p>2) GET 请求</p>
 <p>配置 URIEncoding=”utf-8”。</p>
-<p>注：</p>
-<p>只针对get请求有效。</p>
+<ul>
+<li>只针对get请求有效。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>课堂练习</strong></p>
 <p>练习1：注册用户</p>
 <p>参考代码如下：</p>
-<p>public class RegServlet extends HttpServlet {</p>
-<p>  private static final long serialVersionUID = 1L;</p>
-<p>  protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {</p>
-<pre><code>// 采用方案三解决POST请求乱码问题
-
-request.setCharacterEncoding(&quot;utf-8&quot;);
-
-// 处理请求的一般流程
-
-// 1.接收参数
-
-String username = request.getParameter(&quot;username&quot;);
-
-String password = request.getParameter(&quot;password&quot;);
-
-String[] hobby = request.getParameterValues(&quot;hobby&quot;);
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RegServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOExceptio </span>&#123;</span><br><span class="line">        <span class="comment">// 采用方案三解决POST请求乱码问题</span></span><br><span class="line">        request.setCharacterEncoding(<span class="string">"utf-8"</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 处理请求的一般流程</span></span><br><span class="line">        <span class="comment">// 1.接收参数</span></span><br><span class="line">        String username = request.getParameter(<span class="string">"username"</span>);</span><br><span class="line">        String password = request.getParameter(<span class="string">"password"</span>);</span><br><span class="line">        String[] hobby = request.getParameterValues(<span class="string">"hobby"</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 采用方案一解决乱码问题</span></span><br><span class="line">        <span class="comment">//     byte[] bs = username.getBytes("iso8859-1");</span></span><br><span class="line">        <span class="comment">//     username = new String(bs, "utf-8");</span></span><br><span class="line">        <span class="comment">// 2.处理业务</span></span><br><span class="line">        System.out.println(<span class="string">"username:"</span> + username)</span><br><span class="line">        System.out.println(<span class="string">"password:"</span> + password);</span><br><span class="line">        System.out.println(<span class="string">"hobby:"</span>);</span><br><span class="line">        <span class="keyword">for</span> (String str : hobby) &#123;</span><br><span class="line">            System.out.println(<span class="string">"   "</span> + str);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 3.发送响应</span></span><br><span class="line">        response.setContentType(<span class="string">"text/html;charset=utf-8"</span>);</span><br><span class="line">        PrintWriter pw = response.getWriter();</span><br><span class="line">        pw.println(<span class="string">"&lt;h1&gt;恭喜，亲爱的"</span> + username + <span class="string">"，您已注册成功！&lt;/h1&gt;"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
-
-
-
-
-// 采用方案一解决乱码问题</code></pre><p>//     byte[] bs = username.getBytes(“iso8859-1”); </p>
-<p>//     username = new String(bs, “utf-8”);</p>
-<p>​    </p>
-<pre><code>// 2.处理业务
-
-System.out.println(&quot;username:&quot; + username);
-
-System.out.println(&quot;password:&quot; + password);
-
-System.out.println(&quot;hobby:&quot;);
-
-for (String str : hobby) {
-
-  System.out.println(&quot;   &quot; + str);
-
-}
-
-// 3.发送响应
-
-response.setContentType(&quot;text/html;charset=utf-8&quot;);
-
-PrintWriter pw = response.getWriter();
-
-pw.println(&quot;&lt;h1&gt;恭喜，亲爱的&quot; + username + &quot;，您已注册成功！&lt;/h1&gt;&quot;);</code></pre><p>  }</p>
-<p>}</p>
 <p>练习2：添加用户</p>
-<p>create table t_user(</p>
-<p>  id int primary key auto_increment,</p>
-<p>  username varchar(50) unique,</p>
-<p>  password varchar(20),</p>
-<p>  phone varchar(20)</p>
-<p>);</p>
-<p>select e.ename,d.dname </p>
-<p>from EMP e </p>
-<p>join Dept d on e.deptno=d.deptno </p>
-<p>where e.sal=(select max(sal) from EMP);</p>
-<h2 id="三、DAO、重定向"><a href="#三、DAO、重定向" class="headerlink" title="三、DAO、重定向"></a>三、DAO、重定向</h2><p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps13.jpg" alt="img"></p>
-<p>1.DAO (Data Access Object 数据访问对象)</p>
-<p>(1)什么是DAO?</p>
-<p>封装了数据访问逻辑的对象。</p>
-<p>(2)如何写一个DAO?</p>
-<p><em>step1</em>.写一个实体类（一个java类，里面有字段、get()、set()、toString()方法）</p>
-<p>注:</p>
-<p> 将查询到的记录存放到一个java对象里面，</p>
-<p>就需要设计一个对应的java类(即实体类)，</p>
-<p>该类与要访问的表要一致（字段与属性要一一对应）。</p>
-<p>比如，要访问的表是:</p>
-<p>  t_user(id,username,password,phone)</p>
-<p>就可以设计</p>
-<p>  User类(id,uname,pwd,phone)</p>
-<p><em>step2</em>.写一个DAO类</p>
-<p>注：</p>
-<p>  封装数据访问逻辑，比如，将查询到的记录</p>
-<p>  中的信息存放到一个实体类的实例里面。</p>
-<p>2.重定向</p>
-<p>(1)什么是重定向?</p>
-<p>服务器通过发送302状态码及Location消息头（</p>
-<p>该消息头的值是一个地址，一般称之为重定向地址）</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> t_user(</span><br><span class="line">  <span class="keyword">id</span> <span class="built_in">INT</span> PRIMARY <span class="keyword">KEY</span> AUTO_INCREMENT,</span><br><span class="line">  username <span class="built_in">varchar</span>(<span class="number">50</span>) <span class="keyword">unique</span>,</span><br><span class="line">  <span class="keyword">password</span> <span class="built_in">varchar</span>(<span class="number">20</span>),</span><br><span class="line">  phone <span class="built_in">varchar</span>(<span class="number">20</span>)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> e.ename,d.dname </span><br><span class="line"><span class="keyword">FROM</span> EMP e </span><br><span class="line"><span class="keyword">JOIN</span> Dept d <span class="keyword">ON</span> e.deptno=d.deptno </span><br><span class="line"><span class="keyword">WHERE</span> e.sal = (<span class="keyword">SELECT</span> <span class="keyword">max</span>(sal) <span class="keyword">FROM</span> EMP);</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="三、DAO、重定向"><a href="#三、DAO、重定向" class="headerlink" title="三、DAO、重定向"></a>三、DAO、重定向</h2><p><img src="https://img-blog.csdnimg.cn/20201204142648924.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><font size="5"><strong>1.DAO (Data Access Object 数据访问对象)</strong></font></p>
+<p><strong>(1)什么是DAO?</strong></p>
+<ul>
+<li>封装了数据访问逻辑的对象。</li>
+</ul>
+<p><strong>(2)如何写一个DAO?</strong></p>
+<ul>
+<li><p><strong><em>step1</em></strong>.写一个实体类（一个java类，里面有字段、get()、set()、toString()方法）</p>
+<ul>
+<li><p>将查询到的记录存放到一个java对象里面，就需要设计一个对应的java类(即实体类)，该类与要访问的表要一致（字段与属性要一一对应）。</p>
+</li>
+<li><p>比如，要访问的表是:</p>
+<p>t_user(id,username,password,phone) 就可以设计  User类(id,uname,pwd,phone)</p>
+</li>
+</ul>
+</li>
+<li><p><strong><em>step2</em></strong>.写一个DAO类</p>
+<ul>
+<li>封装数据访问逻辑，比如，将查询到的记录中的信息存放到一个实体类的实例里面。</li>
+</ul>
+</li>
+</ul>
+<p><font size="5"><strong>2.重定向</strong></font></p>
+<p><strong>(1)什么是重定向?</strong></p>
+<ul>
+<li><p>服务器通过发送302状态码及Location消息头（该消息头的值是一个地址，一般称之为重定向地址）</p>
 <p>通知浏览器访问一个新的地址(即重定向地址)。</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps14.jpg" alt="img"> </p>
-<p>(2)如何重定向?</p>
-<p>response.sendRedirect(String url);</p>
-<p>注: url为重定向地址。</p>
-<p>注：重定向之前，容器会先清空response对象上存放的</p>
-<p>所有数据，然后再重定向。</p>
-<p>(3)特点</p>
-<p>a.重定向地址是任意的。</p>
-<p>b.重定向之后，浏览器地址栏的地址会发生变化。</p>
-<p>练习： 实现添加员工、员工列表功能</p>
-<p>员工表</p>
-<p>create table t_emp(</p>
-<p> id int primary key auto_increment,</p>
-<p> ename varchar(50),</p>
-<p> salary double,</p>
-<p> age int</p>
-<p>);</p>
-<h2 id="四、Servlet生命周期、JSP基础"><a href="#四、Servlet生命周期、JSP基础" class="headerlink" title="四、Servlet生命周期、JSP基础"></a>四、Servlet生命周期、JSP基础</h2><p>1.Servlet生命周期</p>
-<p>(1)什么是Servlet的生命周期?</p>
-<p>容器如何创建Servlet实例，如何对其进行初始化，</p>
-<p>如何调用其方法来处理请求，以及如何销毁其实例的整个过程。</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps15.jpg" alt="img"> </p>
-<p>(2)生命周期分成哪几个阶段?(4个阶段–实例化、初始化、调用、销毁)</p>
-<p>1)实例化</p>
-<p>a.什么是实例化?</p>
-<p>  容器调用Servlet的构造器，创建相应的对象。</p>
-<p>b.什么时候实例化?</p>
-<p>  情形1：容器收到请求之后才创建实例。(默认)</p>
-<p>  情形2：容器启动之后，立即创建实例。(需要额外配置)</p>
-<servlet>
+</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20201204142656508.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>(2)如何重定向?</strong></p>
+<ul>
+<li><strong>response.sendRedirect(String url);</strong><ul>
+<li>url为重定向地址；</li>
+<li>重定向之前，容器会先清空response对象上存放的所有数据，然后再重定向。</li>
+</ul>
+</li>
+</ul>
+<p><strong>(3)特点</strong></p>
+<ul>
+<li>a.重定向地址是任意的。</li>
+<li>b.重定向之后，浏览器地址栏的地址会发生变化。</li>
+</ul>
+<p><strong>练习：</strong></p>
+<ul>
+<li>实现添加员工、员工列表功能</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 员工表：</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> t_emp(</span><br><span class="line"> <span class="keyword">id</span> <span class="built_in">int</span> primary <span class="keyword">key</span> auto_increment,</span><br><span class="line"> ename <span class="built_in">varchar</span>(<span class="number">50</span>),</span><br><span class="line"> salary <span class="keyword">double</span>,</span><br><span class="line"> age <span class="built_in">int</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 
-<p> <servlet-name>someServlet</servlet-name> </p>
-<p> <servlet-class>web.SomeServlet</servlet-class></p>
- <!-- 
 
-     配置启动加载（即立即创建其实例）
 
-     注：
+<h2 id="四、Servlet生命周期、JSP基础"><a href="#四、Servlet生命周期、JSP基础" class="headerlink" title="四、Servlet生命周期、JSP基础"></a>四、Servlet生命周期、JSP基础</h2><p><font size="5"><strong>1.Servlet生命周期</strong></font></p>
+<p><strong>(1)什么是Servlet的生命周期?</strong></p>
+<ul>
+<li>容器如何创建Servlet实例，如何对其进行初始化，</li>
+<li>如何调用其方法来处理请求，以及如何销毁其实例的整个过程。</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20201204142705109.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>(2)生命周期分成哪几个阶段?(4个阶段–实例化、初始化、调用、销毁)</strong></p>
+<ul>
+<li><p><strong>1.实例化</strong></p>
+<ul>
+<li><p>a.什么是实例化?</p>
+<p>容器调用Servlet的构造器，创建相应的对象。</p>
+</li>
+<li><p>b.什么时候实例化?</p>
+<p>情形1：容器收到请求之后才创建实例。(默认)</p>
+<p>情形2：容器启动之后，立即创建实例。(需要额外配置)</p>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">servlet</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>someServlet<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span> </span><br><span class="line"> <span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>web.SomeServlet<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></span><br><span class="line"> <span class="comment">&lt;!-- </span></span><br><span class="line"><span class="comment"> 	配置启动加载（即立即创建其实例）</span></span><br><span class="line"><span class="comment"> 	注：</span></span><br><span class="line"><span class="comment"> 		其值是一个大于零的整数，越小，</span></span><br><span class="line"><span class="comment"> 		优先级越高（其先被创建）</span></span><br><span class="line"><span class="comment">  --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">load-on-startup</span>&gt;</span>1<span class="tag">&lt;/<span class="name">load-on-startup</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-         其值是一个大于零的整数，越小，
+<p><em>（  注：容器只会创建一个实例，单例模式。）</em></p>
+<ul>
+<li><p><strong>2.初始化</strong></p>
+<ul>
+<li><p>a.什么是初始化?</p>
+<p>容器调用Servlet实例的init方法。<em>（ 注:该方法只会执行一次！）</em></p>
+</li>
+<li><p>b.GenericServlet的init方法？</p>
+<p>将容器传递过来的ServletConfig对象保存下来了，并且提供了一个getServletConfig方法用来获得该对象。</p>
+</li>
+<li><p>c.如何实现自已的初始化处理逻辑？</p>
+<p>重写 GenericServlet提供的init()即可。<em>（不带参的那个方法）</em></p>
+<p><img src="https://img-blog.csdnimg.cn/20201204142713243.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>d.初始化参数</p>
+<ul>
+<li><p><strong>step1</strong>.先配置初始化参数</p>
+</li>
+<li><p><strong>step2</strong>.调用ServletConfig提供的 getInitParameter方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(servletconfig config)</span> <span class="keyword">throws</span> ServletException </span>&#123;</span><br><span class="line">    <span class="comment">// 保存容器传递过来的 ServletConfig对象</span></span><br><span class="line">    <span class="keyword">this</span>.config = config;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 便于开发人员去扩展自已的初始化逻辑</span></span><br><span class="line">    <span class="comment">// (只需要 override下面这个init方法即可)。</span></span><br><span class="line">    <span class="keyword">this</span>.init();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-         优先级越高（其先被创建）
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>3.调用(就绪)</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20201204142733409.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+</li>
+</ul>
+<ul>
+<li><p>a.什么是就绪？</p>
+<p>容器调用Servlet实例的service方法来处理请求。</p>
+</li>
+<li><p>b.HttpServlet的service方法</p>
+<p>依据请求类型调用对应的doXXX方法。</p>
+<p>比如：get请求会调用doGet方法，post请求会调用doPost方法。</p>
+<blockquote>
+<p><strong>注意</strong>：doGet,doPost方法只是简单的抛出了一个异常。需要开发人员去重写(override)。</p>
+<p>我们要写一个Servlet,既可以重写HttpServlet的service方法，也可以重写其doGet方法和doPost方法。</p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><p><strong>4.销毁</strong></p>
+<ul>
+<li><p>a.什么是销毁?</p>
+<p>容器在删除Servlet实例之前，会调用该实例的 destroy() 方法。<em>（该方法只会执行一次）</em></p>
+</li>
+<li><p>b.如何实现自已的销毁处理逻辑?</p>
+<p>只需要override GenericServlet的destroy方法即可。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>相关的接口与类</strong></p>
+<ul>
+<li>Servlet接口<ul>
+<li>init()</li>
+<li>service()</li>
+<li>destroy()</li>
+</ul>
+</li>
+<li>GenericServlet抽象类<ul>
+<li>实现了Servlet接口中的init和destroy方法。</li>
+</ul>
+</li>
+<li>HttpServlet抽象类<ul>
+<li>继承了GenericServlet抽象类，实现了 service() 方法。</li>
+</ul>
+</li>
+</ul>
+<p><font size="5"><strong>2.JSP</strong></font></p>
+<p><strong>(1)什么是jsp?</strong></p>
+<ul>
+<li><p>sun公司制订的一种服务器端动态页面技术规范。</p>
+<ul>
+<li>a.虽然直接使用Servlet也可以生成动态页面，但是，过于繁琐（需要使用out.println方法输出），也不利于页面的维护(需要修改java代码),所以，sun才制订了jsp技术规范。</li>
+<li>b.jsp是一个以.jsp为后缀的文件（主要内容是html和少量的java代码），容器会将这个文件转换成相应的Servlet然后执行。</li>
+<li><strong>jsp的本质是Servlet</strong>。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong>：jsp文件在运行之后需要访问才会生成.class文件</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>(2)如何写一个jsp文件?</strong></p>
+<ul>
+<li><p><strong><em>step1</em></strong>. 添加一个以.jsp为后缀的文件。</p>
+</li>
+<li><p><strong><em>step2</em></strong>. 在文件当中，可以添加如下内容:</p>
+<ul>
+<li><p>1)html(包括css,javascript) 直接写即可。</p>
+</li>
+<li><p>2)java代码</p>
+<ul>
+<li>方式一： java代码片断   &lt;%  java代码  %&gt;</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20201204142758642.jpg" alt="在这里插入图片描述"></p>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>* 方式二 ：jsp表达式   &lt;%= java表达式 %&gt;
 
-  -->
+  ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201204142806386.jpg)</code></pre><ul>
+<li><p>3)隐含对象</p>
+<ul>
+<li><p>a.什么是隐含对象?</p>
+<p>在jsp文件当中可以直接使用的对象（比如out,request,response）。</p>
+</li>
+<li><p>b.为什么可以直接使用这些隐含对象?</p>
+<p>容器会自动生成获得这些对象的代码。</p>
+</li>
+</ul>
+</li>
+<li><p>4)指令</p>
+<ul>
+<li><p>a.什么是指令?</p>
+<p>告诉容器，在将jsp文件转换成Servlet的时候，做一些额外的处理，比如导包。</p>
+</li>
+<li><p>b.语法  &lt;%@ 指令名 属性=值 %&gt;</p>
+</li>
+<li><p>c.page指令</p>
+<p>import属性：导包，比如：<em>（多个包用”,”隔开）</em></p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%page <span class="keyword">import</span>=<span class="string">"java.util.*,java.util.*"</span>%&gt;</span><br></pre></td></tr></table></figure>
 
-<p>  <load-on-startup>1</load-on-startup></p>
- </servlet>
-
-<p>  注：容器只会创建一个实例！</p>
-<p>2)初始化</p>
-<p>a.什么是初始化?</p>
-<p> 容器调用Servlet实例的init方法。</p>
-<p> 注:该方法只会执行一次！</p>
-<p>b.GenericServlet的init方法</p>
-<p> 将容器传递过来的ServletConfig对象保存下来了，</p>
-<p> 并且提供了一个getServletConfig方法用来获得该</p>
-<p> 对象。</p>
-<p>c.如何实现自已的初始化处理逻辑。</p>
-<p>  override GenericServlet提供的init()即可。</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps16.jpg" alt="img"></p>
-<p> 注: 不带参的那个!<br>d.初始化参数</p>
-<p> step1.先配置初始化参数</p>
-<p> step2.调用ServletConfig提供的</p>
-<p>  getInitParameter方法</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps17.jpg" alt="img"></p>
-<p>3)调用(就绪)</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps18.jpg" alt="img"></p>
-<p>a.什么是就绪</p>
-<p>  容器调用Servlet实例的service方法来处理请求。</p>
-<p>b.HttpServlet的service方法</p>
-<p>  依据请求类型调用对应的doXXX方法。</p>
-<p>  比如：get请求会调用doGet方法，post请求会调用doPost方法。</p>
-<p>  注：</p>
-<pre><code>doGet,doPost方法只是简单的抛出了一个异常。需要开发人员去重写(override)。
-
-我们要写一个Servlet,既可以override
-
-HttpServlet的service方法，也可以
-
-override其doGet方法和doPost方法。</code></pre><p>4)销毁</p>
-<p>a.什么是销毁?</p>
-<p>  容器在删除Servlet实例之前，会调用该实例的</p>
-<p>  destroy方法。</p>
-<p> 注：该方法只会执行一次。</p>
-<p>b.如何实现自已的销毁处理逻辑?</p>
-<p>  只需要override GenericServlet的destroy方法即可。</p>
-<p>(3)相关的接口与类(了解)</p>
-<p>a.Servlet接口</p>
-<p>  init()</p>
-<p>  service()</p>
-<p>  destroy()</p>
-<p>b.GenericServlet抽象类</p>
-<p>  实现了Servlet接口中的init和destroy方法。</p>
-<p>c.HttpServlet抽象类</p>
-<p>  继承了GenericServlet抽象类，实现了</p>
-<p>  service方法。</p>
-<ol start="2">
-<li>jsp</li>
-</ol>
-<p>(1)什么是jsp?</p>
-<p>sun公司制订的一种服务器端动态页面技术规范。</p>
-<p>注:</p>
-<p> a.虽然直接使用Servlet也可以生成动态页面，但是，</p>
-<p>   过于繁琐（需要使用out.println方法输出），也不利于</p>
-<p>   页面的维护(需要修改java代码),所以，sun才制订了</p>
-<p>   jsp技术规范。</p>
-<p> b.jsp是一个以.jsp为后缀的文件（主要内容是</p>
-<p>   html和少量的java代码），容器会将这个文件转换成</p>
-<p>   相应的Servlet然后执行。</p>
-<p>   <strong>(jsp的本质是Servlet!)</strong></p>
-<p>   注意：jsp文件在运行之后需要访问才会生成.class文件</p>
-<p>(2)如何写一个jsp文件?</p>
-<p><em>step1</em>. 添加一个以.jsp为后缀的文件。</p>
-<p><em>step2</em>. 在文件当中，可以添加如下内容:</p>
-<p>1)html(包括css,javascript)</p>
-<p>   直接写即可。</p>
-<p>2)java代码</p>
-<p>   方式一 java代码片断</p>
-<p>   &lt;%  java代码  %&gt;</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps19.jpg" alt="img"></p>
-<p>   方式二 jsp表达式</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps20.jpg" alt="img"></p>
-<p>   &lt;%= java表达式 %&gt;</p>
-<p>3)隐含对象</p>
-<p> a.什么是隐含对象?</p>
-<p>   在jsp文件当中可以直接使用的对象（比如out,request,response）。</p>
-<p> b.为什么可以直接使用这些隐含对象?</p>
-<p>   容器会自动生成获得这些对象的代码。</p>
-<p>4)指令</p>
-<p>a.什么是指令?</p>
-<p>  告诉容器，在将jsp文件转换成Servlet的时候，</p>
-<p>  做一些额外的处理，比如导包。</p>
-<p>b.语法</p>
-<p> &lt;%@ 指令名 属性=值 %&gt;</p>
-<p>c.page指令</p>
-<p>  import属性：导包</p>
-<pre><code>比如: &lt;%page import=&quot;java.util.*,java.util.*&quot;%&gt;</code></pre><p>  注:多个包用”,”隔开   </p>
-<p>(3)jsp是如何执行的?</p>
-<p><em>step1</em>. 容器将jsp文件转换成一个Servlet</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>(3)jsp是如何执行的?</strong></p>
+<ul>
+<li><p><strong><em>step1</em></strong>. 容器将jsp文件转换成一个Servlet</p>
 <p>a. html(css,js) —-&gt; 在service方法里，使用out.write输出。 </p>
 <p>b. &lt;%   %&gt;   —-&gt; 在service方法里，照搬。</p>
 <p>c. &lt;%=  %&gt;   —-&gt; 在service方法里，使用out.print输出。</p>
-<p><em>step2</em>.容器调用该Servlet。</p>
-<h2 id="五、page指令、转发、JSP开发常见问题"><a href="#五、page指令、转发、JSP开发常见问题" class="headerlink" title="五、page指令、转发、JSP开发常见问题"></a>五、page指令、转发、JSP开发常见问题</h2><p>1.page指令</p>
-<p>contentType属性：设置response.setContentType</p>
-<pre><code>的值。</code></pre><p>pageEncoding属性：告诉容器，在读取jsp文件的内容</p>
-<pre><code>时，使用指定的字符集去解码。</code></pre><p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps21.jpg" alt="img"></p>
-<p><em>注意</em>：charset和pageEncoding的值可以不一样，比如：</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps22.jpg" alt="img"></p>
-<p>   上图是可以运行的，因为charset是给浏览器说明的编码格式，pageEncoding是读jsp文件的时候需要的编码格式，只要是中文就可以读取。</p>
-<p>   但是我们一般使用相同的编码格式。</p>
-<p>2.转发</p>
-<p>(1)什么是转发?</p>
-<p>一个web组件将未完成的处理转交给另外一个</p>
-<p>web组件继续做。</p>
-<p>注:</p>
-<p>  web组件（servlet或者是jsp）。</p>
-<p>  大多数情况下，是一个servlet获得数据之后，</p>
-<p>  转发给jsp来展现这些数据。</p>
-<p>(2)如何转发?</p>
-<p><em>step1</em>.绑订数据到request对象上。</p>
-<p>request.setAttribute(String name,Object obj)</p>
-<p>注:</p>
-<p>  name 绑订名。</p>
-<p>  obj  绑订值。</p>
-<p>  Object  request.getAttribute(String name)</p>
-<p><em>step2</em>.获得转发器 </p>
-<p>RequestDispatcher rd = </p>
-<p>  request.getRequestDispatcher(String uri)</p>
-<p>注:</p>
-<p>  uri:转发的目的地地址，通常是一个jsp。</p>
-<p>  RequestDispatcher:是一个接口,getRequest</p>
-<p>  Dispatcher方法会返回该接口的实现。</p>
-<p><em>step3</em>.转发</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps23.jpg" alt="img"></p>
-<p>rd.forward(request,response)</p>
-<p>详细步骤：</p>
+</li>
+<li><p><strong><em>step2</em></strong>.容器调用该Servlet。</p>
+</li>
+</ul>
+<h2 id="五、page指令、转发、JSP开发常见问题"><a href="#五、page指令、转发、JSP开发常见问题" class="headerlink" title="五、page指令、转发、JSP开发常见问题"></a>五、page指令、转发、JSP开发常见问题</h2><p><font size="5"><strong>1.page指令</strong></font></p>
+<ul>
+<li>contentType属性：设置response.setContentType的值。</li>
+</ul>
+<p>pageEncoding属性：告诉容器，在读取jsp文件的内容时，使用指定的字符集去解码。</p>
+<p><img src="https://img-blog.csdnimg.cn/20201204142815524.jpg" alt="在这里插入图片描述"></p>
+<blockquote>
+<p><strong>注意</strong>：charset和pageEncoding的值可以不一样，比如：</p>
+<p><img src="https://img-blog.csdnimg.cn/20201204142822199.jpg" alt="在这里插入图片描述"></p>
+</blockquote>
+<blockquote>
+<p>上图是可以运行的，因为charset是给浏览器说明的编码格式，pageEncoding是读jsp文件的时候需要的编码格式，只要是中文就可以读取，但是我们一般使用相同的编码格式。</p>
+</blockquote>
+<p><font size="5"><strong>2.转发</strong></font></p>
+<p><strong>(1)什么是转发?</strong></p>
+<ul>
+<li><p>一个web组件将未完成的处理转交给另外一个web组件继续做。</p>
+<p>web组件（servlet或者是jsp），大多数情况下，是一个servlet获得数据之后，转发给jsp来展现这些数据。</p>
+</li>
+</ul>
+<p><strong>(2)如何转发?</strong></p>
+<ul>
+<li><p><strong><em>step1</em></strong>.绑订数据到request对象上。</p>
+<p><strong>request.setAttribute(String name,Object obj)</strong></p>
+<ul>
+<li>name 绑订名。</li>
+<li>obj  绑订值。</li>
+<li>Object  request.getAttribute(String name)</li>
+</ul>
+</li>
+<li><p><strong><em>step2</em></strong>.获得转发器 </p>
+<p><strong>RequestDispatcher rd = request.getRequestDispatcher(String uri);</strong></p>
+<ul>
+<li>uri:转发的目的地地址，通常是一个jsp。</li>
+<li>RequestDispatcher:是一个接口,getRequestDispatcher方法会返回该接口的实现。</li>
+</ul>
+</li>
+<li><p><em>step3</em>.转发</p>
+<p><strong>rd.forward(request,response)</strong></p>
+</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20201204142833626.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<ul>
+<li><strong>详细步骤：</strong></li>
+</ul>
 <p>1：在浏览器地址栏输入地址后回车发送listUser请求</p>
 <p>2：创建request对象</p>
 <p>3：就绪，调用service()方法</p>
@@ -840,148 +899,227 @@ override其doGet方法和doPost方法。</code></pre><p>4)销毁</p>
 <p>5：调用forward()方法转发后，通知容器</p>
 <p>6：让web容器去调用另外一个组件的service()方法</p>
 <p>7：另一个组件再从request对象中获得之前绑定的数据</p>
-<p>注：</p>
-<p>  转发的本质是通知容器调用(即执行service方法)</p>
-<p>  另外一个web组件。</p>
-<p>(3)特点</p>
-<p>a.转发的目的地有限制（同一个应用）。</p>
-<p>b.转发之后，浏览器地址栏的地址不变。</p>
-<p>3.比较转发与重定向</p>
-<p>a.能否共享request和response?</p>
-<p>转发可以，而重定向不行。</p>
-<p>注：</p>
-<p>  当请求到达容器，容器创建request和response,</p>
-<p>  当响应发送完毕，容器会销毁这两个对象，也就是说，request和response                         的生存时间是一次请求和响应期间存在。</p>
-<p>  转发是一次请求，重定向是两次请求。</p>
-<p>b.浏览器地址栏地址有无变化?</p>
-<p>转发无变化，重定向有变化。</p>
-<p>c.目的地有无限制?</p>
-<p>转发有限制（同一个应用），重定向无限制。</p>
-<p>如何用Eclipse创建Servlet:</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps24.jpg" alt="img"></p>
-<p><em>step1</em>:右键“src/main/java”，新建一个Servlet</p>
-<p><em>step2</em>:点击next，可以自定义url-mapping地址名</p>
-<p><em>step3</em>:点击next，可以选择默认生成的方法，我们一般只选择默认生成service()方法</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps25.jpg" alt="img"></p>
-<p>4.什么是web容器，其作用是? 尽可能写出你知道的容器名称</p>
-<p>web容器给处于其中的应用程序组件（JSP、SERVLET）提供一个环境，使JSP、SERVLET直接跟容器中的环境变量接口交互，不必关注其它系统问题。例如：TOMCAT、WEBLOGIC、WEBSPHERE等都为web容器。</p>
-<p>5.容器如何处理请求资源路径?</p>
-<p>比如，<a href="http://ip:port/day05/abc.html">http://ip:port/day05/abc.html</a></p>
-<p><em>step1</em>.容器默认认为访问的是一个servlet</p>
-<p><em>（如果地址名和*<em>HTML等文件名重复的话先访问servlet*</em>）**,</em></p>
-<p>所以，会查看配置文件(web.xml)有没有一个匹配的servlet。</p>
-<p>  注：配置规则</p>
-<p>  (1)精确匹配:</p>
-<pre><code>要求url-pattern的值必须等于&quot;/abc.html&quot;。</code></pre><p>  (2)通配符匹配:</p>
-<pre><code>使用 * 号匹配任意的零个或者多个字符，比如
+<blockquote>
+<p><strong>注意</strong>：转发的本质是通知容器调用(即执行service方法)另外一个web组件。</p>
+</blockquote>
+<p><strong>(3)特点</strong></p>
+<ul>
+<li><p>a.转发的目的地有限制（同一个应用）。</p>
+</li>
+<li><p>b.转发之后，浏览器地址栏的地址不变。</p>
+</li>
+</ul>
+<p><font size="5"><strong>3.比较转发与重定向</strong></font></p>
+<ul>
+<li>a.能否共享request和response?<ul>
+<li>转发可以，而重定向不行。</li>
+<li>分析：当请求到达容器，容器创建request和response,当响应发送完毕，容器会销毁这两个对象，也就是说，request 和 response 的生存时间是一次请求和响应期间存在。</li>
+<li>转发是一次请求，重定向是两次请求。</li>
+</ul>
+</li>
+<li>b.浏览器地址栏地址有无变化?<ul>
+<li>转发无变化，重定向有变化。</li>
+</ul>
+</li>
+<li>c.目的地有无限制?<ul>
+<li>转发有限制（同一个应用），重定向无限制。</li>
+</ul>
+</li>
+</ul>
+<p><strong>如何用Eclipse创建Servlet:</strong></p>
+<ul>
+<li><p><em>step1</em>:右键“src/main/java”，新建一个Servlet</p>
+<p><img src="https://img-blog.csdnimg.cn/20201204142841594.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+</li>
+</ul>
+<ul>
+<li><p><em>step2</em>:点击next，可以自定义url-mapping地址名</p>
+</li>
+<li><p><em>step3</em>:点击next，可以选择默认生成的方法，我们一般只选择默认生成service()方法</p>
+</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20201204142852979.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><font size="5"><strong>4.web容器</strong></font></p>
+<p><strong>什么是web容器，其作用是? 尽可能写出你知道的容器名称</strong></p>
+<ul>
+<li>web容器给处于其中的应用程序组件（JSP、SERVLET）提供一个环境；</li>
+<li>作用：使JSP、SERVLET直接跟容器中的环境变量接口交互，不必关注其它系统问题；</li>
+<li>例如：TOMCAT、WEBLOGIC、WEBSPHERE等都为web容器。</li>
+</ul>
+<p><strong>容器如何处理请求资源路径?</strong></p>
+<ul>
+<li><p>比如：<u><a href="http://ip:port/day05/abc.html">http://ip:port/day05/abc.html</a></u></p>
+</li>
+<li><p><strong><em>step1</em></strong>.容器默认认为访问的是一个servlet</p>
+<p><em>如果地址名和HTML等文件名重复的话先访问servlet，会查看配置文件(web.xml)有没有一个匹配的servlet。</em></p>
+</li>
+<li><p><strong><em>step2</em></strong>.如果没有匹配的servlet,则查找对应位置的文件，然后执行(如果找不到，则返回404)。</p>
+</li>
+</ul>
+<p><strong>配置规则</strong></p>
+<ul>
+<li><p>(1)精确匹配:</p>
+<ul>
+<li>要求url-pattern的值必须等于”/abc.html”。</li>
+</ul>
+</li>
+<li><p>(2)通配符匹配:</p>
+<ul>
+<li>使用 * 号匹配任意的零个或者多个字符，比如：</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/*<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/demo/*<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-&lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+<ul>
+<li>(3)后缀匹配:(注意：后缀匹配不能用/开头)<ul>
+<li>使用”*.”开头，后接一个后缀，比如：</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>*.do<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 用来匹配所有以.do结尾的请求 --&gt;</span></span><br></pre></td></tr></table></figure>
 
-&lt;url-pattern&gt;/demo/*&lt;/url-pattern&gt;</code></pre><p>  (3)后缀匹配:(注意：后缀匹配不能用/开头)</p>
-<pre><code>使用&quot;*.&quot;开头，后接一个后缀，比如
 
-&lt;url-pattern&gt;*.do&lt;/url-pattern&gt;,
 
-用来匹配所有以.do结尾的请求。</code></pre><p><em>step2</em>.如果没有匹配的servlet,则查找对应位置的文件，然后执行(如果找不到，则返回404)。</p>
-<p>6.如何让一个servlet处理多种请求?</p>
-<p><em>step1</em>.采用后缀匹配。</p>
-<p>比如:</p>
-<p>  <url-pattern>*.do</url-pattern></p>
-<p><em>step2</em>.分析请求资源路径，然后进行不同的处理。</p>
-<h2 id="六、路径问题"><a href="#六、路径问题" class="headerlink" title="六、路径问题"></a>六、路径问题</h2><p>1.路径问题</p>
-<p>链接，表单提交，重定向，转发</p>
-<p><a href=""> <form action=""></p>
-<p>response.sendRedirct(“”)</p>
-<p>request.getRequestDispatcher(“”)</p>
-<p>(1)相对路径</p>
-<p>1)什么是相对路径?</p>
-<p>不以/开头的路径</p>
-<p>(2)绝对路径</p>
-<p>1)什么是绝对路径?</p>
-<p>以/开头的路径</p>
-<p>2)如何写绝对路径?</p>
-<p>  链接，表单提交，重定向从应用名开始写；转发从应用名之后开始写。</p>
-<p>注：不要直接将应用名写在路径里面，</p>
-<p>  而应该使用 request.getContextPath()来获取。</p>
-<p>  (应该尽量避免硬编码—-把应用名写死)</p>
-<p>  建议使用绝对路径，好写，并且更好维护。</p>
-<p>综合练习：登录</p>
-<p>需求:</p>
-<p>用户填写用户名和密码并提交，服务器端查询数据库，</p>
-<p>看是否有匹配的记录（即用户名和密码都匹配），如果</p>
-<p>有，则登录成功（返回用户列表）；如果没有，则登录</p>
-<p>失败（在登录页面当中，提示用户名或密码错误）。</p>
-<p>提示:</p>
-<p>step1.给UserDAO添加一个方法</p>
-<p>  public User findByUsername(String uname)</p>
-<p>step2.添加一个登录页面 login.jsp</p>
-<p>step3.给ActionServlet添加一个处理</p>
-<p>  “/login”的分支，用于处理登录请求。</p>
-<p>  request.setAttribute(“login_failed”,</p>
-<p>  “用户名或密码错误”);</p>
-<p>  request.getRequestDispatcher(“login.jsp”).forward(request,response);</p>
-<h2 id="七、状态管理-cookie"><a href="#七、状态管理-cookie" class="headerlink" title="七、状态管理-cookie"></a>七、状态管理-cookie</h2><p>1.状态管理</p>
-<p>(1)什么是状态管理?</p>
-<p>将浏览器与web服务器之间多次交互做为一个整体来</p>
-<p>处理，将多次交互所涉及的数据(即状态)保存下来。</p>
-<p>(2)如何进行状态管理?</p>
-<p>方式一: 将状态保存在浏览器端 </p>
-<p>通常使用cookie技术</p>
-<p>方式二: 将状态保存在服务器端</p>
-<p>通常使用session技术</p>
-<p>(3)cookie</p>
-<p>1)什么是cookie?</p>
-<p>服务器临时存放在浏览器端的少量数据。</p>
-<p>2)cookie工作原理</p>
-<p>浏览器访问服务器时,服务器会将一些数据以set-cookie</p>
-<p>消息头的形式发送给浏览器，浏览器会将这些数据</p>
-<p>临时保存下来；</p>
-<p>当浏览器再次访问服务器时，会将之前存放的数据以</p>
-<p>cookie消息头的形式发送给服务器。</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps26.jpg" alt="img"></p>
-<p>3)添加cookie</p>
-<p>Cookie c = new Cookie(String name,String value);</p>
-<p>注：cookie的名称和值都必须是String。</p>
-<p>response.addCookie(c);</p>
-<p>4)读取cookie</p>
-<p>Cookie[] request.getCookies();</p>
-<p>注：有可能返回null。</p>
-<p>String cookie.getName();</p>
-<p>String cookie.getValue();</p>
-<p>5)cookie的生存时间</p>
-<p>a.默认情况下，cookie会被浏览器保存在内存里面。</p>
-<p>即浏览器只要不关闭，cookie就会一直存在。</p>
-<p>b.setMaxAge(int seconds)</p>
-<p>注：</p>
-<p>  b1.　单位是秒。</p>
-<p>  b2.  seconds &gt; 0: 浏览器会将cookie保存</p>
-<pre><code>在硬盘上，当超过指定时间，浏览器会删除
+<p><strong>如何让一个servlet处理多种请求?</strong></p>
+<ul>
+<li><strong><em>step1</em></strong>.采用后缀匹配。比如:</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>*.do<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-cookie。
+<ul>
+<li><strong><em>step2</em></strong>.分析请求资源路径，然后进行不同的处理。</li>
+</ul>
+<h2 id="六、路径问题"><a href="#六、路径问题" class="headerlink" title="六、路径问题"></a>六、路径问题</h2><p><strong>链接：</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
- seconds &lt; 0: 默认值（即保存在内存）
+<p><strong>表单提交：</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">""</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
- seconds = 0: 删除cookie。</code></pre><p>比如，要修改名称为username的cookie的值:</p>
-<pre><code>再发送一个Cookie，名为username，</code></pre><p>值为想要修改成的值</p>
-<p>Cookie c = new Cookie(“username”,</p>
-<pre><code> &quot;&quot;);
+<p><strong>重定向：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response.sendRedirct(<span class="string">""</span>);</span><br></pre></td></tr></table></figure>
 
-比如，要删除名称为username的cookie:
+<p><strong>转发：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">request.getRequestDispatcher(<span class="string">""</span>);</span><br></pre></td></tr></table></figure>
 
- Cookie c = new Cookie(&quot;username&quot;,
 
- &quot;&quot;);
 
- c.setMaxAge(0);
+<p><strong>相对路径</strong></p>
+<ul>
+<li>不以/开头的路径。</li>
+</ul>
+<p><strong>绝对路径</strong></p>
+<ul>
+<li>以/开头的路径。</li>
+<li>如何写绝对路径?<ul>
+<li>链接，表单提交，重定向从应用名开始写；转发从应用名之后开始写。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong>：</p>
+<ul>
+<li><p>不要直接将应用名写在路径里面，而应该使用 request.getContextPath()来获取。</p>
+</li>
+<li><p>(应该尽量避免硬编码—-把应用名写死)</p>
+</li>
+<li><p>建议使用绝对路径，好写，并且更好维护。</p>
+</li>
+</ul>
+</blockquote>
+<p><strong>综合练习：登录</strong></p>
+<blockquote>
+<p><strong>需求</strong>：</p>
+<ol>
+<li>用户填写用户名和密码并提交；</li>
+<li>服务器端查询数据库，看是否有匹配的记录（即用户名和密码都匹配）；</li>
+<li>如果有，则登录成功（返回用户列表）；</li>
+<li>如果没有，则登录失败（在登录页面当中，提示用户名或密码错误）。</li>
+</ol>
+</blockquote>
+<p><strong>提示:</strong></p>
+<ul>
+<li><strong>step1</strong>.给UserDAO添加一个方法</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> User <span class="title">findByUsername</span><span class="params">(String uname)</span></span></span><br></pre></td></tr></table></figure>
 
- response.addCookie(c);</code></pre><p>注意：如果Cookie的路径不一样是不能被覆盖的</p>
+<ul>
+<li><p><strong>step2</strong>.添加一个登录页面 login.jsp</p>
+</li>
+<li><p><strong>step3</strong>.给ActionServlet添加一个处理 “/login” 的分支，用于处理登录请求。</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">request.setAttribute(<span class="string">"login_failed"</span>, <span class="string">"用户名或密码错误"</span>);</span><br><span class="line">request.getRequestDispatcher(<span class="string">"login.jsp"</span>).forward(request,response);</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="七、状态管理-cookie"><a href="#七、状态管理-cookie" class="headerlink" title="七、状态管理-cookie"></a>七、状态管理-cookie</h2><p><font size="5"><strong>1.状态管理</strong></font></p>
+<p><strong>(1) 什么是状态管理?</strong></p>
+<ul>
+<li>将浏览器与web服务器之间多次交互做为一个整体来处理，将多次交互所涉及的数据(即状态)保存下来。</li>
+</ul>
+<p><strong>(2) 如何进行状态管理?</strong></p>
+<ul>
+<li><p>方式一: 将状态保存在浏览器端，通常使用cookie技术；</p>
+</li>
+<li><p>方式二: 将状态保存在服务器端，通常使用session技术。</p>
+</li>
+</ul>
+<p><font size="5"><strong>2.cookie</strong></font></p>
+<p><strong>(1) 什么是cookie?</strong></p>
+<ul>
+<li>服务器临时存放在浏览器端的少量数据。</li>
+</ul>
+<p><strong>(2) cookie工作原理</strong></p>
+<ul>
+<li>浏览器访问服务器时,服务器会将一些数据以set-cookie消息头的形式发送给浏览器，</li>
+<li>浏览器会将这些数据临时保存下来；</li>
+<li>当浏览器再次访问服务器时，会将之前存放的数据以cookie消息头的形式发送给服务器。</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20201204142902474.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>(3) 添加cookie</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Cookie c = <span class="keyword">new</span> Cookie(String name,String value);</span><br><span class="line">response.addCookie(c);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>注意</strong>：cookie的名称和值都必须是String。</p>
+</blockquote>
+<p><strong>(4) 读取cookie</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 有可能返回null</span></span><br><span class="line">Cookie[] request.getCookies();</span><br><span class="line">String cookie.getName()</span><br><span class="line">String cookie.getValue();</span><br></pre></td></tr></table></figure>
+
+<p><strong>(5) cookie的生存时间</strong></p>
+<ul>
+<li><p>a.默认情况下，cookie会被浏览器保存在内存里面。即，浏览器只要不关闭，cookie就会一直存在。</p>
+</li>
+<li><p>b.setMaxAge(int seconds)</p>
+<ul>
+<li>单位是秒。</li>
+<li>seconds &gt; 0: 浏览器会将cookie保存在硬盘上，当超过指定时间，浏览器会删除cookie。</li>
+<li>seconds &lt; 0: 默认值（即保存在内存）</li>
+<li>seconds = 0: 删除cookie。</li>
+</ul>
+</li>
+<li><p>比如，要修改名称为username的cookie的值：</p>
+<ul>
+<li>再发送一个Cookie，名为username，值为想要修改成的值</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cookie c = <span class="keyword">new</span> Cookie(<span class="string">"username"</span>, <span class="string">""</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>比如，要删除名称为username的cookie:</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Cookie c = <span class="keyword">new</span> Cookie(<span class="string">"username"</span>, <span class="string">""</span>);</span><br><span class="line">c.setMaxAge(<span class="number">0</span>);</span><br><span class="line">response.addCookie(c);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>注意</strong>：如果Cookie的路径不一样是不能被覆盖的。</p>
+</blockquote>
 <p>6)编码问题</p>
 <p>cookie只能保存合法的ascii字符，如果要保存中文，</p>
 <p>要将中文转换成相应的ascii字符的形式。</p>
 <p>String URLEncoder.encode(String str,String charset);</p>
 <p>String URLDecoder.decode(String str,String charset);</p>
-<p>注：建议，添加cookie时，最好对保存的字符统一</p>
-<p>编码处理。</p>
+<p>注：建议，添加cookie时，最好对保存的字符统一编码处理。</p>
 <p>7)cookie的路径问题</p>
 <p>a.什么是cookie的路径问题?</p>
 <p> 当浏览器访问服务器上的某个地址时，会比较</p>
@@ -998,7 +1136,7 @@ cookie。
 <p>/day07/biz01/sub/findCookie3.jsp   yes</p>
 <p>d.修改cookie的路径</p>
 <p>  cookie.setPath(String path);</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps27.jpg" alt="img"></p>
+<p><img src="https://img-blog.csdnimg.cn/2020120414291353.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p>8)cookie的限制</p>
 <p>a.cookie可以被用户禁止。</p>
 <p>b.cookie不安全。</p>
@@ -1011,822 +1149,626 @@ cookie。
 <p>e.cookie只能保存字符串。</p>
 <p>练习：写一个Servlet(比如CountServlet)，记录</p>
 <p>用户访问的次数(要求使用cookie技术)。</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps28.jpg" alt="img"></p>
-<h2 id="八、状态管理-Session"><a href="#八、状态管理-Session" class="headerlink" title="八、状态管理-Session"></a>八、状态管理-Session</h2><p>1.session(会话)</p>
-<p>(1)什么是session?</p>
-<p>服务器端为了保存状态而创建的一个特殊的对象。</p>
-<p>(2)session的工作原理</p>
-<p>浏览器访问服务器时，服务器创建一个session对象</p>
-<p>（该对象有一个唯一的id,称之为sessionId）,然后</p>
-<p>将sessionId以cookie的方式发送给浏览器（意味</p>
-<p>着浏览器重启的话，sessionId将会更新）（是在</p>
-<p>request.getSession()方法中实现的）；</p>
-<p>当浏览器再次访问服务器时，会将sessionId发送过来，</p>
-<p>服务器可以利用sessionId找到之前的session对象。</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps29.jpg" alt="img"></p>
-<p>(3)如何获得session对象?</p>
-<p>1)方式一</p>
-<p>HttpSession session = </p>
-<p>  request.getSession(boolean flag);</p>
-<p>注:</p>
-<p>  a. HttpSession是一个接口。</p>
-<p>  b. 当flag为true时，先查看请求当中是否有</p>
-<p>  sessionId,如果没有，则创建一个session对象；</p>
-<p>  如果有,则依据sessionId查找对应的session</p>
-<p>  对象，如果找到了，则返回，找不到，则创建一个</p>
-<p>  新的session对象。</p>
-<p>  c. 当flag为false时,先查看请求当中是否有</p>
-<p>  sessionId,如果没有，则返回null;</p>
-<p>  如果有，则依据sessionId查找对应的session对象，如果找到了，则返回，找不到，返回null。</p>
-<p>2)方式二</p>
-<p>HttpSession session = </p>
-<p>  request.getSession();</p>
-<p>等价于 request.getSession(true)。</p>
-<p>面试题：三个方法的区别？</p>
-<p>(4)保存状态相关的几个方法</p>
-<p>setAttribute(String name,Object obj);–绑定数据</p>
-<p>Object getAttribute(String name);–获取数据</p>
-<p>removeAttribute(String name);–解除绑定</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps30.jpg" alt="img"></p>
-<p>(5)session超时</p>
-<p>1)什么是session超时</p>
-<p>服务器会将空闲时间过长的session对象删除掉。</p>
-<p>注：这样可以节省内存空间。</p>
-<p>  一般空闲时间长度为半个小时左右。</p>
-<p>2)修改超时时间长度</p>
-<p>方式一：</p>
-<p>在Servers的web.xml文件中修改以下参数（单位是分钟）：</p>
-<pre><code>30</code></pre><p>一般没有必要去修改！</p>
-<p>方式二:</p>
-<p>  session.setMaxInactiveInterval(int seconds);</p>
-<p>两次请求之间的间隔如果超过指定的时间（单位是秒）</p>
-<p>，则session对象被销毁。</p>
-<p>(6)删除session</p>
-<p>session.invalidate();（invalidate–失效）</p>
-<p>2.session验证（案例）</p>
-<p> step1.登录成功之后，将一些数据绑订到session对象之上:比如</p>
-<p>  session.setAttribute(“user”,user);</p>
-<p> step2.如果请求涉及到需要保护的资源（即只有</p>
-<p>  登录成功之后才能访问的资源，比如用户列表），</p>
-<p>  则进行session验证：比如</p>
-<p>  Object obj = session.getAttribute(“user”);</p>
-<p>  if(obj == null){</p>
-<pre><code>response.sendRedirect(&quot;login.jsp&quot;);</code></pre><p>  }</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps31.jpg" alt="img"></p>
-<h2 id="九、过滤器（上）"><a href="#九、过滤器（上）" class="headerlink" title="九、过滤器（上）"></a>九、过滤器（上）</h2><p>1.比较cookie与session</p>
-<p>cookie的优点是不占用服务器端的内存资源，</p>
-<p>session的优点是安全，并且可以保存更丰富的</p>
-<p>数据类型。</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps32.jpg" alt="img"></p>
-<p>2.验证码(扩展)<br>protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {</p>
-<pre><code>    System.out.println(&quot;CheckcodeServlet&apos;s service()&quot;);
+<p><img src="https://img-blog.csdnimg.cn/2020120414292345.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="八、状态管理-Session"><a href="#八、状态管理-Session" class="headerlink" title="八、状态管理-Session"></a>八、状态管理-Session</h2><p><font size="5"><strong>1.session 会话</strong></font></p>
+<p><strong>(1) 什么是session?</strong></p>
+<ul>
+<li>服务器端为了保存状态而创建的一个特殊的对象。</li>
+</ul>
+<p><strong>(2) session的工作原理</strong></p>
+<ul>
+<li>浏览器访问服务器时，服务器创建一个session对象（该对象有一个唯一的id,称之为sessionId）；</li>
+<li>然后将sessionId以cookie的方式发送给浏览器（意味着浏览器重启的话，sessionId将会更新）（是在request.getSession()方法中实现的）；</li>
+<li>当浏览器再次访问服务器时，会将sessionId发送过来，服务器可以利用sessionId找到之前的session对象。</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20201204142931255.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>(3) 如何获得session对象?</strong></p>
+<ul>
+<li><p>方式一：</p>
+<p><strong>HttpSession session = request.getSession(boolean flag);</strong></p>
+<ul>
+<li>a. HttpSession是一个接口。</li>
+<li>b. 当flag为true时，先查看请求当中是否有sessionId，<ul>
+<li>如果没有，则创建一个session对象；</li>
+<li>如果有,则依据sessionId查找对应的session对象，</li>
+<li>如果找到了，则返回，找不到，则创建一个新的session对象。</li>
+</ul>
+</li>
+<li>c. 当flag为false时,先查看请求当中是否有sessionId，<ul>
+<li>如果没有，则返回null；</li>
+<li>如果有，则依据sessionId查找对应的session对象，</li>
+<li>如果找到了，则返回，找不到，返回null。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>方式二：</p>
+<p><strong>HttpSession session = request.getSession();</strong></p>
+<ul>
+<li>等价于 request.getSession(true)。</li>
+</ul>
+<p>request.getSession();</p>
+</li>
+</ul>
+<p><strong>(4) 保存状态相关的几个方法</strong></p>
+<ul>
+<li>setAttribute(String name,Object obj);–绑定数据</li>
+<li>Object getAttribute(String name);–获取数据</li>
+<li>removeAttribute(String name);–解除绑定</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20201204142938878.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>(5) session超时</strong></p>
+<ul>
+<li><p>什么是session超时？</p>
+<ul>
+<li>服务器会将空闲时间过长的session对象删除掉。</li>
+<li>注：这样可以节省内存空间。一般空闲时间长度为半个小时左右。</li>
+</ul>
+</li>
+<li><p>修改超时时间长度</p>
+<ul>
+<li><p>方式一：</p>
+<p>在Servers的web.xml文件中修改以下参数（单位是分钟）：<em>（一般没有必要去修改！）</em></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">session-config</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">session-timeout</span>&gt;</span>30<span class="tag">&lt;/<span class="name">session-timeout</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">session-config</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>方式二：</p>
+<p><strong>session.setMaxInactiveInterval(int seconds);</strong></p>
+<ul>
+<li>两次请求之间的间隔如果超过指定的时间（单位是秒），则session对象被销毁。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>(6) 删除session</strong></p>
+<ul>
+<li><strong>session.invalidate();</strong>（invalidate–失效）</li>
+</ul>
+<p><font size="5"><strong>session验证（案例）</strong></font></p>
+<ul>
+<li><strong>step1</strong>.登录成功之后，将一些数据绑订到session对象之上，比如：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">session.setAttribute(<span class="string">"user"</span>,user);</span><br></pre></td></tr></table></figure>
 
-    /*
+<ul>
+<li><strong>step2</strong>.如果请求涉及到需要保护的资源（即只有登录成功之后才能访问的资源，比如用户列表），则进行session验证。比如：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Object obj = session.getAttribute(<span class="string">"user"</span>);</span><br><span class="line"><span class="keyword">if</span>(obj == <span class="keyword">null</span>)&#123;</span><br><span class="line">	response.sendRedirect(<span class="string">"login.jsp"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-     * 绘图
+<p><img src="https://img-blog.csdnimg.cn/2020120414294864.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="九、过滤器（上）"><a href="#九、过滤器（上）" class="headerlink" title="九、过滤器（上）"></a>九、过滤器（上）</h2><p><font size="5"><strong>1.比较cookie与session</strong></font></p>
+<ul>
+<li><p>cookie的优点是不占用服务器端的内存资源，</p>
+</li>
+<li><p>session的优点是安全，并且可以保存更丰富的数据类型。</p>
+</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20201204142959341.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><font size="5"><strong>2.验证码</strong></font></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">service</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span></span></span><br><span class="line"><span class="function">    										<span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line"></span><br><span class="line">	System.out.println(<span class="string">"CheckcodeServlet's service()"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">	 * 绘图</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="comment">//step1.创建一个内存映像对象（画布）</span></span><br><span class="line">	<span class="comment">//三个参数为，画布的宽度，高度，类型</span></span><br><span class="line">	BufferedImage image=<span class="keyword">new</span> BufferedImage(<span class="number">80</span>,<span class="number">30</span>,BufferedImage.TYPE_INT_RGB);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//step2.获得画笔</span></span><br><span class="line">	<span class="comment">//导包的时候导awt的包</span></span><br><span class="line">	Graphics g=image.getGraphics();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//step3.给笔设置颜色</span></span><br><span class="line">	g.setColor(<span class="keyword">new</span> Color(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">//step4.给画布设置背景颜色(左上角的左边距，左上角的右边距，背景宽，背景高)</span></span><br><span class="line">	g.fillRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">80</span>, <span class="number">30</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//step5.重新给笔设置颜色和字体大小</span></span><br><span class="line">	Random r=<span class="keyword">new</span> Random();</span><br><span class="line">	g.setColor(<span class="keyword">new</span> Color(r.nextInt(<span class="number">255</span>),r.nextInt(<span class="number">255</span>),r.nextInt(<span class="number">255</span>)));</span><br><span class="line">	<span class="comment">//Font(字体类型，风格，大小)</span></span><br><span class="line">	g.setFont(<span class="keyword">new</span> Font(<span class="keyword">null</span>, Font.ITALIC|Font.BOLD, <span class="number">24</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">//step6.生成number（验证码）</span></span><br><span class="line">	String number=<span class="string">""</span>+r.nextInt(<span class="number">10</span>)+r.nextInt(<span class="number">10</span>)+r.nextInt(<span class="number">10</span>)+r.nextInt(<span class="number">10</span>)+r.nextInt(<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//step7.将验证码添加到图片里面（字符串，左下角的左边距，左下角的上边距）</span></span><br><span class="line">	g.drawString(number, <span class="number">5</span>, <span class="number">25</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//step8.加一些干扰线</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">8</span>;i++) &#123;</span><br><span class="line">		<span class="comment">//设置干扰线颜色</span></span><br><span class="line">		g.setColor(<span class="keyword">new</span> Color(r.nextInt(<span class="number">255</span>),r.nextInt(<span class="number">255</span>),r.nextInt(<span class="number">255</span>)));</span><br><span class="line">		<span class="comment">//设置干扰线位置</span></span><br><span class="line">		g.drawLine(r.nextInt(<span class="number">80</span>), r.nextInt(<span class="number">30</span>), r.nextInt(<span class="number">80</span>), r.nextInt(<span class="number">30</span>));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">	 * 将图片压缩，发送给浏览器</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//step1.设置MEMI类型（告诉浏览器，</span></span><br><span class="line">	<span class="comment">//服务器返回的数据类型是什么，这里返回</span></span><br><span class="line">	<span class="comment">//的是一张jpeg格式的图片）</span></span><br><span class="line">	response.setContentType(<span class="string">"image/jpeg"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//step2.获得字节输出流</span></span><br><span class="line">	OutputStream output=response.getOutputStream();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//step3.压缩图片并输出</span></span><br><span class="line">	<span class="comment">//(原始图片对象，压缩成的格式，输出流)</span></span><br><span class="line">	javax.imageio.ImageIO.write(image, <span class="string">"jpeg"</span>, output);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-     */
 
-    //step1.创建一个内存映像对象（画布）
 
-    //三个参数为，画布的宽度，高度，类型
-
-    BufferedImage image=new BufferedImage(80,30,BufferedImage.TYPE_INT_RGB);
-
-    //step2.获得画笔
-
-    //导包的时候导awt的包
-
-    Graphics g=image.getGraphics();
-
-    //step3.给笔设置颜色
-
-    g.setColor(new Color(255,255,255));
-
-    //step4.给画布设置背景颜色(左上角的左边距，左上角的右边距，背景宽，背景高)
-
-    g.fillRect(0, 0, 80, 30);
-
-    //step5.重新给笔设置颜色和字体大小
-
-    Random r=new Random();
-
-    g.setColor(new Color(r.nextInt(255),r.nextInt(255),r.nextInt(255)));
-
-    //Font(字体类型，风格，大小)
-
-    g.setFont(new Font(null, Font.ITALIC|Font.BOLD, 24));
-
-    //step6.生成number（验证码）
-
-    String number=&quot;&quot;+r.nextInt(10)+r.nextInt(10)+r.nextInt(10)+r.nextInt(10)+r.nextInt(10);
-
-    //step7.将验证码添加到图片里面（字符串，左下角的左边距，左下角的上边距）
-
-    g.drawString(number, 5, 25);
-
-    //step8.加一些干扰线
-
-    for(int i=0;i&lt;8;i++) {
-
-        //设置干扰线颜色
-
-        g.setColor(new Color(r.nextInt(255),r.nextInt(255),r.nextInt(255)));
-
-        //设置干扰线位置
-
-        g.drawLine(r.nextInt(80), r.nextInt(30), r.nextInt(80), r.nextInt(30));
-
-    }
-
-    /*
-
-     * 将图片压缩，发送给浏览器
-
-     */
-
-    //step1.设置MEMI类型（告诉浏览器，
-
-    //服务器返回的数据类型是什么，这里返回
-
-    //的是一张jpeg格式的图片）
-
-    response.setContentType(&quot;image/jpeg&quot;);
-
-    //step2.获得字节输出流
-
-    OutputStream output=response.getOutputStream();
-
-    //step3.压缩图片并输出
-
-    //(原始图片对象，压缩成的格式，输出流)
-
-    javax.imageio.ImageIO.write(image, &quot;jpeg&quot;, output);
-
-}</code></pre><p>3.过滤器</p>
-<p>(1)什么是过滤器?</p>
-<p>servlet规范当中定义的一种特殊的组件，用来</p>
-<p>拦截容器的调用过程。</p>
-<p>注：</p>
-<p>  容器收到请求之后，会调用过滤器，再调用</p>
-<p>  servlet。</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps33.jpg" alt="img"></p>
-<p>(2)如何写一个过滤器?</p>
-<p>step1.写一个java类，实现Filter接口。</p>
-<p>step2.在doFilter方法里面，实现拦截处理逻辑。</p>
-<p>step3.配置过滤器。(web.xml)</p>
+<p><font size="5"><strong>3.过滤器</strong></font></p>
+<p><strong>(1) 什么是过滤器?</strong></p>
+<ul>
+<li>servlet规范当中定义的一种特殊的组件，用来拦截容器的调用过程。</li>
+<li>容器收到请求之后，会调用过滤器，再调用servlet。</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20201204143010138.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>(2) 如何写一个过滤器?</strong></p>
+<ul>
+<li><p><strong>step1</strong>.写一个java类，实现Filter接口。</p>
+</li>
+<li><p><strong>step2</strong>.在doFilter方法里面，实现拦截处理逻辑。</p>
+</li>
+<li><p><strong>step3</strong>.配置过滤器。(web.xml)</p>
+</li>
+</ul>
 <p>练习：写一个过滤器，检查评论的字数，如果超过 20个字，则提示“字数过多”。</p>
-<h2 id="十、过滤器（下）、监听器"><a href="#十、过滤器（下）、监听器" class="headerlink" title="十、过滤器（下）、监听器"></a>十、过滤器（下）、监听器</h2><p>(3)过滤器的优先级</p>
-<p>当有多个过滤器都满足拦截要求，则依据配置的先后顺序来执行。</p>
-<p>(4)初始化参数</p>
-<p>step1.配置初始化参数。</p>
-<p>step2.调用FilterConfig对象的getInitParameter</p>
-<p>方法来获取初始化参数值。</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps34.jpg" alt="img"></p>
-<p>(5)过滤器的优点</p>
-<p>a.可以在不修改原有代码的基础上，增加新的功能。</p>
-<p>b.可以将多个组件相同的逻辑集中写在一个类里面</p>
-<p>（即过滤器里面），方便代码的维护。(比如session验证功能)</p>
-<p>2.监听器</p>
-<p>(1)什么是监听器?</p>
-<p>servlet规范当中定义的一种特殊的组件，用来监听</p>
-<p>容器产生的事件并进行相应的处理。</p>
-<p>注：</p>
-<p>  容器主要会产生两大类事件:</p>
-<p>  a.生命周期相关的事件</p>
-<pre><code>容器创建或者销毁了request,session,
+<h2 id="十、过滤器（下）、监听器"><a href="#十、过滤器（下）、监听器" class="headerlink" title="十、过滤器（下）、监听器"></a>十、过滤器（下）、监听器</h2><p><strong>(3) 过滤器的优先级</strong></p>
+<ul>
+<li>当有多个过滤器都满足拦截要求，则依据配置的先后顺序来执行。</li>
+</ul>
+<p><strong>(4) 初始化参数</strong></p>
+<ul>
+<li><p>step1.配置初始化参数。</p>
+</li>
+<li><p>step2.调用FilterConfig对象的 getInitParameter() 方法来获取初始化参数值。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 配置初始化参数 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">init-param</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">param-name</span>&gt;</span>illegal<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>猫<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">init-param</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-servlet上下文时产生的事件。</code></pre><p>  b.绑订数据相关的事件</p>
-<pre><code>调用了request,session,servlet上下文
+</li>
+</ul>
+<p><strong>(5) 过滤器的优点</strong></p>
+<ul>
+<li><p>a.可以在不修改原有代码的基础上，增加新的功能。</p>
+</li>
+<li><p>b.可以将多个组件相同的逻辑集中写在一个类里面（即过滤器里面），方便代码的维护。(比如session验证功能)</p>
+</li>
+</ul>
+<p><font size="5"><strong>2.监听器</strong></font></p>
+<p><strong>(1) 什么是监听器?</strong></p>
+<ul>
+<li>servlet规范当中定义的一种特殊的组件，用来监听容器产生的事件并进行相应的处理。</li>
+</ul>
+<p><strong>容器主要会产生两大类事件:</strong></p>
+<ul>
+<li><p>a.生命周期相关的事件：</p>
+<p>容器创建或者销毁了request,session,servlet上下文时产生的事件。</p>
+</li>
+<li><p>b.绑订数据相关的事件：</p>
+<p>调用了request,session,servlet上下文的setAttribute,removeAttribute时产生的事件。</p>
+</li>
+</ul>
+<p><strong>(2) servlet上下文</strong></p>
+<ul>
+<li>容器启动之后，会为每一个应用创建唯一的一个符合ServletContext接口要求的对象，该对象一般称之为servlet上下文。</li>
+<li>特点：<ul>
+<li>a.唯一性：一个应用对应一个servlet上下文；</li>
+<li>b.持久性：只要容器不关闭，应用没有被卸载，则servlet上下文会一直存在。</li>
+</ul>
+</li>
+<li>如何获取servlet上下文?<ul>
+<li>GenericServlet、ServletConfig、FilterConfig、HttpSession都提供了一个方法：<strong>getServletContext()</strong></li>
+</ul>
+</li>
+<li>servlet上下文的作用：<ul>
+<li>a.绑订数据（类似于request、session）<ul>
+<li>setAttribute(String name,Object obj)</li>
+<li>Object getAttribute(Sting name)</li>
+<li>removeAttribute(String name)</li>
+</ul>
+</li>
+<li>b.读取全局的初始化参数。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>注1</strong>：</p>
+<ul>
+<li><p>request,session和servlet上下文都提供了绑订数据相关的方法，</p>
+</li>
+<li><p>从生存时间的长度来看：servlet上下文 &gt; session &gt;request；</p>
+</li>
+<li><p>在满足使用条件的情况下，应该优先使用生命周期短的。</p>
+</li>
+</ul>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20201204143023544.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<blockquote>
+<p><strong>注2</strong>：如果数据需要所有用户共享，应该绑订到servlet上下文对象上。</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20201204143037337.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201204143043137.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<blockquote>
+<p><strong>注3</strong>：同一个应用中的所有组件(servlet,filter)都可以访问的初始化参数。</p>
+<ul>
+<li>step1.配置初始化参数；</li>
+<li>step2.调用ServletContext提供的getInitParameter方法来读取初始化参数值。</li>
+</ul>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 配置全局的初始化参数 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">context-param</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">param-name</span>&gt;</span>company<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>A公司<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-的setAttribute,removeAttribute时产生
 
-的事件。</code></pre><p>(2)servlet上下文</p>
-<p>1)什么是servlet上下文?</p>
-<p> 容器启动之后，会为每一个应用创建唯一的一个</p>
-<p>符合ServletContext接口要求的对象，该对象一般</p>
-<p>称之为servlet上下文。</p>
-<p>2)特点</p>
-<p>  a.唯一性：一个应用对应一个servlet上下文。</p>
-<p>  b.持久性：只要容器不关闭，应用没有被卸载，</p>
-<pre><code>则servlet上下文会一直存在。</code></pre><p>3)如何获取servlet上下文?</p>
-<p>  GenericServlet,ServletConfig,</p>
-<p>  FilterConfig,HttpSession都提供了一个</p>
-<p>  方法：</p>
-<pre><code>getServletContext()</code></pre><p>4)servlet上下文的作用:</p>
-<p>  a.绑订数据（类似于request、session）</p>
-<pre><code>setAttribute(String name,Object obj)
 
-Object getAttribute(Sting name)
-
-removeAttribute(String name)</code></pre><p>  注:</p>
-<pre><code>注1. request,session和servlet上下文
-
-都提供了绑订数据相关的方法，从生存时间
-
-的长度来看 servlet上下文 &gt; session &gt;
-
-request。在满足使用条件的情况下，应该
-
-优先使用生命周期短的。</code></pre><p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps35.jpg" alt="img"></p>
-<pre><code>注2.如果数据需要所有用户共享，应该绑订到servlet上下文对象上。</code></pre><p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps36.jpg" alt="img">)<img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps37.jpg" alt="img"></p>
-<p>  b.读取全局的初始化参数。</p>
-<pre><code>注：同一个应用中的所有组件(servlet,filter)都可以访问的
-
-初始化参数。
-
-step1.配置初始化参数
-
-step2.调用ServletContext提供的
-
-getInitParameter方法来读取初始化
-
-参数值。</code></pre><p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps38.jpg" alt="img"></p>
-<p>(3)如何写一个监听器?</p>
-<p>step1.写一个java类，实现相应的监听器接口。</p>
-<p>注：要依据监听的事件类型来选择实现相应的接口，</p>
-<p>比如，要监听session对象的创建和销毁，可以实现</p>
-<p>HttpSessionListener接口。</p>
-<p>step2.在接口方法当中，实现监听处理逻辑。</p>
-<p>step3.配置监听器。(web.xml)(没有先后顺序)</p>
-<p>统计在线人数。 </p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps39.jpg" alt="img"></p>
-<p>/**</p>
-<pre><code> * session对象创建之后，容器会调用
-
- * sessionCreated方法。
-
- * se：事件对象
-
- */
-
-public void sessionCreated(HttpSessionEvent se) {
-
-    System.out.println(&quot;sessionCreated()&quot;);
-
-    //获得servlet上下文
-
-    ServletContext sctx=se.getSession().getServletContext();
-
-    //通过上下文获得绑定人数
-
-    Integer count=(Integer)sctx.getAttribute(&quot;count&quot;);
-
-    if(count==null) {
-
-        //第一个用户
-
-        count=1;
-
-    }else {
-
-        //不是第一个用户，人数加一
-
-        count++;
-
-    }
-
-    //绑定最新的人数到上下文
-
-    sctx.setAttribute(&quot;count&quot;, count);</code></pre><p>​        </p>
-<pre><code>}
+<p><strong>(3) 如何写一个监听器?</strong></p>
+<ul>
+<li><p><strong>step1</strong>.写一个java类，实现相应的监听器接口。</p>
+<p>注：要依据监听的事件类型来选择实现相应的接口，比如，要监听session对象的创建和销毁，可以实现HttpSessionListener接口。</p>
+</li>
+<li><p><strong>step2</strong>.在接口方法当中，实现监听处理逻辑。</p>
+</li>
+<li><p><strong>step3</strong>.配置监听器。(web.xml)(没有先后顺序)</p>
+</li>
+</ul>
+<p><strong>统计在线人数：</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20201204143054987.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * session对象创建之后，容器会调用</span></span><br><span class="line"><span class="comment"> * sessionCreated方法。</span></span><br><span class="line"><span class="comment"> * se：事件对象</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sessionCreated</span><span class="params">(HttpSessionEvent se)</span> </span>&#123;</span><br><span class="line">	System.out.println(<span class="string">"sessionCreated()"</span>);</span><br><span class="line">	<span class="comment">//获得servlet上下文</span></span><br><span class="line">	ServletContext sctx=se.getSession().getServletContext();</span><br><span class="line">	<span class="comment">//通过上下文获得绑定人数</span></span><br><span class="line">	Integer count=(Integer)sctx.getAttribute(<span class="string">"count"</span>);</span><br><span class="line">	<span class="keyword">if</span>(count==<span class="keyword">null</span>) &#123;</span><br><span class="line">		<span class="comment">//第一个用户</span></span><br><span class="line">		count=<span class="number">1</span>;</span><br><span class="line">	&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="comment">//不是第一个用户，人数加一</span></span><br><span class="line">		count++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//绑定最新的人数到上下文</span></span><br><span class="line">	sctx.setAttribute(<span class="string">"count"</span>, count);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * session对象销毁之后，容器会调用</span></span><br><span class="line"><span class="comment"> * sessionDestroyed方法。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sessionDestroyed</span><span class="params">(HttpSessionEvent se)</span> </span>&#123;</span><br><span class="line">	System.out.println(<span class="string">"sessionDestroyed()"</span>);</span><br><span class="line">	ServletContext sctx=se.getSession().getServletContext();</span><br><span class="line">	Integer count=(Integer)sctx.getAttribute(<span class="string">"count"</span>);</span><br><span class="line">	count--;</span><br><span class="line">	sctx.setAttribute(<span class="string">"count"</span>, count);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
 
+<p><font size="5"><strong>3.实现一个简单的web缓存 (扩展)</strong></font></p>
+<p><strong>基本思路：</strong></p>
+<ul>
+<li><p>将一些常用的、不怎么发生变化，并且数据量不大的数据从数据库中查询出来，并存放到内存里面。</p>
+</li>
+<li><p>可以写一个监听器，实现servletContextListener接口，在上下文创建时，查询数据库，并且将查询到的数据绑订到上下文上。</p>
+</li>
+<li><p><strong>step1</strong>.建表 t_role</p>
+</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> t_role(</span><br><span class="line">  <span class="keyword">id</span> <span class="built_in">int</span> primary <span class="keyword">key</span>,</span><br><span class="line">  <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">20</span>)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> t_role <span class="keyword">values</span>(<span class="number">1</span>,<span class="string">'管理员'</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> t_role <span class="keyword">values</span>(<span class="number">2</span>,<span class="string">'版主'</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> t_role <span class="keyword">values</span>(<span class="number">3</span>,<span class="string">'用户'</span>);</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li><p><strong>step2</strong>.实体类 Role</p>
+</li>
+<li><p><strong>step3</strong>.DAO类  RoleDAO</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">List <span class="title">findAll</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li><strong>step4</strong>.监听器类 CacheListener</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 伪代码 */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CacheListener</span> <span class="keyword">implements</span> <span class="title">ServletContextListener</span> </span>&#123;</span><br><span class="line">	contextInitialized()&#123;</span><br><span class="line">    	List list = RoleDAO.findAll...</span><br><span class="line">        sctx.setAttribute(<span class="string">""</span>,list)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-/**
-
- * session对象销毁之后，容器会调用
-
- * sessionDestroyed方法。
-
- */
-
-public void sessionDestroyed(HttpSessionEvent se) {
-
-    System.out.println(&quot;sessionDestroyed()&quot;);
-
-    ServletContext sctx=se.getSession().getServletContext();
-
-    Integer count=(Integer)sctx.getAttribute(&quot;count&quot;);
-
-    count--;
-
-    sctx.setAttribute(&quot;count&quot;, count);
-
-}</code></pre><p>实现一个简单的web缓存 (扩展)</p>
-<p>基本思路：</p>
-<p>  将一些常用的、不怎么发生变化，并且数据量不大</p>
-<p>的数据从数据库中查询出来，并存放到内存里面。</p>
-<p>可以写一个监听器，实现servletContextListener</p>
-<p>接口，在上下文创建时，查询数据库，并且将查询到的</p>
-<p>数据绑订到上下文上。</p>
-<p>step1.建表 t_role</p>
-<p>create table t_role(</p>
-<p>  id int primary key,</p>
-<p>  name varchar(20)</p>
-<p>);</p>
-<p>insert into t_role values(1,’管理员’);</p>
-<p>insert into t_role values(2,’版主’);</p>
-<p>insert into t_role values(3,’用户’);</p>
-<p>step2.实体类 Role</p>
-<p>step3.DAO类  RoleDAO</p>
-<p>public List findAll()</p>
-<p>step4.监听器类 CacheListener</p>
-<p>  implements ServletContextListener</p>
-<p>  contextInitialized(){</p>
-<pre><code>List list = RoleDAO.findAll...
-
-sctx.setAttribute(&quot;&quot;,list)</code></pre><p>  }</p>
-<p>注意：可以绑定数据的4个作用域里分别是</p>
+<blockquote>
+<p><strong>注意</strong>：可以绑定数据的4个作用域里分别是</p>
 <p>pageContext、request、session、ServletContext</p>
-<h2 id="十一、Servlet线程安全、jsp基础、EL"><a href="#十一、Servlet线程安全、jsp基础、EL" class="headerlink" title="十一、Servlet线程安全、jsp基础、EL"></a>十一、Servlet线程安全、jsp基础、EL</h2><ol>
-<li>Servlet线程安全问题</li>
-</ol>
-<p>(1)为什么说Servlet会有线程安全问题?</p>
-<p>a.容器只会创建一个Servlet实例。</p>
-<p>b.容器收到一个请求，就会启动一个线程来处理该请求，</p>
-<p>这样，就可能会有多个线程同时调用同一个对象，就有</p>
-<p>可能产生线程安全问题（比如，这些线程同时去修改某个属性）。</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps40.jpg" alt="img"></p>
-<p>(2)如何解决?</p>
-<p>将有可能产生线程安全问题的代码使用synchronized加锁。</p>
-<p>a.使用synchronized加锁对性能会有一些影响。</p>
-<p>不要对整个方法加锁，而是对有可能产生线程安全问题的代码块加锁。</p>
-<p>b.尽量不要修改属性。</p>
-<ol start="2">
-<li>jsp基础</li>
-</ol>
-<p>(1)jsp是什么?</p>
-<p>(2)如何写jsp?</p>
-<p>step1.写一个以.jsp为后缀的文件。</p>
-<p>step2.添加:</p>
-<p>1)html (css,js)</p>
-<p>直接写即可。</p>
-<p>2)java代码。</p>
-<p>a.java代码片断</p>
-<p>&lt;% java代码  %&gt;</p>
-<p>b.jsp表达式</p>
-<p>&lt;%= java表达式 %&gt;</p>
-<p>c. jsp声明  (a1.jsp)</p>
-<p>&lt;%! 声明变量或者方法  %&gt;</p>
-<p>3)指令</p>
-<p>a.什么是指令？</p>
-<p>  告诉容器，在将jsp转换成servlet时，做一些</p>
-<p>额外的处理，比如导包。</p>
-<p>b.语法</p>
-<p>  &lt;%@ 指令名 属性＝值 %&gt;</p>
-<p>c.page指令</p>
-<p>  import属性：导包</p>
-<p>  pageEncoding属性：jsp文件的编码。</p>
-<p>  contentType属性：设置setContentType的内容。</p>
-<p>session属性:缺省值（默认值）是true,如果值是</p>
-<p>false,则不能够使用session隐含对象。</p>
-<pre><code>(a2.jsp)</code></pre><p>  errorPage属性：指定一个异常处理页面。</p>
-<pre><code>注: 当jsp运行发生了异常，则容器会调用</code></pre><p>异常处理页面。(a3.jsp)</p>
-<p>  isErrorPage属性:缺省值是false,如果值为true,</p>
-<pre><code>则可以使用exception隐含对象。使用</code></pre><p>exception.getMessage()获得错误信息。</p>
-<pre><code>(a4.jsp)</code></pre><p>d.include指令</p>
-<p>告诉容器，在将jsp转换成servlet时，将</p>
-<p>file属性指定的文件的内容插入到该指令所</p>
-<p>在的位置。</p>
-<p>e. taglib指令</p>
-<p>  jsp标签技术中，用来引入某个标签。</p>
-<p>4)隐含对象</p>
-<p>a.什么是隐含对象?</p>
-<p> 可以直接使用的对象。</p>
-<p>b.为什么可以直接使用这些隐含对象?</p>
-<p> 容器会自动添加获得这些对象的代码。</p>
+</blockquote>
+<h2 id="十一、Servlet线程安全、jsp基础、EL"><a href="#十一、Servlet线程安全、jsp基础、EL" class="headerlink" title="十一、Servlet线程安全、jsp基础、EL"></a>十一、Servlet线程安全、jsp基础、EL</h2><p><font size="5"><strong>1.Servlet线程安全问题</strong></font></p>
+<p><strong>(1) 为什么说Servlet会有线程安全问题?</strong></p>
+<ul>
+<li>a.容器只会创建一个Servlet实例。</li>
+<li>b.容器收到一个请求，就会启动一个线程来处理该请求，这样，就可能会有多个线程同时调用同一个对象，就有可能产生线程安全问题（比如，这些线程同时去修改某个属性）。</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20201204143103376.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>(2) 如何解决?</strong></p>
+<ul>
+<li>将有可能产生线程安全问题的代码使用synchronized加锁。</li>
+<li>a.使用synchronized加锁对性能会有一些影响。不要对整个方法加锁，而是对有可能产生线程安全问题的代码块加锁。</li>
+<li>b.尽量不要修改属性。</li>
+</ul>
+<p><font size="5"><strong>2.JSP基础</strong></font></p>
+<p><strong>(1) jsp是什么?</strong></p>
+<ul>
+<li>JSP全称Java Server Pages，是一种动态网页开发技术。它使用JSP标签在HTML网页中插入Java代码。</li>
+</ul>
+<p><strong>(2) 如何写jsp?</strong></p>
+<ul>
+<li><p>step1.写一个以.jsp为后缀的文件。</p>
+</li>
+<li><p>step2.添加:</p>
+<ul>
+<li><p>1) html (css,js) 直接写即可。</p>
+</li>
+<li><p>2) java代码。</p>
+<ul>
+<li>a.java代码片断  &lt;% java代码  %&gt;</li>
+<li>b.jsp表达式   &lt;%= java表达式 %&gt;</li>
+<li>c. jsp声明  (a1.jsp)   &lt;%! 声明变量或者方法  %&gt;</li>
+</ul>
+</li>
+<li><p>3) 指令</p>
+<ul>
+<li><p>a.什么是指令？</p>
+<p>告诉容器，在将jsp转换成servlet时，做一些额外的处理，比如导包。</p>
+</li>
+<li><p>b.语法   &lt;%@ 指令名 属性＝值 %&gt;</p>
+</li>
+<li><p>c.page指令</p>
+<p><strong>import</strong>属性：导包</p>
+<p><strong>pageEncoding</strong>属性：jsp文件的编码。</p>
+<p><strong>contentType</strong>属性：设置setContentType的内容。</p>
+<p><strong>session</strong>属性：缺省值（默认值）是true,如果值是false,则不能够使用session隐含对象。  (a2.jsp)</p>
+<p><strong>errorPage</strong>属性：指定一个异常处理页面。</p>
+<pre><code>*（注: 当jsp运行发生了异常，则容器会调用异常处理页面。(a3.jsp)）*</code></pre><p><strong>isErrorPage</strong>属性:缺省值是false,如果值为true,则可以使用exception隐含对象。</p>
+<ul>
+<li>使用exception.getMessage()获得错误信息。(a4.jsp)</li>
+</ul>
+</li>
+<li><p>d.include指令</p>
+<p>告诉容器，在将jsp转换成servlet时，将file属性指定的文件的内容插入到该指令所在的位置。</p>
+</li>
+<li><p>e. taglib指令</p>
+<p>jsp标签技术中，用来引入某个标签。</p>
+</li>
+</ul>
+</li>
+<li><p>4) 隐含对象</p>
+<p>a.什么是隐含对象? 可以直接使用的对象。</p>
+<p>b.为什么可以直接使用这些隐含对象? 容器会自动添加获得这些对象的代码。</p>
 <p>c.有哪些隐含对象?</p>
-<p>  out,request,response</p>
-<p>  session,application</p>
-<p>  exception</p>
-<p>  pageContext: 页面上下文</p>
-<pre><code>容器会为每一个jsp实例创建唯一的一个
-
-符合PageContext接口要求的对象，该
-
-对象会一直存在，除非jsp实例被删除。
-
-作用1：绑订数据  (a6.jsp,a7.jsp)
-
-  setAttribute
-
-  getAttribute
-
-  removeAttribute
-
-  注：绑订到pageContext上的数据，
-
-  只有对应的jsp实例能访问。
-
-作用2：获得其它所有隐含对象
-
-  注：该对象提供了获得其它隐含对象的
-
-  方法。</code></pre><p>config: 相当于ServletConfig，通过它来读取</p>
-<p>初始化参数 (a5.jsp)</p>
-<p>  page:  jsp实例本身（过度设计，从来不用）</p>
-<pre><code>注: jsp对应的那个servlet实例。</code></pre><p>　5)注释 (a8.jsp)</p>
-<p>a.   </p>
-<p>如果注释的内容是java代码，java代码会执行。</p>
-<p>但是不会显示。</p>
-<p>b. &lt;%– 注释内容 –%&gt;</p>
-<p>  如果注释的内容是java代码，不会执行。</p>
-<p>(3)jsp是如何执行的?</p>
-<p>step1. jsp要转换成一个servlet</p>
-<p>  html —–&gt; service方法里，使用out.write</p>
-<pre><code>输出。</code></pre><p>  &lt;%  %&gt; —&gt; service方法里，照搬。</p>
-<p>  &lt;%=  %&gt;  –&gt; service方法里，使用out.print</p>
-<pre><code>输出。</code></pre><p>  &lt;%!  %&gt; —&gt; 增加新的属性和方法。</p>
-<p>step2.调用servlet。</p>
-<ol start="3">
-<li>jsp标签和el表达式</li>
-</ol>
-<p>(1)jsp标签是什么?</p>
-<p>jsp标签语法类似于html标签，用于替换jsp</p>
-<p>文件中的java代码。</p>
-<p>注：</p>
-<p>  a.因为直接在jsp文件当中写java代码，不利于</p>
-<p>  jsp文件的维护（比如，将带有java代码的jsp</p>
-<p>  文件交给美工去修改就很不方便）。所以，sun</p>
-<p>  才制订了jsp标签技术规范。</p>
-<p>  b.使用jsp标签来替换java代码，一方面jsp文件</p>
-<p>  会变得简洁，利于代码的维护与复用，另外一方</p>
-<p>  面，也利于美工去修改。</p>
-<p>(2)el表达式是什么?</p>
-<p>一套简单的运算规则，用于给jsp标签的属性赋值，</p>
-<p>也可以脱离jsp标签直接运行。</p>
-<p>(3)el表达式的使用</p>
-<p>1)访问bean的属性</p>
-<p>注(了解):</p>
-<p>  一个类，满足如下几个条件，就可以称之为</p>
-<p>  一个javabean:</p>
+<ul>
+<li><p>out,request,response</p>
+</li>
+<li><p>session,application</p>
+</li>
+<li><p>exception</p>
+</li>
+<li><p>pageContext: 页面上下文</p>
+<p>容器会为每一个jsp实例创建唯一的一个符合PageContext接口要求的对象，该对象会一直存在，除非jsp实例被删除。</p>
+<ul>
+<li><p>作用1：绑订数据  (a6.jsp,a7.jsp)  setAttribute、getAttribute、removeAttribute</p>
+<p><em>（注：绑订到pageContext上的数据，只有对应的jsp实例能访问。）</em></p>
+</li>
+<li><p>作用2：获得其它所有隐含对象</p>
+<p><em>（注：该对象提供了获得其它隐含对象的方法。）</em></p>
+</li>
+</ul>
+</li>
+<li><p>config: 相当于ServletConfig，通过它来读取初始化参数 (a5.jsp)</p>
+</li>
+<li><p>page:  jsp实例本身（过度设计，从来不用）</p>
+<p><em>（注: jsp对应的那个servlet实例。）</em></p>
+</li>
+</ul>
+</li>
+<li><p>5) 注释 (a8.jsp)</p>
+<p>a.   如果注释的内容是java代码，java代码会执行，但是不会显示。</p>
+<p>b. &lt;%– 注释内容 –%&gt;  如果注释的内容是java代码，不会执行。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>(3) JSP是如何执行的?</strong></p>
+<ul>
+<li><p><strong>step1</strong>. JSP要转换成一个servlet</p>
+<ul>
+<li>html —–&gt; service方法里，使用out.write输出。</li>
+<li>&lt;%  %&gt; —&gt; service方法里，照搬。</li>
+<li>&lt;%=  %&gt;  –&gt; service方法里，使用out.print</li>
+<li>&lt;%!  %&gt; —&gt; 增加新的属性和方法。</li>
+</ul>
+</li>
+<li><p><strong>step2</strong>.调用servlet。</p>
+</li>
+</ul>
+<p><font size="5"><strong>3.jsp标签和el表达式</strong></font></p>
+<p><strong>(1) jsp标签是什么?</strong></p>
+<ul>
+<li>jsp标签语法类似于html标签，用于替换jsp文件中的java代码。<ul>
+<li>a.因为直接在jsp文件当中写java代码，不利于jsp文件的维护（比如，将带有java代码的jsp文件交给美工去修改就很不方便）。所以，sun才制订了jsp标签技术规范。</li>
+<li>b.使用jsp标签来替换java代码，一方面jsp文件会变得简洁，利于代码的维护与复用，另外一方面，也利于美工去修改。</li>
+</ul>
+</li>
+</ul>
+<p><strong>(2) el表达式是什么?</strong></p>
+<ul>
+<li>一套简单的运算规则，用于给jsp标签的属性赋值，也可以脱离jsp标签直接运行。</li>
+</ul>
+<p><strong>(3) el表达式的使用</strong></p>
+<p><strong>1) 访问bean的属性</strong></p>
+<blockquote>
+<p><strong>补充</strong>：一个类，满足如下几个条件，就可以称之为一个javabean:</p>
 <p>要求：</p>
-<p>1.public class</p>
-<p>  2.有无参构造器</p>
-<p>  3.实现序列化接口(不是强制要求) </p>
-<p>  4.有一些属性</p>
-<p>  5.有对应的get/set方法</p>
-<p>方式一　　(e1.jsp)</p>
-<p>  ${user.username}</p>
-<pre><code>a.执行过程：容器依次从pageContext-&gt;
-
-  request-&gt;session-&gt;application
-
-  中查找绑订名为&quot;user&quot;的对象
-
-  (即getAttribute),如果找到了，
-
-  则调用该对象的&quot;getUsername&quot;方法
-
-  并输出。   
-
-b.优点: 
-
-  会将null转换成&quot;&quot;（空字符串）输出。
-
-  如果找不到对应的对象，不会报空指针
-
-  异常，而是输出&quot;&quot;（空字符串）。</code></pre><p>但是不能把方法名写错，否则会报错。</p>
-<pre><code>c.指定查找范围:
-
-  可以使用pageScope,requestScope,
-
-  sessionScope,applicationScope
-
-  指定查找范围，比如：
-
-  ${sessionScope.user.username}</code></pre><p>方式二</p>
-<p>${user[‘username’]}—等价于${user.username}</p>
-<pre><code>注：
-
-  []里面允许出现绑订名，比如
-
-  ${user[str]}。找不到则输出空字符串””</code></pre><p>${user[requestScope.str]}</p>
-<pre><code>[]里面还可以出现从０开始的下标，
-
-用于访问实体类属性数组中的某个元素。
-  例：</code></pre><p>&lt;%</p>
-<pre><code>    request.setAttribute(&quot;str&quot;, &quot;username&quot;);
-
-%&gt;
-
-username:${user[str] }</code></pre><p>2)做一些简单的运算 (e2.jsp)</p>
-<p>注：运算的结果可以用来给jsp标签的属性赋值，</p>
-<p>也可以直接输出。</p>
-<p>a.算术运算 +,-,*,/,%</p>
-<pre><code>注: &quot;+&quot;只能求和。不能做字符串链接，</code></pre><p>但是可以计算”1”+”1”(结果为2)</p>
-<p>b.关系运算 &gt;,&gt;=,&lt;,&lt;=,==,!=（结果为true或false）</p>
-<p>==可以用来判断字符串是否相同。</p>
-<p>如果不指定查找范围就会依次查找。</p>
-<p>c.逻辑运算 &amp;&amp;,||,!</p>
-<p>d.empty运算　empty</p>
-<pre><code>注: 判断是否为一个空字符串或者
-
-是否为一个空的集合。</code></pre><p>例：</p>
-<p>&lt;%</p>
-<p>request.setAttribute(“s2”, “”);</p>
-<p>%&gt;</p>
-<p>空字符串：${empty s2 }<br/><!-- true --></p>
-<p>空的集合：${empty list1 }<br/><!-- true --></p>
-<p>值为null：${empty null}<br/><!-- true --></p>
-<p>找不到对应的值：${empty abc }<br/><!-- true --></p>
-<h2 id="十二、JSTL、自定义标签"><a href="#十二、JSTL、自定义标签" class="headerlink" title="十二、JSTL、自定义标签"></a>十二、JSTL、自定义标签</h2><p>3)读取请求参数值 (e1.jsp)</p>
-<p>${param.username}</p>
-<p>等价于</p>
-<p>  request.getParameter(“username”);</p>
-<p>${paramValues.interest}</p>
-<p>等价于</p>
-<p>  request.getParameterValues(“interest”);</p>
 <ol>
-<li>jstl (java standard tag lib 即JAVA标准标签库)</li>
+<li><p>public class</p>
+</li>
+<li><p>有无参构造器</p>
+</li>
+<li><p>实现序列化接口(不是强制要求) </p>
+</li>
+<li><p>有一些属性</p>
+</li>
+<li><p>有对应的get/set方法</p>
+</li>
 </ol>
-<p>(1)jstl是什么?</p>
-<p>apache开发的一套通用的jsp标签，后来捐献给了sun,sun</p>
-<p>将其命名为jstl。</p>
-<p>(2)如何使用jstl?</p>
-<p>step1.导入jstl相关的jar包。</p>
-<p>step2.使用taglib指令引入要使用的jsp标签。</p>
-<p>  uri属性：指定要引入的jsp标签的命名空间。</p>
-<pre><code>注：
+</blockquote>
+<ul>
+<li><p>方式一：(e1.jsp)</p>
+<ul>
+<li><strong>${user.username}</strong></li>
+<li>a.执行过程：容器依次从pageContext-&gt; request -&gt; session -&gt; application 中查找绑订名为”user”的对象  (即getAttribute),如果找到了，则调用该对象的”getUsername”方法并输出。   </li>
+<li>b.优点：会将null转换成””（空字符串）输出。如果找不到对应的对象，不会报空指针异常，而是输出””（空字符串）。但是不能把方法名写错，否则会报错。</li>
+<li>c.指定查找范围：可以使用pageScope,requestScope、sessionScope、applicationScope 指定查找范围，比如：${sessionScope.user.username}</li>
+</ul>
+</li>
+<li><p>方式二：</p>
+<ul>
+<li><p><strong>${user[‘username’]}</strong>    等价于    ${user.username}</p>
+</li>
+<li><p>[]里面允许出现绑订名，比如 ${user[str]}。找不到则输出空字符串”” ${user[requestScope.str]}</p>
+</li>
+<li><p>[]里面还可以出现从０开始的下标，用于访问实体类属性数组中的某个元素。例：</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;%request.setAttribute(<span class="string">"str"</span>, <span class="string">"username"</span>);%&gt;</span><br><span class="line">username:$&#123;user[str] &#125;</span><br></pre></td></tr></table></figure>
 
-  命名空间：为了区分同名的元素而在元素
 
-  前添加的一个限定（通常是一个域名）。</code></pre><p>  prefix属性：命名空间的别名。</p>
-<p>(3)几个核心标签</p>
-<p>1)if标签（e3.jsp）</p>
-<p>标签体</p>
-<p>  当test属性值为true时，容器会执行标签体的内容。</p>
-<p>  test属性可以使用el表达式赋值来作为绑定值。</p>
-<p>  var属性用来指定绑订名。</p>
-<p>  scope属性用来指定绑订范围（”page”,”request”,”session”,</p>
-<pre><code>&quot;application&quot;）。</code></pre><p>例：</p>
-<p>性别：</p>
-<p>&lt;c:if test=”${user.gender==’m’ }” </p>
-<p>var=”rs” scope=”page”&gt;男</c:if></p>
-<p>&lt;c:if test=”${!rs }”&gt;女</c:if></p>
-<p>2)choose标签  (e4.jsp)</p>
-<p>​<br>​<br>​<br>​<br>​<br>​     </p>
-<p>  when可以出现1次或者多次，表示一个分支，</p>
-<p>  当test属性值为true时，执行标签体的内容。</p>
-<p>otherwise可以出现0次或者1次，表示例外。</p>
-<p>注意：这两个标签不能独立使用，必须要嵌套在</p>
-<p>choose标签中才有意义！</p>
+
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>2) 做一些简单的运算 (e2.jsp)</strong></p>
+<ul>
+<li><p>运算的结果可以用来给jsp标签的属性赋值，也可以直接输出。</p>
+<ul>
+<li><p>a.算术运算 +,-,*,/,%，其中”+”只能求和。不能做字符串链接，但是可以计算”1”+”1”(结果为2)</p>
+</li>
+<li><p>b.关系运算 &gt;,&gt;=,&lt;,&lt;=,==,!=（结果为true或false）</p>
+<p>==可以用来判断字符串是否相同。如果不指定查找范围就会依次查找。</p>
+</li>
+<li><p>c.逻辑运算 &amp;&amp;,||,!</p>
+</li>
+<li><p>d.empty运算　empty：判断是否为一个空字符串或者是否为一个空的集合。例：</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;%</span><br><span class="line">request.setAttribute(<span class="string">"s2"</span>, <span class="string">""</span>);</span><br><span class="line">%&gt;</span><br><span class="line">空字符串：$&#123;empty s2 &#125;&lt;br/&gt;&lt;!-- <span class="keyword">true</span> --&gt;</span><br><span class="line">空的集合：$&#123;empty list1 &#125;&lt;br/&gt;&lt;!-- <span class="keyword">true</span> --&gt;</span><br><span class="line">值为<span class="keyword">null</span>：$&#123;empty <span class="keyword">null</span>&#125;&lt;br/&gt;&lt;!-- <span class="keyword">true</span> --&gt;</span><br><span class="line">找不到对应的值：$&#123;empty abc &#125;&lt;br/&gt;&lt;!-- <span class="keyword">true</span> --&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="十二、JSTL、自定义标签"><a href="#十二、JSTL、自定义标签" class="headerlink" title="十二、JSTL、自定义标签"></a>十二、JSTL、自定义标签</h2><p><strong>3) 读取请求参数值 (e1.jsp)</strong></p>
+<ul>
+<li><strong>${param.username}</strong>    等价于    request.getParameter(“username”);</li>
+<li><strong>${paramValues.interest}</strong>    等价于    request.getParameterValues(“interest”);</li>
+</ul>
+<p><font size="5"><strong>jstl (java standard tag lib 即JAVA标准标签库)</strong></font></p>
+<p><strong>(1)jstl是什么?</strong></p>
+<ul>
+<li>apache开发的一套通用的jsp标签，后来捐献给了sun，sun将其命名为jstl。</li>
+</ul>
+<p><strong>(2) 如何使用jstl?</strong></p>
+<ul>
+<li><p><strong>step1</strong>.导入jstl相关的jar包。</p>
+</li>
+<li><p><strong>step2</strong>.使用taglib指令引入要使用的jsp标签。</p>
+<p>uri属性：指定要引入的jsp标签的命名空间。</p>
+<ul>
+<li>命名空间：为了区分同名的元素而在元素前添加的一个限定（通常是一个域名）。</li>
+</ul>
+<p>prefix属性：命名空间的别名。</p>
+</li>
+</ul>
+<p><strong>(3) 几个核心标签</strong></p>
+<p><strong>1) if标签</strong>（e3.jsp）</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;c:if test=""　var="" scope=""&gt;标签体&lt;/c:if&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>当<code>test属性</code>值为true时，容器会执行标签体的内容。</li>
+<li><code>test属性</code>，可以使用el表达式赋值来作为绑定值。</li>
+<li><code>var属性</code>，用来指定绑订名。</li>
+<li><code>scope属性</code>用来指定绑订范围（”page”,”request”,”session”,”application”）。例：</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">性别：</span><br><span class="line">&lt;c:if test="$&#123;user.gender=='m' &#125;" var="rs" scope="page"&gt;男&lt;/c:if&gt;</span><br><span class="line">&lt;c:if test="$&#123;!rs &#125;"&gt;女&lt;/c:if&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>2) choose标签</strong>  (e4.jsp)</p>
+ <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;c:choose&gt;</span><br><span class="line">    &lt;c:when test=<span class="string">""</span>&gt;</span><br><span class="line">    &lt;/c:when&gt;  &lt;!--可以出现1到多次--&gt;</span><br><span class="line">    &lt;c:otherwise&gt;</span><br><span class="line">    &lt;/c:otherwise&gt;  &lt;!--可以出现0或一次--&gt;</span><br><span class="line">&lt;/c:choose&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>when可以出现1次或者多次，表示一个分支；</li>
+<li>当test属性值为true时，执行标签体的内容；</li>
+<li>otherwise可以出现0次或者1次，表示例外。</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong>：这两个标签不能独立使用，必须要嵌套在choose标签中才有意义！</p>
+</blockquote>
 <p>例：</p>
-<p>&lt;c:choose&gt;</p>
-<pre><code>&lt;c:when test=&quot;${u.gender==&apos;m&apos;}&quot;&gt;男&lt;/c:when&gt;
-
-&lt;c:when test=&quot;${u.gender==&apos;f&apos;}&quot;&gt;女&lt;/c:when&gt;
-
-&lt;c:otherwise&gt;保密&lt;/c:otherwise&gt;</code></pre><p></c:choose></p>
-<p>3)forEach标签 (e5.jsp)</p>
-<p>用于遍历集合或者数组。</p>
-<p>a.语法：</p>
-<p>  b.items属性用来指定要遍历的集合或者数组，</p>
-<p>  可以使用el表达式来赋值。</p>
-<p>c.var属性用来指定绑订名（绑订范围固定是pageContext,</p>
-<p>该标签每次从集合或者数组当中</p>
-<p>  取一个元素，然后绑订到pageContext上）。</p>
-<p>  d.varStatus属性也是用来指定绑定名（绑订范围固定</p>
-<p>  是pageContext,绑订值是一个特殊对象，该对象</p>
-<p>  由该标签创建，提供了几个方法用来获得当前遍历的状态，比如，</p>
-<p>getIndex():获得当前正在被遍历的元素的下标（从0开始）</p>
-<p>getCount():获得当前是第几次被遍历（从1开始）</p>
-<p>例：</p>
-<p>&lt;c:forEach items=”${users }” var=”u” varStatus=”s”&gt;</p>
-<tr class="row${s.index%2+1 }">
-
-<pre><code>&lt;td&gt;${u.id }&lt;/td&gt;
-
-&lt;td&gt;${u.uname }&lt;/td&gt;
-
-&lt;td&gt;${u.pwd }&lt;/td&gt;
-
-&lt;td&gt;${u.phone }&lt;/td&gt;
-
-&lt;td&gt;&lt;a href=&quot;delUser.do?id=${u.id }&quot;
-
-onclick=&quot;return confirm(&apos;确定删除${u.uname}吗?&apos;)&quot;&gt;删除            </code></pre><p></a> </td></p>
-</tr>
-
-<p></c:forEach></p>
-<p>  注：</p>
-<pre><code>容器依据标签的命名空间找到标签的描述</code></pre><p>  　文件(.tld文件),然后依据标签的名称找到</p>
-<p>  　对应的标签类，然后将该类实例化，并且调用</p>
-<p>  　该实例对应的方法。<br>    注意：如果是更改项目名，要记得右键项目名称，</p>
-<p>然后更改web project settings的值为相应的项目名称。</p>
-<p>这个web project settings是你访问服务器上你部署的应用的应用名</p>
-<p>默认情况下 不指定这个的话应用名和你的工程名是一样的</p>
-<p>指定了之后 就是以这个名字为准了</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps41.jpg" alt="img"> </p>
-<p>2.自定义标签</p>
-<p>(1)编程步骤</p>
-<p>step1.写一个java类，继承SimpleTagSupport类。</p>
-<p>注：</p>
-<p>  简单标签技术(new),继承SimpleTagSupport类</p>
-<p>  来开发。</p>
-<p>  复杂标签技术(old)</p>
-<p>step2.override doTag方法，在该方法里面，编写</p>
-<p>  处理逻辑。</p>
-<p>step3.描述标签(.tld文件)</p>
-<p>JSP</p>
-<p>注:</p>
-<p>  body-content的值可以是empty,scriptless,</p>
-<p>  JSP。</p>
-<p>  empty: 该标签没有标签体。</p>
-<p>  scriptless: 该标签可以有标签体，但是标签体</p>
-<pre><code>的内容不能够出现java代码(&lt;% %&gt;,
-
-&lt;%= %&gt;,&lt;%! %&gt;)。</code></pre><p>  JSP:该标签可以有标签体，并且标签体可以出现</p>
-<pre><code>java代码。只有复杂标签技术才支持该值。</code></pre><p>例：</p>
-<p>1.java标签类：</p>
-<p>/**</p>
-<p> * 自定义标签，用来输出系统的当前时间</p>
-<p> * @author Administrator</p>
-<p> *</p>
-<p> */</p>
-<p>public class SysdateTag extends SimpleTagSupport {</p>
-<pre><code>//设置默认格式
-
-private String format=&quot;yyyy/MM/dd HH:mm:ss&quot;;
-
-//设置format的get方法
-
-public String getFormat() {
-
-    return this.format;
-
-}
-
-//设置format的set方法
-
-public void setFormat(String format) {
-
-    this.format=format;
-
-}
-
-//重写doTag方法来实现具体的功能
-
-@Override
-
-public void doTag() throws JspException, IOException {
-
-    //创建服务器时间
-
-    Date date=new Date();
-
-    //格式化时间
-
-    SimpleDateFormat sdf=new SimpleDateFormat(format);
-
-    String now=sdf.format(date);
-
-    //将时间输出给浏览器
-
-    //PageContext extends JspContext
-
-    //该方法声明返回JspContext
-
-    //但在实现时返回的是PageContext
-
-    //所以可以将其强转为PageContext
-
-    //从而获得其他8个隐含对象
-
-    PageContext ctx=(PageContext)getJspContext();
-
-    JspWriter out=ctx.getOut();
-
-    out.println(now);
-
-    //注意：此处一定不能关闭流，因为其他的标签
-
-    //也要用这个流
-
-    super.doTag();
-
-}</code></pre><p>}</p>
-<p>2.s.tld文件：</p>
-<?xml version="1.0" encoding="UTF-8" ?>
-
-
-
-<p>&lt;taglib xmlns=”<a href="http://java.sun.com/xml/ns/javaee&quot;" target="_blank" rel="noopener">http://java.sun.com/xml/ns/javaee&quot;</a></p>
-<p>  xmlns:xsi=”<a href="http://www.w3.org/2001/XMLSchema-instance&quot;" target="_blank" rel="noopener">http://www.w3.org/2001/XMLSchema-instance&quot;</a></p>
-<p>  xsi:schemaLocation=”<a href="http://java.sun.com/xml/ns/javaee" target="_blank" rel="noopener">http://java.sun.com/xml/ns/javaee</a> <a href="http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd&quot;" target="_blank" rel="noopener">http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd&quot;</a></p>
-<p>  version=”2.1”&gt;</p>
-<p> <description>这是我自己的标签库</description></p>
-<p> <display-name>My tag</display-name></p>
-<p> <tlib-version>3.1</tlib-version></p>
-<p> <short-name>s</short-name></p>
-<p> <uri>/my-tag</uri></p>
- <tag>
-
-<p>  <description>用来输出服务器的时间</description></p>
-<p>  <name>sysdate</name></p>
-<p>  <tag-class>web.SysdateTag</tag-class></p>
-  <!-- 声明该标签可以包含哪些内容 -->
-
-  <!-- empty: 该标签没有标签体。
-
-      scriptless: 该标签可以有标签体，但是标签体
-
-            的内容不能够出现java代码(<% %>,
-
-            <%= %>,<%! %>)。
-
-      JSP:该标签可以有标签体，并且标签体可以出现
-
-            java代码。只有复杂标签技术才支持该值
-
-  -->
-
-<p>  <body-content>empty</body-content></p>
-  <!-- 以下是标签的属性设置 -->
-
-  <attribute>
-
-<pre><code>&lt;description&gt;用来设置时间的格式&lt;/description&gt;
-
-&lt;name&gt;format&lt;/name&gt;
-
-&lt;!-- 设置是否必须给这个属性赋值 --&gt;
-
-&lt;required&gt;false&lt;/required&gt;
-
-&lt;!-- 设置是否可以用EL表达式给次属性赋值 --&gt;
-
-&lt;rtexprvalue&gt;true&lt;/rtexprvalue&gt;</code></pre>  </attribute>
-
- </tag>
-
-
-
-</taglib>
-
-<p>3.应用：</p>
-<p>&lt;%@ taglib uri=”/my-tag” prefix=”s” %&gt;</p>
-<p>&lt;s:sysdate format=”yyyy-MM-dd” /&gt;</p>
-<h2 id="十三、MVC"><a href="#十三、MVC" class="headerlink" title="十三、MVC"></a>十三、MVC</h2><p>1.MVC (Model 模型,View　视图,Controller　控制器)</p>
-<p>(1)MVC是什么?</p>
-<p>是一种软件架构思想，其核心思想是，我们可以将软件划分成三种不同类型的模块，分别是模型，视图和控制器。其中，模型负责封装业务逻辑，视图负责表示逻辑（数据展现和用户操作界面），控制器负责协调模型和视图(视图将请求发送给控制器，由控制器选择对应的模型来处理；模型返回的处理结果也要先交给控制器，由控制器选择合适的视图来展现)。</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps42.jpg" alt="img"> </p>
-<p>(2)如何使用MVC?</p>
-<p>在web开发当中，我们经常使用Servlet充当控制器，</p>
-<p>jsp充当视图，java充当模型。它们的关系如下图所示：</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps43.jpg" alt="img"> </p>
-<p>(3)MVC的优点</p>
-<p>a.模型返回的处理结果，可以使用不同的视图来展现。</p>
-<p>b.方便测试</p>
-<p>  比如将业务逻辑写在java类里面，可以直接测试。</p>
-<p>  如果写在Servlet里面，需要部署之后才能测试。</p>
-<p>c.方便代码的维护</p>
-<p>  修改模型或者视图，彼此不受影响。</p>
-<p>注:</p>
-<p>  使用MVC,会增加代码量，会增加软件的成本，</p>
-<p>  也会增加设计的难度。所以，只有一定规模的</p>
-<p>  软件才需要使用MVC。</p>
-<p>案例：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;c:choose&gt;</span><br><span class="line">    &lt;c:when test="$&#123;u.gender=='m'&#125;"&gt;男&lt;/c:when&gt;</span><br><span class="line">    &lt;c:when test="$&#123;u.gender=='f'&#125;"&gt;女&lt;/c:when&gt;</span><br><span class="line">    &lt;c:otherwise&gt;保密&lt;/c:otherwise&gt;</span><br><span class="line">&lt;/c:choose&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>3) forEach标签</strong> (e5.jsp)</p>
+<ul>
+<li><p>用于遍历集合或者数组。</p>
+</li>
+<li><p>a.语法：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;c:forEach items=<span class="string">""</span> <span class="keyword">var</span>=<span class="string">""</span> varStatus=<span class="string">""</span>&gt;</span><br><span class="line">&lt;/c:forEach&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>b.items属性用来指定要遍历的集合或者数组，可以使用el表达式来赋值。</p>
+</li>
+<li><p>c.var属性用来指定绑订名（绑订范围固定是pageContext,该标签每次从集合或者数组当中取一个元素，然后绑订到pageContext上）。</p>
+</li>
+<li><p>d.varStatus属性也是用来指定绑定名（绑订范围固定是pageContext,绑订值是一个特殊对象，该对象由该标签创建，提供了几个方法用来获得当前遍历的状态，比如，</p>
+<ul>
+<li>getIndex():获得当前正在被遍历的元素的下标（从0开始）</li>
+<li>getCount():获得当前是第几次被遍历（从1开始）例：</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;c:forEach items=<span class="string">"$&#123;users &#125;"</span> <span class="keyword">var</span>=<span class="string">"u"</span> varStatus=<span class="string">"s"</span>&gt;</span><br><span class="line">&lt;tr <span class="class"><span class="keyword">class</span></span>=<span class="string">"row$&#123;s.index%2+1 &#125;"</span>&gt;</span><br><span class="line">	&lt;td&gt;$&#123;u.id &#125;&lt;/td&gt;</span><br><span class="line">	&lt;td&gt;$&#123;u.uname &#125;&lt;/td&gt;</span><br><span class="line">	&lt;td&gt;$&#123;u.pwd &#125;&lt;/td&gt;</span><br><span class="line">	&lt;td&gt;$&#123;u.phone &#125;&lt;/td&gt;</span><br><span class="line">	&lt;td&gt;&lt;a href=<span class="string">"delUser.do?id=$&#123;u.id &#125;"</span></span><br><span class="line">	onclick=<span class="string">"return confirm('确定删除$&#123;u.uname&#125;吗?')"</span>&gt;删除			</span><br><span class="line">&lt;/a&gt;&amp;nbsp;&lt;/td&gt;</span><br><span class="line">&lt;/tr&gt;</span><br><span class="line">&lt;/c:forEach&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>补充</strong>：容器依据标签的命名空间找到标签的描述文件(.tld文件),然后依据标签的名称找到对应的标签类，然后将该类实例化，并且调用该实例对应的方法。</p>
+<p><strong>注意</strong>：如果是更改项目名，要记得右键项目名称，然后更改web project settings的值为相应的项目名称。这个web project settings是你访问服务器上你部署的应用的应用名默认情况下 不指定这个的话应用名和你的工程名是一样的指定了之后 就是以这个名字为准了。</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20201204143111124.jpg" alt="在这里插入图片描述"></p>
+<p><font size="5"><strong>2.自定义标签</strong></font></p>
+<p><strong>(1) 编程步骤</strong></p>
+<ul>
+<li><p><strong>step1</strong>.写一个java类，继承SimpleTagSupport类。</p>
+<ul>
+<li>简单标签技术(new),继承SimpleTagSupport类来开发。</li>
+<li>复杂标签技术(old)</li>
+</ul>
+</li>
+<li><p><strong>step2</strong>.override doTag方法，在该方法里面，编写处理逻辑。</p>
+</li>
+<li><p><strong>step3</strong>.描述标签(.tld文件)</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;body-content&gt;JSP&lt;/body-content&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>body-content的值可以是<code>empty</code>、<code>scriptless</code>、<code>JSP</code>。</li>
+<li><code>empty</code>: 该标签没有标签体。</li>
+<li><code>scriptless</code>: 该标签可以有标签体，但是标签体的内容不能够出现java代码(&lt;% %&gt;,&lt;%= %&gt;,&lt;%! %&gt;)</li>
+<li><code>JSP</code>:该标签可以有标签体，并且标签体可以出现java代码。只有复杂标签技术才支持该值。</li>
+</ul>
+</li>
+</ul>
+<p><strong>案例：</strong></p>
+<ol>
+<li><p>java标签类：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 自定义标签，用来输出系统的当前时间</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> ACGkaka</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SysdateTag</span> <span class="keyword">extends</span> <span class="title">SimpleTagSupport</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//设置默认格式</span></span><br><span class="line">    <span class="keyword">private</span> String format=<span class="string">"yyyy/MM/dd HH:mm:ss"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//设置format的get方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getFormat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.format;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//设置format的set方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setFormat</span><span class="params">(String format)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.format=format;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//重写doTag方法来实现具体的功能</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doTag</span><span class="params">()</span> <span class="keyword">throws</span> JspException, IOException </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//创建服务器时间</span></span><br><span class="line">        Date date=<span class="keyword">new</span> Date();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//格式化时间</span></span><br><span class="line">        SimpleDateFormat sdf=<span class="keyword">new</span> SimpleDateFormat(format);</span><br><span class="line">        String now=sdf.format(date);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//将时间输出给浏览器</span></span><br><span class="line">        <span class="comment">//PageContext extends JspContext</span></span><br><span class="line">        <span class="comment">//该方法声明返回JspContext</span></span><br><span class="line">        <span class="comment">//但在实现时返回的是PageContext</span></span><br><span class="line">        <span class="comment">//所以可以将其强转为PageContext</span></span><br><span class="line">        <span class="comment">//从而获得其他8个隐含对象</span></span><br><span class="line">        PageContext ctx=(PageContext)getJspContext();</span><br><span class="line">        JspWriter out=ctx.getOut();</span><br><span class="line">        out.println(now);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//注意：此处一定不能关闭流，因为其他的标签</span></span><br><span class="line">        <span class="comment">//也要用这个流</span></span><br><span class="line">        <span class="keyword">super</span>.doTag();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>s.tld文件：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span> ?&gt;</span><br><span class="line"></span><br><span class="line">&lt;taglib xmlns=<span class="string">"http://java.sun.com/xml/ns/javaee"</span></span><br><span class="line">    xmlns:xsi=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span><br><span class="line">    xsi:schemaLocation=<span class="string">"http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"</span></span><br><span class="line">    version=<span class="string">"2.1"</span>&gt;</span><br><span class="line">    </span><br><span class="line">  &lt;description&gt;这是我自己的标签库&lt;/description&gt;</span><br><span class="line">  &lt;display-name&gt;My tag&lt;/display-name&gt;</span><br><span class="line">  &lt;tlib-version&gt;3.1&lt;/tlib-version&gt;</span><br><span class="line">  &lt;short-name&gt;s&lt;/short-name&gt;</span><br><span class="line">  &lt;uri&gt;/my-tag&lt;/uri&gt;</span><br><span class="line"></span><br><span class="line">  &lt;tag&gt;</span><br><span class="line">    &lt;description&gt;用来输出服务器的时间&lt;/description&gt;</span><br><span class="line">    &lt;name&gt;sysdate&lt;/name&gt;</span><br><span class="line">    &lt;tag-<span class="class"><span class="keyword">class</span>&gt;<span class="title">web</span>.<span class="title">SysdateTag</span>&lt;/<span class="title">tag</span>-<span class="title">class</span>&gt;</span></span><br><span class="line"><span class="class">    &lt;!-- 声明该标签可以包含哪些内容 --&gt;</span></span><br><span class="line">    &lt;!-- empty: 该标签没有标签体。</span><br><span class="line">    	scriptless: 该标签可以有标签体，但是标签体</span><br><span class="line">        		的内容不能够出现java代码(&lt;% %&gt;,</span><br><span class="line">        		&lt;%= %&gt;,&lt;%! %&gt;)。</span><br><span class="line">    	JSP:该标签可以有标签体，并且标签体可以出现</span><br><span class="line">        		java代码。只有复杂标签技术才支持该值</span><br><span class="line">    --&gt;</span><br><span class="line">    &lt;body-content&gt;empty&lt;/body-content&gt;</span><br><span class="line">    &lt;!-- 以下是标签的属性设置 --&gt;</span><br><span class="line">    &lt;attribute&gt;</span><br><span class="line">        &lt;description&gt;用来设置时间的格式&lt;/description&gt;</span><br><span class="line">        &lt;name&gt;format&lt;/name&gt;</span><br><span class="line">        &lt;!-- 设置是否必须给这个属性赋值 --&gt;</span><br><span class="line">        &lt;required&gt;false&lt;/required&gt;</span><br><span class="line">        &lt;!-- 设置是否可以用EL表达式给次属性赋值 --&gt;</span><br><span class="line">        &lt;rtexprvalue&gt;true&lt;/rtexprvalue&gt;</span><br><span class="line">    &lt;/attribute&gt;</span><br><span class="line">  &lt;/tag&gt;</span><br><span class="line"></span><br><span class="line">&lt;/taglib&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>应用：</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ taglib uri=<span class="string">"/my-tag"</span> prefix=<span class="string">"s"</span> %&gt;</span><br><span class="line">&lt;s:sysdate format=<span class="string">"yyyy-MM-dd"</span> /&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<h2 id="十三、MVC"><a href="#十三、MVC" class="headerlink" title="十三、MVC"></a>十三、MVC</h2><p><font size="5"><strong>1.MVC (Model 模型,View 视图,Controller 控制器)</strong></font></p>
+<p><strong>(1) MVC模式</strong></p>
+<ul>
+<li>是一个经典的设计模式，是软件的分层思想：<ul>
+<li><strong>M：Model</strong>，即业务层，用来处理业务；</li>
+<li><strong>V：View</strong>，即视图层，用来处理数据；</li>
+<li><strong>C：Controller</strong>，即控制层，是业务层和视图层的桥梁。</li>
+</ul>
+</li>
+<li>它可以降低软件中代码的耦合度，便于团队开发及维护。</li>
+</ul>
+<p><strong>(2) 如何使用MVC?</strong></p>
+<ul>
+<li>在web开发当中，我们经常使用Servlet充当控制器，jsp充当视图，java充当模型。它们的关系如下图所示：</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20201204143118591.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>(3) MVC的优点</strong></p>
+<ul>
+<li><p>a.模型返回的处理结果，可以使用不同的视图来展现。</p>
+</li>
+<li><p>b.方便测试</p>
+<ul>
+<li>比如将业务逻辑写在java类里面，可以直接测试。</li>
+<li>如果写在Servlet里面，需要部署之后才能测试。</li>
+</ul>
+</li>
+<li><p>c.方便代码的维护，修改模型或者视图，彼此不受影响。</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong>：</p>
+<p>使用MVC,会增加代码量，会增加软件的成本，也会增加设计的难度。所以，只有一定规模的软件才需要使用MVC。</p>
+</blockquote>
+<p><strong>案例：</strong></p>
 <p>NETCTOSS–中国电信运营支持系统-网络版</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps44.jpg" alt="img"> </p>
-<p>注意：浏览器访问服务器获得网页，以及加载网页的过程中包含多次请求</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps45.jpg" alt="img"> </p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps46.jpg" alt="img"> </p>
-<p>2.实现一个简单的MVC框架。</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps47.jpg" alt="img"></p>
-<p>(1)基本架构</p>
-<h2 id="十四、"><a href="#十四、" class="headerlink" title="十四、"></a>十四、</h2><p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps48.jpg" alt="img"> </p>
-<h2 id="十五、smartmvc"><a href="#十五、smartmvc" class="headerlink" title="十五、smartmvc"></a>十五、smartmvc</h2><p>1.smartmvc架构</p>
-<p><img src="file:///C:%5CUsers%5CTSINGS~1%5CAppData%5CLocal%5CTemp%5Cksohtml42144%5Cwps49.jpg" alt="img"> </p>
-<p>2.使用smartmvc</p>
-<p><em>step1.</em>导包 </p>
-<p>  dom4j</p>
-<p><em>step2.</em>将base包下面的common,web包拷贝到</p>
-<p>工程里面。（这两个包是smartmvc的核心包）。</p>
-<p><em>step3.</em>配置DispatcherServlet。</p>
-<p>  注：</p>
-<pre><code>主要是指定配置文件的位置。</code></pre><p><em>step4.</em>添加处理器类</p>
-<p>  比如，添加LoginController</p>
-<p>  注:</p>
-<pre><code>a.方法前添加@RequestMapping。
+<p><img src="https://img-blog.csdnimg.cn/20201204143125843.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<blockquote>
+<p><strong>注意</strong>：浏览器访问服务器获得网页，以及加载网页的过程中包含多次请求</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20201204143132407.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201204143139454.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><font size="5"><strong>2.实现一个简单的MVC框架</strong></font></p>
+<p><img src="https://img-blog.csdnimg.cn/20201204143147410.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>(1) 基本架构</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20201204143157794.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="十四、smartmvc"><a href="#十四、smartmvc" class="headerlink" title="十四、smartmvc"></a>十四、smartmvc</h2><p><font size="5"><strong>1.smartmvc架构</strong></font></p>
+<p><img src="https://img-blog.csdnimg.cn/20201204143204763.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><font size="5"><strong>2.使用smartmvc</strong></font></p>
+<ul>
+<li><p><strong><em>step1</em></strong>.导包 dom4j</p>
+</li>
+<li><p><strong><em>step2</em></strong>.将base包下面的common,web包拷贝到工程里面。（这两个包是smartmvc的核心包）。</p>
+</li>
+<li><p><strong><em>step3</em></strong>.配置DispatcherServlet。</p>
+<p><em>（注：主要是指定配置文件的位置。）</em></p>
+</li>
+<li><p><strong><em>step4</em></strong>.添加处理器类，比如，添加LoginController</p>
+<ul>
+<li><p>a.方法前添加@RequestMapping。</p>
+</li>
+<li><p>b.方法的返回值是一个字符串(即视图名，默认会转发)，如果是重定向，前面要加”redirect:”。</p>
+</li>
+</ul>
+</li>
+<li><p><strong><em>step5</em></strong>.在配置文件(比如context.xml)中添加处理器的配置信息。</p>
+<p><em>（注：要写完整的类名。）</em></p>
+</li>
+<li><p><strong><em>step6</em></strong>.添加jsp文件。</p>
+<ul>
+<li>a.要添加到WEB-INF下。</li>
+<li>b.文件名要等于视图名。</li>
+</ul>
+</li>
+</ul>
 
-b.方法的返回值是一个字符串(即视图名，
-
-默认会转发)，如果
-
-是重定向，前面要加&quot;redirect:&quot;。</code></pre><p><em>step5.</em>在配置文件(比如context.xml)中添加处理器</p>
-<p>  的配置信息。</p>
-<p>  注：要写完整的类名。</p>
-<p><em>step6.</em>添加jsp文件。</p>
-<p>  注：</p>
-<pre><code>a.要添加到WEB-INF下。
-
-b.文件名要等于视图名。</code></pre>
     
 
     
@@ -1872,7 +1814,7 @@ b.文件名要等于视图名。</code></pre>
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://acgkaka.github.io/2020/11/12/9Java入门（九）Servlet JSP MVC/" title="Java入门（九）Servlet JSP MVC" target="_blank">http://acgkaka.github.io/2020/11/12/9Java入门（九）Servlet JSP MVC/</a>
+          <a href="http://acgkaka.github.io/2020/12/04/9Java入门（九）Servlet JSP MVC/" title="Java入门（九）Servlet JSP MVC" target="_blank">http://acgkaka.github.io/2020/12/04/9Java入门（九）Servlet JSP MVC/</a>
         </li>
         
         <li>
@@ -1950,7 +1892,7 @@ b.文件名要等于视图名。</code></pre>
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://acgkaka.github.io/2020/11/12/9Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%B9%9D%EF%BC%89Servlet%20JSP%20MVC/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://acgkaka.github.io/2020/12/04/9Java%E5%85%A5%E9%97%A8%EF%BC%88%E4%B9%9D%EF%BC%89Servlet%20JSP%20MVC/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -1965,18 +1907,9 @@ b.文件名要等于视图名。</code></pre>
 
 <nav id="article-nav">
   
-    <a href="/2020/12/04/01%E5%A6%82%E4%BD%95%E5%9C%A8github%E7%9A%84README%E4%B8%AD%E5%A2%9E%E5%8A%A0Badge%E6%A0%87%E8%AF%86/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          如何在github的README中增加Badge标识？
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/11/11/8Java%E5%85%A5%E9%97%A8%EF%BC%88%E5%85%AB%EF%BC%89JDBC/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java入门（八）JDBC</div>
+    <a href="/2020/12/04/01%E5%A6%82%E4%BD%95%E5%9C%A8github%E7%9A%84README%E4%B8%AD%E5%A2%9E%E5%8A%A0Badge%E6%A0%87%E8%AF%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何在github的README中增加Badge标识？</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -2003,7 +1936,7 @@ b.文件名要等于视图名。</code></pre>
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、Servlet基础"><span class="toc-number">1.</span> <span class="toc-text">一、Servlet基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、HTTP协议、抓包、Servlet工作原理"><span class="toc-number">2.</span> <span class="toc-text">二、HTTP协议、抓包、Servlet工作原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、DAO、重定向"><span class="toc-number">3.</span> <span class="toc-text">三、DAO、重定向</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、Servlet生命周期、JSP基础"><span class="toc-number">4.</span> <span class="toc-text">四、Servlet生命周期、JSP基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、page指令、转发、JSP开发常见问题"><span class="toc-number">5.</span> <span class="toc-text">五、page指令、转发、JSP开发常见问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、路径问题"><span class="toc-number">6.</span> <span class="toc-text">六、路径问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#七、状态管理-cookie"><span class="toc-number">7.</span> <span class="toc-text">七、状态管理-cookie</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#八、状态管理-Session"><span class="toc-number">8.</span> <span class="toc-text">八、状态管理-Session</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#九、过滤器（上）"><span class="toc-number">9.</span> <span class="toc-text">九、过滤器（上）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十、过滤器（下）、监听器"><span class="toc-number">10.</span> <span class="toc-text">十、过滤器（下）、监听器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十一、Servlet线程安全、jsp基础、EL"><span class="toc-number">11.</span> <span class="toc-text">十一、Servlet线程安全、jsp基础、EL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十二、JSTL、自定义标签"><span class="toc-number">12.</span> <span class="toc-text">十二、JSTL、自定义标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十三、MVC"><span class="toc-number">13.</span> <span class="toc-text">十三、MVC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十四、"><span class="toc-number">14.</span> <span class="toc-text">十四、</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十五、smartmvc"><span class="toc-number">15.</span> <span class="toc-text">十五、smartmvc</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、Servlet基础"><span class="toc-number">1.</span> <span class="toc-text">一、Servlet基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、HTTP协议、抓包、Servlet工作原理"><span class="toc-number">2.</span> <span class="toc-text">二、HTTP协议、抓包、Servlet工作原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、DAO、重定向"><span class="toc-number">3.</span> <span class="toc-text">三、DAO、重定向</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、Servlet生命周期、JSP基础"><span class="toc-number">4.</span> <span class="toc-text">四、Servlet生命周期、JSP基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、page指令、转发、JSP开发常见问题"><span class="toc-number">5.</span> <span class="toc-text">五、page指令、转发、JSP开发常见问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、路径问题"><span class="toc-number">6.</span> <span class="toc-text">六、路径问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#七、状态管理-cookie"><span class="toc-number">7.</span> <span class="toc-text">七、状态管理-cookie</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#八、状态管理-Session"><span class="toc-number">8.</span> <span class="toc-text">八、状态管理-Session</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#九、过滤器（上）"><span class="toc-number">9.</span> <span class="toc-text">九、过滤器（上）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十、过滤器（下）、监听器"><span class="toc-number">10.</span> <span class="toc-text">十、过滤器（下）、监听器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十一、Servlet线程安全、jsp基础、EL"><span class="toc-number">11.</span> <span class="toc-text">十一、Servlet线程安全、jsp基础、EL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十二、JSTL、自定义标签"><span class="toc-number">12.</span> <span class="toc-text">十二、JSTL、自定义标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十三、MVC"><span class="toc-number">13.</span> <span class="toc-text">十三、MVC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十四、smartmvc"><span class="toc-number">14.</span> <span class="toc-text">十四、smartmvc</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -2032,7 +1965,7 @@ b.文件名要等于视图名。</code></pre>
   <script>
     <!-- id: "Java入门（九）Servlet JSP MVC" -->
     var gitment = new Gitment({
-      id: "20201112040000",
+      id: "20201204040000",
       owner: 'ACGkaka',
       repo: 'ACGkaka.github.io',
       oauth: {
