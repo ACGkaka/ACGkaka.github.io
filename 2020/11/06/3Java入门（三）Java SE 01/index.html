@@ -84,7 +84,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20201125180401298.jpg#pic_center">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20201125180417191.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="article:published_time" content="2020-11-05T20:00:00.000Z">
-<meta property="article:modified_time" content="2020-12-07T07:43:21.499Z">
+<meta property="article:modified_time" content="2020-12-08T02:43:07.092Z">
 <meta property="article:author" content="ACG kaka">
 <meta property="article:tag" content="Java入门">
 <meta name="twitter:card" content="summary">
@@ -1812,19 +1812,28 @@
 <li><p>线程运行代码是并发的，并不是真正的同时运行</p>
 </li>
 </ul>
-<p><strong>线程有三种创建方式：</strong></p>
+<p><strong>线程有三种创建方式（面试题）：</strong></p>
 <ul>
-<li><p>1：继承Thread并重写run方法，在run方法中定义线程要执行的任务（需要并发指定的代码）；</p>
-</li>
-<li><p>2：实现Runnable接口 ；</p>
-</li>
-<li><p>2：实现Callable接口 。</p>
-</li>
+<li>1：<font color="red"><strong>继承Thread并重写run方法</strong></font>，在run方法中定义线程要执行的任务（需要并发指定的代码）；</li>
 </ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello World"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 方法一：继承Thread并重写run方法</span></span><br><span class="line">        Thread thread1 = <span class="keyword">new</span> Test();</span><br><span class="line">        thread1.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>2：<font color="red"><strong>实现Runnable接口</strong></font>；</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 方法二：实现 Runnable 接口</span></span><br><span class="line">    Thread thread2 = <span class="keyword">new</span> Thread(() -&gt; System.out.println(<span class="string">"Hello World"</span>));</span><br><span class="line">    thread2.start();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>3：<font color="red"><strong>实现Callable接口</strong></font>，相比较于实现Runnable接口的方式，方法可以有返回值，并且可以抛出异常。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ExecutionException, InterruptedException </span>&#123;</span><br><span class="line">    <span class="comment">// 方法三：实现 Callable 接口</span></span><br><span class="line">    FutureTask&lt;Integer&gt; futureTask = <span class="keyword">new</span> FutureTask&lt;&gt;(() -&gt; <span class="number">1</span> + <span class="number">1</span>);</span><br><span class="line">    Thread thread3 = <span class="keyword">new</span> Thread(futureTask);</span><br><span class="line">    thread3.start();</span><br><span class="line"></span><br><span class="line">    Integer sum = futureTask.get();</span><br><span class="line">    System.out.println(<span class="string">"执行结果："</span> + sum);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br/>
+
 <blockquote>
 <p><strong>注意：</strong></p>
-<p>1：让线程跑起来的时候千万不要调用run()方法，run()方法是线程要执    行的任务。而是调用start()方法！！</p>
-<p>2：线程运行的时候是在start()方法结束之后很快地被调用，而不是在    调    用start()方法的时候被调用！！</p>
+<p>1：让线程跑起来的时候千万不要调用run()方法，run()方法是线程要执行的任务。而是调用start()方法！！</p>
+<p>2：线程运行的时候是在start()方法结束之后很快地被调用，而不是在调用start()方法的时候被调用！！</p>
 <p>3：两个并发的线程不一定谁的run()方法先执行<br><img src="https://img-blog.csdnimg.cn/20201125180045726.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMjA0NzA5,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
 </blockquote>
 <h2 id="九、多线程基础（下）、多线程TCP通信"><a href="#九、多线程基础（下）、多线程TCP通信" class="headerlink" title="九、多线程基础（下）、多线程TCP通信"></a>九、多线程基础（下）、多线程TCP通信</h2><p>第一种创建线程的方式有两种不足</p>
